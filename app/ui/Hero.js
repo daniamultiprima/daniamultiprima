@@ -98,7 +98,7 @@ export default function Hero() {
           <Link href="/solutions">
             <button className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 text-gray-200 font-semibold rounded-xl hover:bg-white/10 hover:border-white/20 transition-all active:scale-95 flex items-center justify-center gap-2 backdrop-blur-sm">
               <Layers size={20} className="text-blue-400" />
-              Explore Solutions
+              Explore Services
             </button>
           </Link>
         </motion.div>
