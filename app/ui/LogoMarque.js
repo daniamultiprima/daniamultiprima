@@ -29,34 +29,39 @@ const row2 = partners.slice(halfLength);
 
 export default function LogoMarquee() {
   return (
-    <section className="w-full py-16 bg-[#020617] border-b border-white/5 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
-        <p className="text-sm font-bold tracking-[0.3em] text-blue-500 uppercase mb-2">
+    <section className="w-full py-24 bg-[#020617] border-y border-white/5 overflow-hidden relative">
+        
+      {/* Background Decor (Optional Glow di belakang) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 mb-16 text-center relative z-10">
+        <p className="text-base md:text-lg font-bold tracking-[0.3em] text-blue-500 uppercase mb-3">
           Trusted Partners
         </p>
-        <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">
-          Powering <span className="text-gray-500">Industry Leaders</span>
+        <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+          Powering <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">Industry Leaders</span>
         </h3>
       </div>
 
-      {/* Container Slider dengan Masking Gradient */}
-      <div className="relative flex flex-col gap-6 w-full overflow-hidden mask-linear-gradient">
+      {/* Container Slider */}
+      <div className="relative flex flex-col gap-10 w-full overflow-hidden">
         
-        {/* Efek Fade di Kiri & Kanan */}
-        <div className="absolute top-0 left-0 z-10 w-24 h-full bg-gradient-to-r from-[#020617] to-transparent pointer-events-none" />
-        <div className="absolute top-0 right-0 z-10 w-24 h-full bg-gradient-to-l from-[#020617] to-transparent pointer-events-none" />
+        {/* Masking Gradient yang lebih lebar agar transisi lebih halus */}
+        <div className="absolute top-0 left-0 z-20 w-32 md:w-64 h-full bg-gradient-to-r from-[#020617] to-transparent pointer-events-none" />
+        <div className="absolute top-0 right-0 z-20 w-32 md:w-64 h-full bg-gradient-to-l from-[#020617] to-transparent pointer-events-none" />
 
         {/* --- ROW 1: Gerak ke KIRI --- */}
         <motion.div 
-          className="flex gap-8 items-center whitespace-nowrap"
-          animate={{ x: [0, -1000] }} 
+          className="flex gap-6 md:gap-10 items-center whitespace-nowrap"
+          // Gunakan persentase agar loop lebih mulus tidak peduli lebar layar
+          animate={{ x: ["0%", "-50%"] }} 
           transition={{
             repeat: Infinity,
             ease: "linear",
-            duration: 40, 
+            duration: 50, // Lebih lambat karena item lebih besar
           }}
         >
-          {/* Loop 3x untuk efek infinite seamless */}
+          {/* Duplikasi array cukup banyak untuk mengisi layar lebar */}
           {[...row1, ...row1, ...row1, ...row1].map((partner, index) => (
             <LogoItem key={`r1-${index}`} Icon={partner.icon} name={partner.name} />
           ))}
@@ -64,12 +69,12 @@ export default function LogoMarquee() {
 
         {/* --- ROW 2: Gerak ke KANAN (Reverse) --- */}
         <motion.div 
-          className="flex gap-8 items-center whitespace-nowrap"
-          animate={{ x: [-1000, 0] }} 
+          className="flex gap-6 md:gap-10 items-center whitespace-nowrap"
+          animate={{ x: ["-50%", "0%"] }} 
           transition={{
             repeat: Infinity,
             ease: "linear",
-            duration: 45, // Beda durasi sedikit biar terlihat organik
+            duration: 55, 
           }}
         >
           {[...row2, ...row2, ...row2, ...row2].map((partner, index) => (
@@ -82,17 +87,26 @@ export default function LogoMarquee() {
   );
 }
 
-// Sub-komponen Item
+// Sub-komponen Item yang lebih BESAR dan PREMIUM
 function LogoItem({ Icon, name }) {
   return (
-    <div className="group flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/5 rounded-full hover:bg-blue-500/10 hover:border-blue-500/30 transition-all duration-300 cursor-default">
-      {/* Icon */}
-      <Icon size={20} className="text-gray-400 group-hover:text-blue-400 transition-colors" />
+    <div className="group relative flex items-center gap-5 px-8 py-5 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-blue-500/50 backdrop-blur-sm transition-all duration-500 cursor-default">
       
-      {/* Nama */}
-      <span className="text-sm font-bold text-gray-300 font-sans tracking-wide whitespace-nowrap group-hover:text-white transition-colors">
+      {/* Icon Container with subtle glow */}
+      <div className="p-2 rounded-lg bg-white/5 group-hover:bg-blue-500/20 transition-colors duration-500">
+        <Icon 
+          strokeWidth={1.5}
+          className="w-8 h-8 md:w-10 md:h-10 text-gray-400 group-hover:text-blue-400 transition-colors duration-500" 
+        />
+      </div>
+      
+      {/* Nama dengan ukuran font lebih besar */}
+      <span className="text-lg md:text-xl font-bold text-gray-300 font-sans tracking-wide whitespace-nowrap group-hover:text-white transition-colors duration-500">
         {name}
       </span>
+
+      {/* Dekorasi kilau saat hover (Optional) */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
     </div>
   );
 }

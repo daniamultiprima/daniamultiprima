@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Layers, Cpu, ShieldCheck, Globe } from 'lucide-react';
+import Link from "next/link"
 
 // Variabel animasi
 const fadeInUp = {
@@ -84,18 +85,22 @@ export default function Hero() {
         <motion.div variants={fadeInUp} className="flex flex-col w-full sm:w-auto sm:flex-row items-center justify-center gap-4 px-4 sm:px-0">
           
           {/* Primary Button */}
-          <button className="group relative w-full sm:w-auto px-8 py-4 bg-blue-600 text-white font-bold rounded-xl overflow-hidden shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all active:scale-95">
-            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            <span className="relative flex items-center justify-center gap-2">
-              Start Consultation <ArrowRight size={20} />
-            </span>
-          </button>
+          <Link href="/portfolio">
+            <button className="group relative w-full sm:w-auto px-8 py-4 bg-blue-600 text-white font-bold rounded-xl overflow-hidden shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all active:scale-95">
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <span className="relative flex items-center justify-center gap-2">
+                Our Portfolio <ArrowRight size={20} />
+              </span>
+            </button>
+          </Link>
 
           {/* Secondary Button (Ganti Showreel jadi Explore) */}
-          <button className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 text-gray-200 font-semibold rounded-xl hover:bg-white/10 hover:border-white/20 transition-all active:scale-95 flex items-center justify-center gap-2 backdrop-blur-sm">
-            <Layers size={20} className="text-blue-400" />
-            Explore Solutions
-          </button>
+          <Link href="/solutions">
+            <button className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 text-gray-200 font-semibold rounded-xl hover:bg-white/10 hover:border-white/20 transition-all active:scale-95 flex items-center justify-center gap-2 backdrop-blur-sm">
+              <Layers size={20} className="text-blue-400" />
+              Explore Solutions
+            </button>
+          </Link>
         </motion.div>
       </motion.div>
 
