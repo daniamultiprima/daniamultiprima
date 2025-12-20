@@ -78,7 +78,7 @@ export default function Navbar() {
             <div className="hidden lg:block">
               <Link 
                 href="/contacts"
-                className="group relative inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-blue-50 text-[#020617] font-extrabold text-sm uppercase tracking-wider rounded-lg transition-all duration-300"
+                className="group relative inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white font-extrabold text-sm uppercase tracking-wider rounded-lg transition-all duration-300"
               >
                 <span>CONTACTS</span>
                 <ArrowUpRight size={18} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
