@@ -160,7 +160,7 @@ function ProjectCard({ project, index }) {
                     </div>
                     <div className="flex flex-col">
                         <span className="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-0.5">
-                            Official Partner
+                            Client
                         </span>
                         <span className="text-white font-bold text-sm md:text-base leading-none">
                             {project.client}
