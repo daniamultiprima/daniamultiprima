@@ -17,8 +17,8 @@ const projects = [
     client: "Kementerian Komunikasi & Digital", 
     category: "AI Government Solutions",
     desc: "Sistem Chatbot WhatsApp cerdas untuk pelayanan publik nasional. Mengintegrasikan Data Warehouse Kementerian dengan Generative AI (Gemini).",
-    tech: ["Next.js", "Gemini API", "PostgreSQL"],
-    logo: "/images/clients/komdigi.svg",
+    tech: ["Gemini AI", "Next.js", "Big Data", "Express.js", "Linux", "Python"],
+    logo: "/images/clients/komdigi.png",
     color: "from-blue-500 to-cyan-400",
     featured: true 
   },
@@ -28,7 +28,7 @@ const projects = [
     client: "RSUD Drs. H. Amri Tambunan",
     category: "HealthTech Ecosystem",
     desc: "Transformasi digital rumah sakit menyeluruh. Pendaftaran pasien online, rekam medis elektronik (EMR), hingga integrasi klaim BPJS.",
-    tech: ["PHP Native", "PostgreSQL", "Redis"],
+    tech: ["React.js", "MongoDB", "Express.js", "PostgreSQL", "Redis"],
     logo: "/images/clients/tambunan.png",
     color: "from-emerald-500 to-teal-400",
     featured: false

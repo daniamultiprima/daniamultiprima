@@ -16,10 +16,10 @@ const allProjects = [
     client: "Kementerian Komunikasi & Digital",
     category: "Government",
     desc: "Sistem Chatbot WhatsApp cerdas berbasis Generative AI (Gemini) yang terintegrasi dengan Data Warehouse Kementerian untuk pelayanan publik otomatis.",
-    tech: ["Gemini AI", "Next.js", "Big Data"],
+    tech: ["Gemini AI", "Next.js", "Big Data", "Express.js", "Linux", "Python"],
     color: "blue",
     featured: true,
-    logo: "/images/clients/komdigi.svg"
+    logo: "/images/clients/komdigi.png"
   },
 
   // --- 2. GOVERNMENT (PEMERINTAHAN) ---
@@ -40,7 +40,7 @@ const allProjects = [
     client: "Pemkab Serdang Bedagai",
     category: "Government",
     desc: "Dashboard laporan harian, mingguan, dan bulanan ke Bupati terkait pendapatan dan penggunaan keuangan daerah.",
-    tech: ["Dashboard", "Analytics"],
+    tech: ["Dashboard", "Analytics", "Next.js", "Express.js"],
     color: "blue",
     featured: true,
     logo: "/images/clients/sergai.png"
@@ -63,7 +63,7 @@ const allProjects = [
     client: "Pemko Tanjung Balai",
     category: "Government",
     desc: "Sistem penerimaan murid baru secara online di seluruh sekolah SD dan SMP di Kota Tanjung balai yang dilengkap hitung zonasi otomatis melalui Maps.",
-    tech: ["Next.js", "Maps API"],
+    tech: ["Next.js", "Maps API", "Express.js"],
     color: "blue",
     featured: false,
     logo: "/images/clients/tanjung_balai.png"
@@ -142,7 +142,7 @@ const allProjects = [
     client: "RSUD Drs. H. Amri Tambunan",
     category: "Health",
     desc: "Sistem Manajemen RS hulu-hilir: Pendaftaran, Rawat Inap/Jalan, Farmasi, Laboratorium, hingga Kasir.",
-    tech: ["PHP", "PostgreSQL", "Microservices"],
+    tech: ["React.js", "MongoDB", "Express.js", "PostgreSQL", "Redis"],
     color: "emerald",
     featured: true,
     logo: "/images/clients/tambunan.png"
