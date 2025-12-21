@@ -260,6 +260,7 @@ const allProjects = [
     tech: ["Dashboard", "Analytics"],
     color: "purple",
     featured: true,
+    isDark: true,
     logo: "/images/clients/telkom.png"
   },
   {
@@ -348,7 +349,7 @@ export default function PortfolioPage() {
                {[1,2,3,4].map(i => <div key={i} className="w-6 h-6 rounded-full bg-gray-600 border-2 border-[#020617]" />)}
             </div>
             <span className="text-sm font-bold tracking-widest uppercase text-gray-400">
-              Trusted by 35+ Organizations
+              Trusted by 35+ Clients
             </span>
           </motion.div>
 
@@ -366,7 +367,7 @@ export default function PortfolioPage() {
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="text-2xl text-gray-400 max-w-4xl mx-auto font-light leading-relaxed"
           >
-            Kami membangun infrastruktur digital untuk Kementerian, Pemerintah Daerah, Rumah Sakit, dan Universitas.
+            Kami membangun infrastruktur digital untuk Kementerian, Pemerintah Daerah, Rumah Sakit, Universitas dan Bisnis.
           </motion.p>
         </div>
       </section>
