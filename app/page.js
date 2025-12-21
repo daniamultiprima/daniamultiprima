@@ -5,7 +5,8 @@ import ServicesBento from "./ui/Services";
 import WhyChooseUs from "./ui/Why";
 import ProjectShowcase from "./ui/Projects";
 import TechStack from "./ui/TeachStack";
-import Footer from "./ui/Footer";
+import Footer from "./ui/Footer"; 
+import WhatsAppFloat from "./ui/WhatsApp";
 
 export default async function Home(){
 	return (
@@ -18,6 +19,7 @@ export default async function Home(){
 			<ProjectShowcase/>
 			<TechStack/>
 			<Footer/>
+			<WhatsAppFloat/>
 		</>
 	)
 }

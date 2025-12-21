@@ -1,14 +1,11 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { 
   ArrowUpRight, 
-  Building2, 
-  Bot, 
-  Stethoscope, 
-  Landmark, 
-  GraduationCap
+  Building2 
 } from 'lucide-react';
 
 import Link from "next/link"
@@ -21,7 +18,7 @@ const projects = [
     category: "AI Government Solutions",
     desc: "Sistem Chatbot WhatsApp cerdas untuk pelayanan publik nasional. Mengintegrasikan Data Warehouse Kementerian dengan Generative AI (Gemini).",
     tech: ["Next.js", "Gemini API", "PostgreSQL"],
-    icon: Bot,
+    logo: "/images/clients/komdigi.svg",
     color: "from-blue-500 to-cyan-400",
     featured: true 
   },
@@ -32,7 +29,7 @@ const projects = [
     category: "HealthTech Ecosystem",
     desc: "Transformasi digital rumah sakit menyeluruh. Pendaftaran pasien online, rekam medis elektronik (EMR), hingga integrasi klaim BPJS.",
     tech: ["PHP Native", "PostgreSQL", "Redis"],
-    icon: Stethoscope,
+    logo: "/images/clients/tambunan.png",
     color: "from-emerald-500 to-teal-400",
     featured: false
   },
@@ -43,7 +40,7 @@ const projects = [
     category: "Big Data Analytics",
     desc: "Dashboard monitoring real-time untuk Bupati. Visualisasi data PAD dan serapan anggaran dinas dalam satu layar eksekutif.",
     tech: ["React.js", "Express", "Socket.io"],
-    icon: Landmark,
+    logo: "/images/clients/sergai.png",
     color: "from-violet-500 to-purple-400",
     featured: false
   },
@@ -54,7 +51,7 @@ const projects = [
     category: "EduTech Platform",
     desc: "Digitalisasi tata kelola kampus masif: Sistem Penilaian Angka Kredit (PAK) Dosen dan Remunerasi.",
     tech: ["Laravel", "MySQL", "Rest API"],
-    icon: GraduationCap,
+    logo: "/images/clients/usu.png",
     color: "from-orange-500 to-red-400",
     featured: false
   }
@@ -64,11 +61,11 @@ export default function ProjectShowcase() {
   return (
     <section className="relative w-full py-32 bg-[#020617] overflow-hidden">
       
-      {/* Background Glow - Diperbesar agar ambience lebih terasa */}
+      {/* Background Glow */}
       <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-[150px] pointer-events-none" />
 
-      {/* CONTAINER UTAMA - Dibuat jauh lebih lebar (1600px) */}
+      {/* CONTAINER UTAMA */}
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
         
         {/* HEADER */}
@@ -90,7 +87,7 @@ export default function ProjectShowcase() {
           
           <div className="lg:pb-4">
              <p className="text-gray-400 text-lg max-w-md mb-6 leading-relaxed">
-                Kami membangun solusi skala enterprise yang digunakan oleh industri, private sector, instansi pemerintah dan universitas top di Indonesia.
+               Kami membangun solusi skala enterprise yang digunakan oleh industri, private sector, instansi pemerintah dan universitas top di Indonesia.
              </p>
              <Link href="/portfolio">
                 <button className="group flex items-center gap-3 text-base font-bold text-white transition-all">
@@ -101,7 +98,7 @@ export default function ProjectShowcase() {
           </div>
         </div>
 
-        {/* GRID LAYOUT - Gap diperbesar jadi gap-10 */}
+        {/* GRID LAYOUT */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
@@ -137,9 +134,18 @@ function ProjectCard({ project, index }) {
             <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-[0.08] group-hover:opacity-20 transition-opacity duration-700`} />
             <div className={`absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-br ${project.color} blur-[100px] opacity-20 rounded-full group-hover:scale-125 transition-transform duration-1000`} />
             
-            {/* Main Icon (Floating) */}
-            <div className="relative z-10 w-28 h-28 bg-white/5 border border-white/10 rounded-3xl flex items-center justify-center shadow-2xl backdrop-blur-md group-hover:-translate-y-3 transition-transform duration-500">
-                <project.icon strokeWidth={1.5} size={56} className="text-white/90 drop-shadow-lg" />
+            {/* --- CONTAINER LOGO DIPERBESAR --- */}
+            <div className="relative z-10 w-36 h-36 bg-white/10 border border-white/10 rounded-3xl flex items-center justify-center shadow-2xl backdrop-blur-md group-hover:-translate-y-3 transition-transform duration-500 overflow-hidden">
+                <div className="relative w-24 h-24">
+                  <Image 
+                    src={project.logo}
+                    alt={project.client}
+                    fill
+                    // --- WARNA ASLI (NO FILTER) ---
+                    className="object-contain transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 150px, 200px"
+                  />
+                </div>
             </div>
 
             {/* Grid Overlay */}
@@ -152,7 +158,7 @@ function ProjectCard({ project, index }) {
             ${isFeatured ? 'w-full lg:w-7/12 border-t lg:border-t-0 lg:border-l border-white/5' : 'border-t border-white/5 flex-grow'}
         `}>
             
-            {/* CLIENT BADGE - LEBIH PROMINENT */}
+            {/* CLIENT BADGE */}
             <div className="mb-8">
                 <div className="inline-flex items-center gap-4 bg-white/[0.03] border border-white/10 p-2 pr-6 rounded-full group-hover:bg-white/[0.08] group-hover:border-white/20 transition-all duration-300">
                     <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${project.color} flex items-center justify-center shadow-lg`}>

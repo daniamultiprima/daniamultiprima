@@ -1,0 +1,25 @@
+<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-blue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g transform="translate(5, 50)">
+    
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="48" fill="black" letter-spacing="-3.5">DANIA</text>
+    
+    <circle cx="158" cy="-8" r="7" fill="#2563EB" filter="url(#glow-blue)" />
+
+    <g transform="translate(2, 18)">
+      <rect x="0" y="-6" width="22" height="3" rx="1.5" fill="#2563EB" />
+      
+      <text x="32" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="12" fill="black" letter-spacing="3">MULTI PRIMA</text>
+    </g>
+
+  </g>
+</svg>
