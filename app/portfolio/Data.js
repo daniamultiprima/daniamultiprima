@@ -384,7 +384,7 @@ export default function PortfolioPage() {
                Project Gallery ({filteredProjects.length} Items)
              </h3>
              
-             <div className="flex flex-wrap justify-center gap-2 bg-white/5 p-2 rounded-full border border-white/5 backdrop-blur-sm">
+             <div className="flex flex-wrap justify-center gap-2 bg-white/5 p-5 rounded-xl border border-white/5 backdrop-blur-sm">
                 {categories.map((cat) => (
                   <button
                     key={cat}
@@ -443,7 +443,7 @@ function WideProjectCard({ project, index }) {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
       className={`
-        group relative flex flex-col justify-between
+        group relative flex flex-col-reverse justify-between
         rounded-[3rem] border border-white/10 bg-[#080c14] overflow-hidden
         transition-all duration-700 hover:border-white/20 hover:shadow-2xl
         ${isFeatured ? 'lg:col-span-2 min-h-[500px] lg:flex-row' : 'lg:col-span-1 min-h-[550px]'}
@@ -480,7 +480,7 @@ function WideProjectCard({ project, index }) {
 
       {/* 2. CONTENT AREA */}
       <div className={`
-          relative z-10 p-10 md:p-14 flex flex-col justify-between
+          relative z-10 p-5 md:p-14 flex flex-col justify-between
           ${isFeatured ? 'lg:w-7/12 order-1' : 'h-1/2 order-2'}
       `}>
           <div>

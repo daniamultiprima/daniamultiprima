@@ -143,7 +143,7 @@ export default function Navbar() {
                   transition={{ delay: 0.3 }}
                 >
                   <Link 
-                    href="/contact"
+                    href="/contacts"
                     onClick={() => setIsOpen(false)}
                     className="w-full flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] active:scale-95 uppercase tracking-widest text-sm"
                   >

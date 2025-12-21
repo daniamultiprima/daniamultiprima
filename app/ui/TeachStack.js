@@ -89,7 +89,7 @@ function TechBadge({ text, icon: Icon, color }) {
 
   return (
     <div className={`
-      group flex items-center gap-3 px-6 py-3 rounded-xl border ${colorStyles[color]} 
+      group flex items-center gap-3 px-8 py-6 rounded-xl border ${colorStyles[color]} 
       backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10 cursor-default
     `}>
       {/* Icon Wrapper */}
@@ -98,7 +98,7 @@ function TechBadge({ text, icon: Icon, color }) {
       </div>
       
       {/* Text */}
-      <span className="font-mono text-sm md:text-base font-bold tracking-wide uppercase">
+      <span className="font-mono text-md md:text-base font-bold tracking-wide uppercase">
         {text}
       </span>
     </div>

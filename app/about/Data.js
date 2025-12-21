@@ -159,7 +159,7 @@ export default function AboutPage() {
                Diskusikan visi digital Anda bersama tim ahli Dania Multi Prima sekarang juga.
             </p>
             <a 
-               href="/contact"
+               href="/contacts"
                className="inline-flex items-center gap-3 bg-white text-black px-10 py-5 rounded-full font-bold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
             >
                Hubungi Kami <ArrowUpRight size={20} />

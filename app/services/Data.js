@@ -283,7 +283,7 @@ export default function ServicesPage() {
                Kami menyediakan solusi <strong>IT Custom</strong> sesuai kebutuhan unik perusahaan Anda. Diskusikan tantangan Anda bersama kami.
             </p>
             <a 
-              href="/contact"
+              href="/contacts"
               className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]"
             >
               Hubungi Tim Ahli <ArrowRight size={20} />

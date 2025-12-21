@@ -8,6 +8,7 @@ import {
   Building2, Stethoscope, GraduationCap, Briefcase, 
   ArrowRight, Check, Sparkles 
 } from 'lucide-react';
+import Link from 'next/link'
 
 const industries = [
   {
@@ -100,9 +101,9 @@ export default function SolutionsPage() {
           <p className="text-gray-400 mb-8">
             Tim <strong className="text-white">System Analyst</strong> kami siap merancang arsitektur sistem yang presisi untuk kebutuhan unik bisnis Anda.
           </p>
-          <a href="/contact" className="inline-flex items-center gap-2 text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition-colors font-bold">
+          <Link href="/contacts" className="inline-flex items-center gap-2 text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition-colors font-bold">
             Hubungi Tim Engineer Kami <ArrowRight size={16} />
-          </a>
+          </Link>
         </div>
 
       </div>

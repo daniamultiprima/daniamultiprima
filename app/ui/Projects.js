@@ -127,7 +127,7 @@ function ProjectCard({ project, index }) {
     >
         {/* 1. VISUAL AREA */}
         <div className={`
-            relative overflow-hidden p-10 flex items-center justify-center
+            relative overflow-hidden p-8 flex items-center justify-center
             ${isFeatured ? 'w-full lg:w-5/12 bg-gradient-to-br from-[#0f172a] to-[#020617]' : 'h-64 bg-[#0f172a]'}
         `}>
             {/* Background Effects */}
@@ -154,7 +154,7 @@ function ProjectCard({ project, index }) {
 
         {/* 2. CONTENT AREA */}
         <div className={`
-            p-10 flex flex-col relative
+            p-5 flex flex-col relative
             ${isFeatured ? 'w-full lg:w-7/12 border-t lg:border-t-0 lg:border-l border-white/5' : 'border-t border-white/5 flex-grow'}
         `}>
             
