@@ -12,7 +12,7 @@ export const metadata = {
         'Proyek Smart City Indonesia', 
         'Vendor SIMRS Terpercaya', 
         'Studi Kasus IT',
-        'Portfolio Dania Multi Prima'
+        'Portfolio Dania Multi Prima',
     ],
     
     alternates: {

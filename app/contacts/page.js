@@ -6,7 +6,7 @@ export const metadata = {
     
     description: 'Hubungi PT. Dania Multi Prima (Medan). Konsultasi gratis proyek pembuatan aplikasi, website, SIMRS, Smart City, dan solusi AI. Chat WhatsApp sekarang! Melayani seluruh Indonesia.',
     
-    keywords: ['Alamat Dania Multi Prima', 'Nomor WA Konsultan IT', 'Nomor WA Konsultan IT Medan', 'Nomor WA Konsultan IT Deli Serdang', 'Kantor Software House Medan', 'Kantor Software House Deli Serdang', 'Jasa IT Support Sumatera Utara', 'Jasa IT Support Medan', 'Jasa IT Support Deli Serdang'],
+    keywords: ['Alamat Dania Multi Prima', 'Nomor WA Konsultan IT', 'Nomor WA Konsultan IT Medan', 'Nomor WA Konsultan IT Deli Serdang', 'Kantor Software House Medan', 'Kantor Software House Deli Serdang', 'Jasa IT Support Sumatera Utara', 'Jasa IT Support Medan', 'Jasa IT Support Deli Serdang', "Jasa Website / Aplikasi Medan", "Jasa Website / Aplikasi Deli Serdang", "Jasa AI Medan", "Jasa AI Deli Serdang"],
     
     alternates: {
         canonical: '/contacts',
