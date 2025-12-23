@@ -23,8 +23,8 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "PT. Dania Multi Prima",
-    "image": "https://dmp.bio/opengraph-image.png",
-    "telephone": "+62-821-6621-6671",
+    "image": "https://dmp.bio/opengraph-image.jpg",
+    "telephone": "+62-813-8050-510",
     "email": "daniamultiprima@gmail.com",
     "address": {
         "@type": "PostalAddress",

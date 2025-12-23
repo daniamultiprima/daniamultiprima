@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function WhatsAppFloat() {
   // Config
-  const phoneNumber = "6282166216671";
+  const phoneNumber = "628138050510";
   const message = "halo DMP, saya mau konsultasi teknologi";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;

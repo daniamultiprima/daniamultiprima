@@ -53,7 +53,7 @@ export default function Footer() {
           {/* Button */}
           <div className="relative z-10">
             <a 
-              href="https://wa.me/6282166216671" 
+              href="https://wa.me/628138050510" 
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
@@ -150,12 +150,12 @@ export default function Footer() {
               </a>
 
               {/* Phone */}
-              <a href="tel:+6282166216671" className="flex items-center gap-4 text-gray-400 text-sm group">
+              <a href="tel:+628138050510" className="flex items-center gap-4 text-gray-400 text-sm group">
                 <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all border border-white/5">
                     <Phone size={16} />
                 </div>
                 <span className="group-hover:text-blue-400 transition-colors">
-                  +62 821-6621-6671
+                  +62 813-8050-510
                 </span>
               </a>
             </div>

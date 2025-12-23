@@ -31,6 +31,8 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        // ARIA LABEL: Memberi tahu Google ini navigasi utama
+        aria-label="Main Navigation"
         className={`fixed top-0 w-full z-50 transition-all duration-500 border-b border-transparent ${
           scrolled
             ? 'bg-[#020617]/90 backdrop-blur-xl border-white/10 py-3 shadow-2xl'
@@ -40,20 +42,16 @@ export default function Navbar() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-16 md:h-16">
             
-            {/* --- TEXT LOGO (TYPOGRAPHIC MASTERPIECE) --- */}
+            {/* --- TEXT LOGO --- */}
             <Link href="/" className="group relative z-50 flex flex-col justify-center">
               <div className="flex items-baseline gap-1">
-                {/* Kata Utama: DANIA */}
                 <span className="text-white font-black text-3xl md:text-4xl tracking-tighter leading-none group-hover:text-gray-200 transition-colors">
                   DANIA
                 </span>
-                {/* Simbol Titik Biru (The Dot) */}
                 <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-blue-600 rounded-full mb-1 group-hover:scale-125 group-hover:bg-blue-400 transition-all duration-300 shadow-[0_0_10px_rgba(37,99,235,0.8)]" />
               </div>
               
-              {/* Kata Kedua: MULTI PRIMA (Wide Spacing) */}
               <div className="flex items-center gap-2 mt-1 opacity-80 group-hover:opacity-100 transition-opacity">
-                 {/* Garis Dekorasi Kecil */}
                 <span className="h-[1px] w-4 bg-blue-500 group-hover:w-8 group-hover:bg-blue-500 transition-all duration-500" />
                 <span className="text-gray-400 text-[10px] md:text-[11px] font-bold tracking-[0.35em] uppercase group-hover:text-blue-400 transition-colors">
                   Multi Prima
@@ -61,18 +59,20 @@ export default function Navbar() {
               </div>
             </Link>
 
-            {/* --- DESKTOP MENU --- */}
-            <div className="hidden lg:flex items-center gap-1 bg-white/5 border border-white/5 rounded-full p-1.5 backdrop-blur-sm">
+            {/* --- DESKTOP MENU (SEO OPTIMIZED) --- */}
+            {/* PERUBAHAN DISINI: Gunakan <ul> dan <li> */}
+            <ul className="hidden lg:flex items-center gap-1 bg-white/5 border border-white/5 rounded-full p-1.5 backdrop-blur-sm list-none m-0">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="px-6 py-2.5 text-sm font-bold text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
-                >
-                  {item.name}
-                </Link>
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="block px-6 py-2.5 text-sm font-bold text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
 
             {/* --- ACTION BUTTON --- */}
             <div className="hidden lg:block">
@@ -90,6 +90,7 @@ export default function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+                aria-label="Toggle Menu" // Tambahan aksesibilitas
               >
                 {isOpen ? <X size={30} /> : <Menu size={30} />}
               </button>
@@ -98,7 +99,7 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* --- MOBILE MENU (Smooth Dropdown) --- */}
+      {/* --- MOBILE MENU --- */}
       <AnimatePresence>
         {isOpen && (
           <>
@@ -116,6 +117,7 @@ export default function Navbar() {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="fixed top-0 left-0 w-full bg-[#020617] border-b border-white/10 z-40 pt-24 pb-8 px-6 shadow-2xl lg:hidden"
             >
+              {/* Mobile Menu juga sebaiknya menggunakan struktur list, tapi div juga oke untuk mobile */}
               <div className="flex flex-col space-y-2">
                 {navItems.map((item, idx) => (
                   <motion.div

@@ -23,7 +23,7 @@ export const metadata = {
         title: 'Portfolio Proyek IT - PT. Dania Multi Prima',
         description: '35+ Proyek Terselesaikan: Government, Health, & Enterprise.',
         url: 'https://dmp.bio/portfolio',
-        images: ['/opengraph-image.png'],
+        images: ['/opengraph-image.jpg'],
     }
 }
 

@@ -90,7 +90,7 @@ export const metadata = {
     siteName: "Dania Multi Prima",
     images: [
       {
-        url: '/opengraph-image.png', // Pastikan gambar ini ada di folder public
+        url: '/opengraph-image.jpg', // Pastikan gambar ini ada di folder public
         width: 1200,
         height: 630,
         alt: "PT. Dania Multi Prima Portfolio",
@@ -103,13 +103,9 @@ export const metadata = {
     card: 'summary_large_image',
     title: "PT. Dania Multi Prima - Tech Innovations",
     description: "IT Consultant & AI Developer. Membangun masa depan digital Indonesia.",
-    images: ['/opengraph-image.png'],
+    images: ['/opengraph-image.jpg'],
   },
 
-  // Verifikasi Google Search Console (Nanti isi kodenya di sini)
-  verification: {
-    google: 'ISI_KODE_VERIFIKASI_GOOGLE_DISINI', 
-  },
    
 };
 
@@ -122,7 +118,7 @@ export default function RootLayout({ children }) {
     "@type": "Organization",
     "name": "PT. Dania Multi Prima",
     "url": "https://dmp.bio",
-    "logo": "https://dmp.bio/logo-dania.png", // Ganti dengan URL logo kamu
+    "logo": "https://dmp.bio/dmp.png", // Ganti dengan URL logo kamu
     "description": "Perusahaan Konsultan IT dan Pengembang AI terkemuka di Indonesia.",
     "address": {
       "@type": "PostalAddress",
@@ -132,7 +128,7 @@ export default function RootLayout({ children }) {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+62-821-6621-6671",
+      "telephone": "+62-813-8050-510",
       "contactType": "customer service",
       "areaServed": "ID",
       "availableLanguage": ["Indonesian", "English"]

@@ -36,7 +36,7 @@ export const metadata = {
         title: 'Katalog Layanan IT Lengkap - PT. Dania Multi Prima',
         description: 'End-to-End IT Solutions: Development, AI, Security, & Infrastructure.',
         url: 'https://dmp.bio/services',
-        images: ['/opengraph-image.png'],
+        images: ['/opengraph-image.jpg'],
     }
 }
 

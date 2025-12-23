@@ -43,8 +43,8 @@ export const metadata = {
   openGraph: {
     title: 'PT. Dania Multi Prima - IT Consultant & Software House',
     description: 'Solusi Teknologi End-to-End: Dari Perancangan Sistem hingga Implementasi AI.',
-    url: 'https://ajthinklab.com',
-    images: ['/opengraph-image.png'],
+    url: 'https://dmp.bio',
+    images: ['/opengraph-image.jpg'],
     type: 'website',
   }
 }
@@ -54,10 +54,10 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "PT. Dania Multi Prima",
-    "image": "https://dmp.bio/opengraph-image.png",
+    "image": "https://dmp.bio/opengraph-image.jpg",
     "@id": "https://dmp.bio",
     "url": "https://dmp.bio",
-    "telephone": "+62-821-6621-6671",
+    "telephone": "+62-813-8050-510",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Jln. Medan-Binjai, Diski, Km. 14.5, Sunggal",

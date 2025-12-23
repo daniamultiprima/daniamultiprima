@@ -23,8 +23,8 @@ export const metadata = {
     openGraph: {
         title: 'Solusi Digital Sektoral - PT. Dania Multi Prima',
         description: 'Spesialis IT untuk Pemerintah, Kesehatan, Pendidikan, & Bisnis.',
-        url: 'https://ajthinklab.com/solutions',
-        images: ['/opengraph-image.png'],
+        url: 'https://dmp.bio/solutions',
+        images: ['/opengraph-image.jpg'],
     }
 }
 

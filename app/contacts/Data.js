@@ -34,7 +34,7 @@ export default function ContactPage() {
       return;
     }
 
-    const waNumber = "6282166216671"; 
+    const waNumber = "628138050510"; 
     const text = `Halo Admin *PT. Dania Multi Prima*,%0a%0aSaya ingin diskusi mengenai project baru.%0a%0a--------------------------------%0a*DATA PENGIRIM*%0a--------------------------------%0a👤 *Nama:* ${firstName} ${lastName}%0a📧 *Email:* ${email}%0a📝 *Subject:* ${subject}%0a--------------------------------%0a%0a*PESAN:*%0a${message}`;
 
     window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
@@ -123,10 +123,10 @@ export default function ContactPage() {
                 <ContactCard 
                   icon={Phone}
                   title="WhatsApp / Telepon"
-                  content="+62 821-6621-6671"
+                  content="+62 813-8050-510"
                   subContent="Senin - Jumat, 09:00 - 17:00 WIB"
                   action="Chat Sekarang"
-                  href="https://wa.me/6282166216671"
+                  href="https://wa.me/628138050510"
                   delay={0.3}
                 />
               </div>
