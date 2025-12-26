@@ -1,17 +1,32 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Navbar from '@/ui/Navbar';
-import Footer from '@/ui/Footer';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Code2, Smartphone, Globe, BrainCircuit, Wifi, Server, 
-  ShieldCheck, MonitorPlay, ShoppingBag, LayoutTemplate, 
-  Settings, Wrench, BarChart3, HardDrive, 
-  Network, Radio, Search, ArrowRight, Layers
-} from 'lucide-react';
+import React, { useState } from "react";
+import Navbar from "@/ui/Navbar";
+import Footer from "@/ui/Footer";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Code2,
+  Smartphone,
+  Globe,
+  BrainCircuit,
+  Wifi,
+  Server,
+  ShieldCheck,
+  MonitorPlay,
+  ShoppingBag,
+  LayoutTemplate,
+  Settings,
+  Wrench,
+  BarChart3,
+  HardDrive,
+  Network,
+  Radio,
+  Search,
+  ArrowRight,
+  Layers,
+} from "lucide-react";
 
-// --- DATA LAYANAN LENGKAP (Sama seperti sebelumnya) ---
+// --- DATA LAYANAN LENGKAP ---
 const allServices = [
   // 1. DEVELOPMENT
   {
@@ -20,7 +35,7 @@ const allServices = [
     title: "Software Development",
     desc: "Merancang dan membangun software custom (Web & Desktop) yang fleksibel, efisien, dan scalable sesuai proses bisnis.",
     icon: Code2,
-    gradient: "from-blue-600 to-cyan-500"
+    gradient: "from-blue-600 to-cyan-500",
   },
   {
     id: 2,
@@ -28,7 +43,7 @@ const allServices = [
     title: "Mobile App Development",
     desc: "Jasa pembuatan aplikasi Android & iOS Native/Hybrid dengan performa tinggi dan UI/UX modern.",
     icon: Smartphone,
-    gradient: "from-blue-500 to-indigo-500"
+    gradient: "from-blue-500 to-indigo-500",
   },
   {
     id: 3,
@@ -36,7 +51,7 @@ const allServices = [
     title: "Web Development",
     desc: "Website Company Profile, E-Commerce, dan Web App yang responsif, SEO-friendly, dan aman.",
     icon: Globe,
-    gradient: "from-sky-500 to-blue-600"
+    gradient: "from-sky-500 to-blue-600",
   },
   {
     id: 4,
@@ -44,9 +59,9 @@ const allServices = [
     title: "UI/UX Design",
     desc: "Perancangan antarmuka aplikasi yang intuitif dan menarik untuk meningkatkan pengalaman pengguna.",
     icon: LayoutTemplate,
-    gradient: "from-pink-500 to-rose-500"
+    gradient: "from-pink-500 to-rose-500",
   },
-  
+
   // 2. INTELLIGENCE (AI & IoT)
   {
     id: 5,
@@ -54,7 +69,7 @@ const allServices = [
     title: "Artificial Intelligence",
     desc: "Implementasi AI, Machine Learning, dan Chatbot Cerdas untuk otomatisasi layanan publik dan bisnis.",
     icon: BrainCircuit,
-    gradient: "from-violet-600 to-purple-500"
+    gradient: "from-violet-600 to-purple-500",
   },
   {
     id: 6,
@@ -62,7 +77,7 @@ const allServices = [
     title: "Internet of Things (IoT)",
     desc: "Sistem IoT Smart City dan Smart Office untuk monitoring perangkat fisik secara real-time.",
     icon: Wifi,
-    gradient: "from-fuchsia-600 to-pink-600"
+    gradient: "from-fuchsia-600 to-pink-600",
   },
   {
     id: 7,
@@ -70,7 +85,7 @@ const allServices = [
     title: "Smart CCTV Integration",
     desc: "Integrasi CCTV dengan analitik cerdas (Face Recognition) untuk keamanan gedung dan kota.",
     icon: Radio,
-    gradient: "from-purple-500 to-indigo-500"
+    gradient: "from-purple-500 to-indigo-500",
   },
 
   // 3. INFRASTRUCTURE
@@ -80,7 +95,7 @@ const allServices = [
     title: "Network Infrastructure",
     desc: "Instalasi jaringan LAN/WAN, Fiber Optic, dan manajemen bandwidth untuk konektivitas stabil.",
     icon: Network,
-    gradient: "from-cyan-500 to-teal-500"
+    gradient: "from-cyan-500 to-teal-500",
   },
   {
     id: 9,
@@ -88,7 +103,7 @@ const allServices = [
     title: "Server & Cloud",
     desc: "Konfigurasi Server Fisik (VPS) dan Cloud (AWS/GCP/Azure) serta manajemen Data Center.",
     icon: Server,
-    gradient: "from-slate-500 to-gray-500"
+    gradient: "from-slate-500 to-gray-500",
   },
   {
     id: 10,
@@ -96,7 +111,7 @@ const allServices = [
     title: "IT Procurement",
     desc: "Pengadaan perangkat keras (Hardware): Laptop, Server, Videotron, dan lisensi software resmi.",
     icon: ShoppingBag,
-    gradient: "from-emerald-500 to-green-500"
+    gradient: "from-emerald-500 to-green-500",
   },
   {
     id: 11,
@@ -104,7 +119,7 @@ const allServices = [
     title: "Migration Services",
     desc: "Layanan migrasi database dan sistem legacy ke teknologi terbaru dengan jaminan keamanan data.",
     icon: HardDrive,
-    gradient: "from-teal-500 to-cyan-600"
+    gradient: "from-teal-500 to-cyan-600",
   },
 
   // 4. SECURITY & MAINTENANCE
@@ -114,7 +129,7 @@ const allServices = [
     title: "Cybersecurity",
     desc: "Audit keamanan sistem, firewall, dan proteksi data dari serangan ransomware/malware.",
     icon: ShieldCheck,
-    gradient: "from-red-600 to-orange-600"
+    gradient: "from-red-600 to-orange-600",
   },
   {
     id: 13,
@@ -122,7 +137,7 @@ const allServices = [
     title: "Penetration Testing",
     desc: "Uji coba peretasan (Ethical Hacking) untuk menemukan celah keamanan pada aplikasi Anda.",
     icon: Search,
-    gradient: "from-orange-500 to-amber-500"
+    gradient: "from-orange-500 to-amber-500",
   },
   {
     id: 14,
@@ -130,7 +145,7 @@ const allServices = [
     title: "IT Maintenance",
     desc: "Kontrak pemeliharaan rutin perangkat IT dan support teknis 24/7.",
     icon: Wrench,
-    gradient: "from-gray-500 to-slate-600"
+    gradient: "from-gray-500 to-slate-600",
   },
 
   // 5. ENTERPRISE SOLUTIONS
@@ -140,7 +155,7 @@ const allServices = [
     title: "System Integration",
     desc: "Mengintegrasikan berbagai aplikasi (API) agar data tersinkronisasi antar divisi.",
     icon: Settings,
-    gradient: "from-blue-600 to-indigo-700"
+    gradient: "from-blue-600 to-indigo-700",
   },
   {
     id: 16,
@@ -148,7 +163,7 @@ const allServices = [
     title: "ERP & CRM Systems",
     desc: "Aplikasi Enterprise Resource Planning (ERP) untuk manajemen keuangan, stok, dan SDM.",
     icon: BarChart3,
-    gradient: "from-indigo-600 to-violet-600"
+    gradient: "from-indigo-600 to-violet-600",
   },
   {
     id: 17,
@@ -156,7 +171,7 @@ const allServices = [
     title: "SEO Optimization",
     desc: "Optimasi website agar muncul di halaman 1 Google dan meningkatkan traffic organik.",
     icon: Layers,
-    gradient: "from-blue-400 to-cyan-400"
+    gradient: "from-blue-400 to-cyan-400",
   },
   {
     id: 18,
@@ -164,7 +179,7 @@ const allServices = [
     title: "IT Training",
     desc: "Pelatihan dan workshop teknologi untuk meningkatkan skill digital karyawan instansi.",
     icon: MonitorPlay,
-    gradient: "from-yellow-500 to-orange-500"
+    gradient: "from-yellow-500 to-orange-500",
   },
 ];
 
@@ -175,55 +190,62 @@ const categories = [
   "Infrastructure",
   "Security",
   "Enterprise",
-  "Creative"
+  "Creative",
 ];
 
 export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState("All Services");
 
-  const filteredServices = activeCategory === "All Services" 
-    ? allServices 
-    : allServices.filter(item => item.category === activeCategory);
+  const filteredServices =
+    activeCategory === "All Services"
+      ? allServices
+      : allServices.filter((item) => item.category === activeCategory);
 
   return (
     <main className="bg-[#020617] min-h-screen text-white selection:bg-blue-500 selection:text-white">
       <Navbar />
-      
+
       {/* --- HERO SECTION --- */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center" />
 
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <motion.div 
-             initial={{ opacity: 0, y: 20 }}
-             animate={{ opacity: 1, y: 0 }}
-             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-blue-400 text-xs font-bold tracking-[0.2em] uppercase mb-6"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-blue-400 text-xs font-bold tracking-[0.2em] uppercase mb-6"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
             Layanan IT & Solusi Digital
           </motion.div>
-          
-          <motion.h1 
+
+          {/* TITLE: UPDATED HERO STYLE */}
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6"
+            className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight"
           >
             Capabilities that <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+            {/* Solid Blue + Neon Shadow */}
+            <span className="text-blue-400 drop-shadow-[0_0_25px_rgba(96,165,250,0.5)]">
               Drive Transformation.
             </span>
           </motion.h1>
-          
-          {/* SEO PARAGRAPH: Penting untuk mengandung keyword */}
-          <motion.p 
+
+          {/* SEO PARAGRAPH */}
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed"
           >
-            Sebagai <strong className="text-white">Software House</strong> dan Konsultan IT Terpercaya, kami menyediakan <strong>18+ Layanan Teknologi</strong> mulai dari pengembangan aplikasi, infrastruktur jaringan, hingga keamanan siber untuk mempercepat transformasi digital Anda.
+            Sebagai <strong className="text-white">Software House</strong> dan
+            Konsultan IT Terpercaya, kami menyediakan{" "}
+            <strong>18+ Layanan Teknologi</strong> mulai dari pengembangan
+            aplikasi, infrastruktur jaringan, hingga keamanan siber untuk
+            mempercepat transformasi digital Anda.
           </motion.p>
         </div>
       </section>
@@ -238,9 +260,10 @@ export default function ServicesPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`
                   px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border
-                  ${activeCategory === cat 
-                    ? "bg-blue-600 text-white border-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.4)]" 
-                    : "bg-[#0B1120] text-gray-400 border-white/10 hover:border-white/30 hover:text-white"
+                  ${
+                    activeCategory === cat
+                      ? "bg-blue-600 text-white border-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.4)]"
+                      : "bg-[#0B1120] text-gray-400 border-white/10 hover:border-white/30 hover:text-white"
                   }
                 `}
               >
@@ -254,11 +277,11 @@ export default function ServicesPage() {
       {/* --- SERVICES GRID --- */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            <AnimatePresence mode='popLayout'>
+            <AnimatePresence mode="popLayout">
               {filteredServices.map((service) => (
                 <ServiceCard key={service.id} item={service} />
               ))}
@@ -275,20 +298,21 @@ export default function ServicesPage() {
 
       {/* --- CTA SECTION --- */}
       <section className="py-24 relative overflow-hidden">
-         <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-8">
-               Tidak menemukan layanan yang dicari?
-            </h2>
-            <p className="text-gray-400 text-lg mb-10">
-               Kami menyediakan solusi <strong>IT Custom</strong> sesuai kebutuhan unik perusahaan Anda. Diskusikan tantangan Anda bersama kami.
-            </p>
-            <a 
-              href="/contacts"
-              className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-            >
-              Hubungi Tim Ahli <ArrowRight size={20} />
-            </a>
-         </div>
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-8">
+            Tidak menemukan layanan yang dicari?
+          </h2>
+          <p className="text-gray-400 text-lg mb-10">
+            Kami menyediakan solusi <strong>IT Custom</strong> sesuai kebutuhan
+            unik perusahaan Anda. Diskusikan tantangan Anda bersama kami.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+          >
+            Hubungi Tim Ahli <ArrowRight size={20} />
+          </a>
+        </div>
       </section>
 
       <Footer />
@@ -296,7 +320,7 @@ export default function ServicesPage() {
   );
 }
 
-// --- COMPONENT: SERVICE CARD (Visual Tetap Keren) ---
+// --- COMPONENT: SERVICE CARD ---
 function ServiceCard({ item }) {
   return (
     <motion.div
@@ -307,29 +331,31 @@ function ServiceCard({ item }) {
       transition={{ duration: 0.3 }}
       className="group relative h-full bg-[#0B1120] border border-white/5 hover:border-white/20 rounded-3xl p-8 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
     >
-      <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+      <div
+        className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+      />
 
       <div className="relative z-10 flex flex-col h-full">
-         <div className="flex justify-between items-start mb-6">
-            <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 shadow-lg">
-               <item.icon size={28} className="text-white" />
-            </div>
-            <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500 bg-white/5 px-2 py-1 rounded border border-white/5">
-               {item.category}
-            </span>
-         </div>
+        <div className="flex justify-between items-start mb-6">
+          <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 shadow-lg">
+            <item.icon size={28} className="text-white" />
+          </div>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500 bg-white/5 px-2 py-1 rounded border border-white/5">
+            {item.category}
+          </span>
+        </div>
 
-         {/* H3 Title: Penting untuk SEO */}
-         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">
-            {item.title}
-         </h3>
-         <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-200 transition-colors">
-            {item.desc}
-         </p>
+        {/* H3 Title: Penting untuk SEO */}
+        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">
+          {item.title}
+        </h3>
+        <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-200 transition-colors">
+          {item.desc}
+        </p>
 
-         <div className="mt-auto pt-6 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-4 group-hover:translate-x-0">
-            <ArrowRight className="text-white" size={20} />
-         </div>
+        <div className="mt-auto pt-6 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-4 group-hover:translate-x-0">
+          <ArrowRight className="text-white" size={20} />
+        </div>
       </div>
 
       <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-white/5 rounded-full blur-2xl group-hover:bg-white/10 transition-colors" />
