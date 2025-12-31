@@ -6,7 +6,8 @@ import WhyChooseUs from "./ui/Why";
 import ProjectShowcase from "./ui/Projects";
 import TechStack from "./ui/TeachStack";
 import Footer from "./ui/Footer";  
-import Script from "next/script";
+import PSE_EKatalog from "./ui/PSE_EKatalog";  
+import Script from "next/script"; 
 
 export const metadata = {
   
@@ -105,6 +106,8 @@ export default async function Home(){
 			<Navbar/>
 			
 			<Hero/>
+
+      <PSE_EKatalog/>
 			
 			<LogoMarquee/>
 			

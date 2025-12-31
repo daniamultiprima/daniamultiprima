@@ -54,8 +54,7 @@ export default function Hero() {
         {/* Badge: SEO Friendly Text */}
         <motion.div variants={fadeInUp} className="mb-6 md:mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-blue-900/10 border border-blue-500/20 text-blue-400 text-[10px] md:text-sm font-bold tracking-[0.2em] uppercase backdrop-blur-md shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-            <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-blue-500 animate-pulse" />
-            Jasa Konsultan IT & AI Developer
+             PT. DANIA MULTI PRIMA
           </div>
         </motion.div>
 
