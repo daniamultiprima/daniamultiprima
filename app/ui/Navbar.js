@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // <--- IMPORT INI
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight, ChevronRight } from "lucide-react";
 
@@ -18,7 +18,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // 1. Ambil path url saat ini (contoh: "/services")
   const pathname = usePathname();
 
   useEffect(() => {
@@ -64,10 +63,8 @@ export default function Navbar() {
               </div>
             </Link>
 
-            {/* --- DESKTOP MENU (ACTIVE STATE LOGIC) --- */}
             <ul className="hidden lg:flex items-center gap-1 bg-white/5 border border-white/5 rounded-full p-1.5 backdrop-blur-sm list-none m-0">
               {navItems.map((item) => {
-                // 2. Cek apakah link ini aktif
                 const isActive = pathname === item.href;
 
                 return (
@@ -78,9 +75,9 @@ export default function Navbar() {
                         block px-6 py-2.5 text-sm font-bold rounded-full transition-all duration-300
                         ${
                           isActive
-                            ? // Style jika AKTIF (Biru + Glow + Text Putih)
+                            ? 
                               "bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]"
-                            : // Style jika TIDAK AKTIF (Gray + Hover effect)
+                            : 
                               "text-gray-300 hover:text-white hover:bg-white/10"
                         }
                       `}
@@ -92,7 +89,6 @@ export default function Navbar() {
               })}
             </ul>
 
-            {/* --- ACTION BUTTON --- */}
             <div className="hidden lg:block">
               <Link
                 href="/contacts"
@@ -100,7 +96,7 @@ export default function Navbar() {
                     group relative inline-flex items-center gap-2 px-6 py-3 font-extrabold text-sm uppercase tracking-wider rounded-lg transition-all duration-300
                     ${
                       pathname === "/contacts"
-                        ? "bg-white text-blue-900 shadow-[0_0_20px_rgba(255,255,255,0.4)]" // Active state khusus tombol
+                        ? "bg-white text-blue-900 shadow-[0_0_20px_rgba(255,255,255,0.4)]"
                         : "bg-blue-600 hover:bg-blue-800 text-white"
                     }
                 `}
@@ -113,7 +109,7 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* --- MOBILE TOGGLE --- */}
+
             <div className="lg:hidden z-50">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -127,7 +123,6 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* --- MOBILE MENU --- */}
       <AnimatePresence>
         {isOpen && (
           <>

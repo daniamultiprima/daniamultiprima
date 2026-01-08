@@ -2,34 +2,39 @@ import Data from "./Data"
 import Script from "next/script"
 
 export const metadata = {
-    title: 'Layanan IT & Pengembangan Software (AI, IoT, ERP)',
+    // TITLE: Keyword Utama + Lokasi + Brand
+    title: 'Layanan IT & Jasa Pembuatan Aplikasi Medan | PT. Dania Multi Prima',
     
-    description: 'Jelajahi 18+ Layanan IT PT. Dania Multi Prima: Jasa Pembuatan Aplikasi (Android/iOS), Website, Solusi AI & IoT, Keamanan Siber (Pentest), hingga Infrastruktur Server & Jaringan di Indonesia.',
+    // DESCRIPTION: Copywriting "Menjual" dengan keyword lengkap
+    description: 'Jelajahi 18+ Layanan IT Terbaik di Medan & Indonesia: Jasa Pembuatan Aplikasi Android/iOS, Website, Sistem SIMRS, Smart City (IoT), Keamanan Siber, hingga Pengadaan Perangkat IT Pemerintahan.',
     
+    // KEYWORDS: Kombinasi Jasa + Lokasi
     keywords: [
-        'Jasa Pembuatan Website Medan',
+        // Development
         'Jasa Pembuatan Aplikasi Medan',
+        'Software House Medan',
         'Jasa Pembuatan Website Deli Serdang',
-        'Jasa Pembuatan Aplikasi Deli Serdang',
+        'Web Developer Profesional Sumut',
+        
+        // Government & Enterprise
         'Vendor IT Pemerintahan',
-        'Vendor IT Pemerintahan Medan',
-        'Vendor IT Pemerintahan Deli Serdang',
-        'Jasa Instalasi Jaringan & Server',
-        'Jasa Instalasi Jaringan & Server Medan',
-        'Jasa Instalasi Jaringan & Server Deli Serdang',
+        'Konsultan SPBE Medan',
+        'Sistem Informasi Manajemen Rumah Sakit (SIMRS)',
+        'Aplikasi Smart City Indonesia',
+        
+        // Infrastructure & Security
+        'Jasa Instalasi Jaringan Medan',
         'Konsultan Cyber Security Indonesia',
-        'Konsultan Cyber Security Medan',
-        'Konsultan Cyber Security Deli Serdang',
-        'Jasa Pembuatan Website Company Profile',
-        'Jasa Pembuatan Website Company Profile Medan',
-        'Jasa Pembuatan Website Company Profile Deli Serdang',
-        'Solusi IoT dan Smart City',
-        'Software House Terpercaya',
-        'Implementasi ERP CRM'
+        'Jasa Penetration Testing (Pentest)',
+        'Pengadaan Server & Komputer Medan',
+        
+        // Advanced Tech
+        'Solusi IoT Pertanian & Kota',
+        'Jasa Implementasi AI (Artificial Intelligence)'
     ],
     
     alternates: {
-        canonical: '/services',
+        canonical: 'https://dmp.bio/services',
     },
     
     openGraph: {
@@ -37,33 +42,43 @@ export const metadata = {
         description: 'End-to-End IT Solutions: Development, AI, Security, & Infrastructure.',
         url: 'https://dmp.bio/services',
         images: ['/opengraph-image.jpg'],
+        type: 'website',
     }
 }
 
+// SCHEMA MARKUP (Service & OfferCatalog)
 const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-        // DEVELOPMENT
-        { "@type": "ListItem", "position": 1, "name": "Software Development (Custom App)" },
-        { "@type": "ListItem", "position": 2, "name": "Mobile App Development (Android & iOS)" },
-        { "@type": "ListItem", "position": 3, "name": "Web Development & E-Commerce" },
-        
-        // INTELLIGENCE
-        { "@type": "ListItem", "position": 4, "name": "Artificial Intelligence (AI) & Machine Learning" },
-        { "@type": "ListItem", "position": 5, "name": "Internet of Things (IoT) Solutions" },
-        
-        // INFRASTRUCTURE
-        { "@type": "ListItem", "position": 6, "name": "Network Infrastructure & Cabling" },
-        { "@type": "ListItem", "position": 7, "name": "Server Management & Cloud Computing" },
-        
-        // SECURITY
-        { "@type": "ListItem", "position": 8, "name": "Cybersecurity & Penetration Testing" },
-        
-        // ENTERPRISE
-        { "@type": "ListItem", "position": 9, "name": "System Integration & ERP" },
-        { "@type": "ListItem", "position": 10, "name": "IT Procurement (Pengadaan Perangkat)" }
-    ]
+    "@type": "ProfessionalService",
+    "name": "PT. Dania Multi Prima",
+    "url": "https://dmp.bio/services",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Deli Serdang",
+        "addressRegion": "Sumatera Utara",
+        "addressCountry": "ID"
+    },
+    // INI KUNCI AGAR MUNCUL DI PENCARIAN LOKAL
+    "areaServed": [
+        { "@type": "City", "name": "Medan" },
+        { "@type": "City", "name": "Deli Serdang" },
+        { "@type": "City", "name": "Binjai" },
+        { "@type": "AdministrativeArea", "name": "Sumatera Utara" },
+        { "@type": "Country", "name": "Indonesia" }
+    ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Layanan IT & Software Development",
+        "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software Development (Custom App)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development (Android & iOS)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development & E-Commerce" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Artificial Intelligence (AI) Solutions" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Internet of Things (IoT) Smart City" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cybersecurity & Penetration Testing" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT Procurement (Pengadaan Barang)" } }
+        ]
+    }
 }
  
 export default async function Services() {  

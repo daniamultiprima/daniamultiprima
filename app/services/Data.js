@@ -5,35 +5,22 @@ import Navbar from "@/ui/Navbar";
 import Footer from "@/ui/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Code2,
-  Smartphone,
-  Globe,
-  BrainCircuit,
-  Wifi,
-  Server,
-  ShieldCheck,
-  MonitorPlay,
-  ShoppingBag,
-  LayoutTemplate,
-  Settings,
-  Wrench,
-  BarChart3,
-  HardDrive,
-  Network,
-  Radio,
-  Search,
-  ArrowRight,
-  Layers,
+  Code2, Smartphone, Globe, BrainCircuit, Wifi, Server,
+  ShieldCheck, MonitorPlay, ShoppingBag, LayoutTemplate,
+  Settings, Wrench, BarChart3, HardDrive,
+  Network, Radio, Search, ArrowRight, Layers,
+  ChevronDown, ChevronUp
 } from "lucide-react";
 
-// --- DATA LAYANAN LENGKAP ---
+
 const allServices = [
-  // 1. DEVELOPMENT
+  
   {
     id: 1,
     category: "Development",
     title: "Software Development",
-    desc: "Merancang dan membangun software custom (Web & Desktop) yang fleksibel, efisien, dan scalable sesuai proses bisnis.",
+    
+    desc: "Layanan Software House Medan untuk pembuatan aplikasi bisnis custom (Web/Desktop) yang presisi, aman, dan scalable sesuai kebutuhan Anda.",
     icon: Code2,
     gradient: "from-blue-600 to-cyan-500",
   },
@@ -41,7 +28,8 @@ const allServices = [
     id: 2,
     category: "Development",
     title: "Mobile App Development",
-    desc: "Jasa pembuatan aplikasi Android & iOS Native/Hybrid dengan performa tinggi dan UI/UX modern.",
+    
+    desc: "Jasa pembuatan aplikasi Android & iOS profesional dengan teknologi Native/Hybrid. Solusi mobile app terbaik untuk startup dan korporasi.",
     icon: Smartphone,
     gradient: "from-blue-500 to-indigo-500",
   },
@@ -49,7 +37,8 @@ const allServices = [
     id: 3,
     category: "Development",
     title: "Web Development",
-    desc: "Website Company Profile, E-Commerce, dan Web App yang responsif, SEO-friendly, dan aman.",
+    
+    desc: "Jasa pembuatan website Company Profile, E-Commerce, dan Portal Berita yang modern, cepat, dan SEO Friendly agar mudah ditemukan di Google.",
     icon: Globe,
     gradient: "from-sky-500 to-blue-600",
   },
@@ -57,17 +46,18 @@ const allServices = [
     id: 4,
     category: "Creative",
     title: "UI/UX Design",
-    desc: "Perancangan antarmuka aplikasi yang intuitif dan menarik untuk meningkatkan pengalaman pengguna.",
+    desc: "Perancangan desain antarmuka aplikasi (User Interface) yang intuitif, modern, dan fokus pada pengalaman pengguna (User Experience).",
     icon: LayoutTemplate,
     gradient: "from-pink-500 to-rose-500",
   },
 
-  // 2. INTELLIGENCE (AI & IoT)
+  
   {
     id: 5,
     category: "Intelligence",
     title: "Artificial Intelligence",
-    desc: "Implementasi AI, Machine Learning, dan Chatbot Cerdas untuk otomatisasi layanan publik dan bisnis.",
+    
+    desc: "Implementasi teknologi AI, Machine Learning, dan Chatbot Cerdas untuk otomatisasi layanan publik pemerintahan dan efisiensi bisnis.",
     icon: BrainCircuit,
     gradient: "from-violet-600 to-purple-500",
   },
@@ -75,7 +65,8 @@ const allServices = [
     id: 6,
     category: "Intelligence",
     title: "Internet of Things (IoT)",
-    desc: "Sistem IoT Smart City dan Smart Office untuk monitoring perangkat fisik secara real-time.",
+    
+    desc: "Solusi IoT Smart City dan Smart Office. Sistem monitoring aset dan lingkungan secara real-time untuk Medan dan sekitarnya.",
     icon: Wifi,
     gradient: "from-fuchsia-600 to-pink-600",
   },
@@ -83,17 +74,18 @@ const allServices = [
     id: 7,
     category: "Intelligence",
     title: "Smart CCTV Integration",
-    desc: "Integrasi CCTV dengan analitik cerdas (Face Recognition) untuk keamanan gedung dan kota.",
+    desc: "Integrasi CCTV cerdas dengan fitur Face Recognition (Pengenal Wajah) dan analitik video untuk keamanan gedung dan kota.",
     icon: Radio,
     gradient: "from-purple-500 to-indigo-500",
   },
 
-  // 3. INFRASTRUCTURE
+  
   {
     id: 8,
     category: "Infrastructure",
     title: "Network Infrastructure",
-    desc: "Instalasi jaringan LAN/WAN, Fiber Optic, dan manajemen bandwidth untuk konektivitas stabil.",
+    
+    desc: "Jasa instalasi jaringan LAN, Fiber Optic, dan manajemen Mikrotik/Cisco untuk konektivitas internet kantor yang stabil dan cepat.",
     icon: Network,
     gradient: "from-cyan-500 to-teal-500",
   },
@@ -101,7 +93,7 @@ const allServices = [
     id: 9,
     category: "Infrastructure",
     title: "Server & Cloud",
-    desc: "Konfigurasi Server Fisik (VPS) dan Cloud (AWS/GCP/Azure) serta manajemen Data Center.",
+    desc: "Konfigurasi Server Fisik (VPS), Dedicated Server, dan Cloud Computing (AWS/GCP/Azure) serta manajemen Data Center yang aman.",
     icon: Server,
     gradient: "from-slate-500 to-gray-500",
   },
@@ -109,7 +101,8 @@ const allServices = [
     id: 10,
     category: "Infrastructure",
     title: "IT Procurement",
-    desc: "Pengadaan perangkat keras (Hardware): Laptop, Server, Videotron, dan lisensi software resmi.",
+    
+    desc: "Layanan pengadaan perangkat keras (Hardware): Laptop, Server, Videotron, dan lisensi software resmi untuk instansi pemerintahan.",
     icon: ShoppingBag,
     gradient: "from-emerald-500 to-green-500",
   },
@@ -117,17 +110,17 @@ const allServices = [
     id: 11,
     category: "Infrastructure",
     title: "Migration Services",
-    desc: "Layanan migrasi database dan sistem legacy ke teknologi terbaru dengan jaminan keamanan data.",
+    desc: "Jasa migrasi database dan pemindahan sistem lama (Legacy) ke teknologi terbaru dengan jaminan keamanan data 100%.",
     icon: HardDrive,
     gradient: "from-teal-500 to-cyan-600",
   },
 
-  // 4. SECURITY & MAINTENANCE
+  
   {
     id: 12,
     category: "Security",
     title: "Cybersecurity",
-    desc: "Audit keamanan sistem, firewall, dan proteksi data dari serangan ransomware/malware.",
+    desc: "Layanan keamanan siber menyeluruh: Audit sistem, pemasangan Firewall, dan proteksi data vital dari serangan ransomware.",
     icon: ShieldCheck,
     gradient: "from-red-600 to-orange-600",
   },
@@ -135,7 +128,8 @@ const allServices = [
     id: 13,
     category: "Security",
     title: "Penetration Testing",
-    desc: "Uji coba peretasan (Ethical Hacking) untuk menemukan celah keamanan pada aplikasi Anda.",
+    
+    desc: "Uji coba peretasan (Ethical Hacking) untuk menemukan dan menutup celah keamanan pada aplikasi web/mobile Anda.",
     icon: Search,
     gradient: "from-orange-500 to-amber-500",
   },
@@ -143,17 +137,18 @@ const allServices = [
     id: 14,
     category: "Security",
     title: "IT Maintenance",
-    desc: "Kontrak pemeliharaan rutin perangkat IT dan support teknis 24/7.",
+    
+    desc: "Kontrak pemeliharaan rutin perangkat IT (Komputer/Jaringan) dan dukungan teknis 24/7 untuk kelancaran operasional kantor.",
     icon: Wrench,
     gradient: "from-gray-500 to-slate-600",
   },
 
-  // 5. ENTERPRISE SOLUTIONS
+  
   {
     id: 15,
     category: "Enterprise",
     title: "System Integration",
-    desc: "Mengintegrasikan berbagai aplikasi (API) agar data tersinkronisasi antar divisi.",
+    desc: "Layanan integrasi sistem antar aplikasi (API Integration) agar data tersinkronisasi otomatis antar divisi perusahaan.",
     icon: Settings,
     gradient: "from-blue-600 to-indigo-700",
   },
@@ -161,7 +156,8 @@ const allServices = [
     id: 16,
     category: "Enterprise",
     title: "ERP & CRM Systems",
-    desc: "Aplikasi Enterprise Resource Planning (ERP) untuk manajemen keuangan, stok, dan SDM.",
+    
+    desc: "Implementasi software ERP dan CRM untuk manajemen keuangan, stok barang, dan data pelanggan dalam satu dashboard terpusat.",
     icon: BarChart3,
     gradient: "from-indigo-600 to-violet-600",
   },
@@ -169,7 +165,8 @@ const allServices = [
     id: 17,
     category: "Creative",
     title: "SEO Optimization",
-    desc: "Optimasi website agar muncul di halaman 1 Google dan meningkatkan traffic organik.",
+    
+    desc: "Jasa optimasi website (SEO) agar tampil di halaman 1 Google, mendatangkan trafik organik, dan meningkatkan penjualan.",
     icon: Layers,
     gradient: "from-blue-400 to-cyan-400",
   },
@@ -177,7 +174,7 @@ const allServices = [
     id: 18,
     category: "Enterprise",
     title: "IT Training",
-    desc: "Pelatihan dan workshop teknologi untuk meningkatkan skill digital karyawan instansi.",
+    desc: "Pelatihan (Training) teknologi dan workshop digital untuk peningkatan skill karyawan instansi dan perusahaan.",
     icon: MonitorPlay,
     gradient: "from-yellow-500 to-orange-500",
   },
@@ -205,7 +202,7 @@ export default function ServicesPage() {
     <main className="bg-[#020617] min-h-screen text-white selection:bg-blue-500 selection:text-white">
       <Navbar />
 
-      {/* --- HERO SECTION --- */}
+
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center" />
@@ -217,40 +214,35 @@ export default function ServicesPage() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-blue-400 text-xs font-bold tracking-[0.2em] uppercase mb-6"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-            Layanan IT & Solusi Digital
+            Layanan IT Lengkap
           </motion.div>
 
-          {/* TITLE: UPDATED HERO STYLE */}
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight"
           >
-            Capabilities that <br />
-            {/* Solid Blue + Neon Shadow */}
+            Comprehensive IT <br />
+            
             <span className="text-blue-400 drop-shadow-[0_0_25px_rgba(96,165,250,0.5)]">
-              Drive Transformation.
+              Solutions in Medan.
             </span>
           </motion.h1>
 
-          {/* SEO PARAGRAPH */}
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed"
           >
-            Sebagai <strong className="text-white">Software House</strong> dan
-            Konsultan IT Terpercaya, kami menyediakan{" "}
-            <strong>18+ Layanan Teknologi</strong> mulai dari pengembangan
-            aplikasi, infrastruktur jaringan, hingga keamanan siber untuk
-            mempercepat transformasi digital Anda.
+            Sebagai <strong className="text-white">Software House & Konsultan IT Terpercaya</strong>, kami menyediakan <strong>18+ Layanan Teknologi</strong> mulai dari jasa pembuatan aplikasi, infrastruktur jaringan, hingga keamanan siber untuk mempercepat transformasi digital bisnis Anda di <strong className="text-white">Sumatera Utara</strong>.
           </motion.p>
         </div>
       </section>
-
-      {/* --- CATEGORY TABS --- */}
+      
       <section className="sticky top-20 z-40 bg-[#020617]/80 backdrop-blur-md border-y border-white/5 py-4">
         <div className="max-w-7xl mx-auto px-6 overflow-x-auto no-scrollbar">
           <div className="flex gap-2 md:justify-center min-w-max">
@@ -274,7 +266,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* --- SERVICES GRID --- */}
+
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -283,7 +275,7 @@ export default function ServicesPage() {
           >
             <AnimatePresence mode="popLayout">
               {filteredServices.map((service) => (
-                <ServiceCard key={service.id} item={service} />
+                <ServiceCard key={service.title} item={service} />
               ))}
             </AnimatePresence>
           </motion.div>
@@ -296,15 +288,14 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* --- CTA SECTION --- */}
+
       <section className="py-24 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-black text-white mb-8">
-            Tidak menemukan layanan yang dicari?
+            Butuh Solusi Custom?
           </h2>
           <p className="text-gray-400 text-lg mb-10">
-            Kami menyediakan solusi <strong>IT Custom</strong> sesuai kebutuhan
-            unik perusahaan Anda. Diskusikan tantangan Anda bersama kami.
+            Kami menyediakan layanan <strong>Konsultasi IT Gratis</strong> untuk menganalisa kebutuhan unik perusahaan Anda.
           </p>
           <a
             href="/contact"
@@ -320,7 +311,7 @@ export default function ServicesPage() {
   );
 }
 
-// --- COMPONENT: SERVICE CARD ---
+
 function ServiceCard({ item }) {
   return (
     <motion.div
@@ -345,7 +336,7 @@ function ServiceCard({ item }) {
           </span>
         </div>
 
-        {/* H3 Title: Penting untuk SEO */}
+
         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">
           {item.title}
         </h3>

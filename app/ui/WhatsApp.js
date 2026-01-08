@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function WhatsAppFloat() {
-  // Config
+  
   const phoneNumber = "628138050510";
   const message = "halo DMP, saya mau konsultasi teknologi";
   const encodedMessage = encodeURIComponent(message);
@@ -18,10 +18,10 @@ export default function WhatsAppFloat() {
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp"
       >
-        {/* Container Tombol: Flat Green Circle */}
+        
         <div className="flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full hover:bg-[#20b857] transition-colors duration-300 shadow-lg">
           
-          {/* Icon WhatsApp Putih Polos */}
+          
           <div className="w-9 h-9 text-white">
             <svg 
               viewBox="0 0 24 24" 

@@ -7,13 +7,13 @@ import { Clock, Layers, ShieldCheck, Cpu } from "lucide-react";
 export default function WhyChooseUs() {
   return (
     <section className="relative w-full py-32 bg-[#020617] overflow-hidden">
-      {/* Background Decor */}
+      
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* --- HEADER (UPDATED STYLE) --- */}
+        
         <div className="mb-20 md:text-center max-w-4xl mx-auto">
-          {/* Badge (Opsional, agar lebih konsisten dengan hero) */}
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </motion.div>
 
-          {/* JUDUL H2: Gaya Baru (Glow) */}
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,13 +33,13 @@ export default function WhyChooseUs() {
             className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-tight"
           >
             Built for <br className="hidden md:block" />
-            {/* Ganti text-blue-500 dengan text-blue-400 + drop-shadow */}
+            
             <span className="text-blue-400 drop-shadow-[0_0_25px_rgba(96,165,250,0.5)]">
               Scale & Security.
             </span>
           </motion.h2>
 
-          {/* DESKRIPSI P: Gaya Baru (Lebih rapi) */}
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,30 +53,30 @@ export default function WhyChooseUs() {
           </motion.p>
         </div>
 
-        {/* --- SPOTLIGHT GRID (Tidak berubah, sudah bagus) --- */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* CARD 1: EXPERIENCE */}
+          
           <SpotlightCard
             icon={<Clock size={40} className="text-blue-400" />}
             title="8+ Years of Excellence"
             desc="Telah dipercaya oleh berbagai sektor industri dan pemerintahan selama lebih dari sewindu. Pengalaman kami adalah jaminan keberhasilan proyek Anda."
           />
 
-          {/* CARD 2: INTEGRATED SOLUTION */}
+
           <SpotlightCard
             icon={<Layers size={40} className="text-purple-400" />}
             title="End-to-End Ecosystem"
             desc="Solusi satu atap. Dari Software, Mobile App, AI, hingga pengadaan Server dan Hardware. Kami mengurus semuanya agar Anda fokus pada bisnis."
           />
 
-          {/* CARD 3: SECURITY FIRST */}
+
           <SpotlightCard
             icon={<ShieldCheck size={40} className="text-emerald-400" />}
             title="Security & Reliability"
             desc="Keamanan bukan opsi, tapi prioritas. Kami menerapkan standar keamanan siber berlapis untuk melindungi data aset dan reputasi perusahaan Anda."
           />
 
-          {/* CARD 4: FUTURE READY */}
+
           <SpotlightCard
             icon={<Cpu size={40} className="text-orange-400" />}
             title="Future-Proof Technology"
@@ -88,7 +88,7 @@ export default function WhyChooseUs() {
   );
 }
 
-// --- SUB KOMPONEN: KARTU DENGAN EFEK SPOTLIGHT (Tidak diubah) ---
+
 function SpotlightCard({ icon, title, desc }) {
   const divRef = useRef(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -117,7 +117,7 @@ function SpotlightCard({ icon, title, desc }) {
       viewport={{ once: true }}
       className="relative w-full h-full rounded-3xl border border-white/10 bg-[#0B1120] overflow-hidden p-10 group"
     >
-      {/* SPOTLIGHT EFFECT LAYER */}
+      
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
@@ -125,7 +125,7 @@ function SpotlightCard({ icon, title, desc }) {
         }}
       />
 
-      {/* CONTENT */}
+
       <div className="relative z-10">
         <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-xl backdrop-blur-md transition-transform duration-300 group-hover:scale-110 group-hover:bg-white/10">
           {icon}
@@ -138,7 +138,7 @@ function SpotlightCard({ icon, title, desc }) {
         </p>
       </div>
 
-      {/* DECORATIVE BORDER GLOW */}
+
       <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-transparent transition duration-300 group-hover:ring-white/20" />
     </motion.div>
   );

@@ -51,12 +51,12 @@ const certifications = [
 export default function LegalCompliance() {
     return (
         <section className="relative w-full py-24 bg-[#020617] border-b border-white/5 overflow-hidden">
-            {/* Background Ambience */}
+            
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                {/* HEADER */}
+                
                 <div className="text-center mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -86,7 +86,7 @@ export default function LegalCompliance() {
                     </p>
                 </div>
 
-                {/* CARDS GRID - Gunakan items-stretch agar tinggi sama */}
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                     {certifications.map((cert, index) => (
                         <CertificationCard
@@ -101,12 +101,12 @@ export default function LegalCompliance() {
     );
 }
 
-// --- SUB-COMPONENT: CARD ---
+
 function CertificationCard({ data, index }) {
     const isLink = !!data.link;
     const Wrapper = isLink ? "a" : "div";
 
-    // Style config based on status
+    
     const isVerified = data.status === "Verified";
     const statusColor = isVerified
         ? "text-green-400 bg-green-500/10 border-green-500/20"
@@ -118,7 +118,7 @@ function CertificationCard({ data, index }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.15 }}
-            className="h-full" // PASTIKAN CONTAINER UTAMA FULL HEIGHT
+            className="h-full"
         >
             <Wrapper
                 href={data.link}
@@ -132,12 +132,12 @@ function CertificationCard({ data, index }) {
                   : "hover:border-white/20"
           }
         `}>
-                {/* Glow Background Effect */}
+            
                 <div
                     className={`absolute top-0 right-0 w-32 h-32 bg-${data.color}-500/10 blur-[60px] rounded-full pointer-events-none transition-all duration-500 group-hover:bg-${data.color}-500/20`}
                 />
 
-                {/* 1. Header Icon & Status (Fixed Top) */}
+
                 <div className="flex justify-between items-start mb-6 relative z-10">
                     <div
                         className={`w-14 h-14 rounded-2xl flex items-center justify-center border border-white/10 bg-white/5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -164,7 +164,7 @@ function CertificationCard({ data, index }) {
                     </div>
                 </div>
 
-                {/* 2. Content Area (FLEX GROW - Mengisi ruang kosong) */}
+
                 <div className="relative z-10 flex-grow flex flex-col">
                     <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-200 transition-colors">
                         {data.title}
@@ -178,7 +178,7 @@ function CertificationCard({ data, index }) {
                     </p>
                 </div>
 
-                {/* 3. Footer / Registration Number (MT-AUTO - Didorong ke paling bawah) */}
+
                 <div className="relative z-10 mt-auto">
                     <div className="bg-black/30 rounded-lg p-3 border border-white/5">
                         <p className="text-[10px] text-gray-500 uppercase font-bold mb-1">
@@ -190,7 +190,7 @@ function CertificationCard({ data, index }) {
                     </div>
                 </div>
 
-                {/* Link Arrow (Only for E-Katalog) */}
+
                 {isLink && (
                     <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0 z-20">
                         <ExternalLink className="text-blue-400" size={20} />
