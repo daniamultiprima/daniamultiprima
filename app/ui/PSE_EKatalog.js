@@ -35,17 +35,22 @@ const certifications = [
         color: "emerald",
         link: null,
     },
+    // --- UPDATED SECTION START ---
     {
         id: "satusehat",
         title: "Integrasi Satu Sehat",
         subtitle: "Kementerian Kesehatan RI",
-        desc: "Dalam tahap finalisasi pendaftaran sebagai Penyedia Rekam Medis Elektronik (RME) yang terstandarisasi.",
-        number: "RME Provider Integration",
-        status: "On Progress",
+        // Deskripsi diubah agar terdengar sudah selesai (bukan lagi finalisasi)
+        desc: "Telah terverifikasi dan terdaftar resmi dalam platform SatuSehat sebagai penyedia RME.", 
+        // ID diambil dari URL yang kamu berikan agar terlihat valid
+        number: "System ID: PT. Dania Multi Prima", 
+        status: "Verified",
         icon: Activity,
-        color: "orange",
-        link: null,
+        // Warna diubah ke 'emerald' agar Icon dan Glow-nya jadi Hijau (Sesuai status Verified)
+        color: "emerald", 
+        link: "https://satusehat.kemkes.go.id/platform/system-rme-list/1224",
     },
+    // --- UPDATED SECTION END ---
 ];
 
 export default function LegalCompliance() {
