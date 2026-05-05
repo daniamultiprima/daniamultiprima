@@ -38,30 +38,44 @@ export default function Navbar() {
         className={`fixed top-0 w-full z-50 transition-all duration-500 border-b border-transparent ${
           scrolled
             ? "bg-[#020617]/90 backdrop-blur-xl border-white/10 py-3 shadow-2xl"
-            : "bg-transparent py-6"
+            : "bg-transparent py-5 md:py-6"
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-between h-16 md:h-16">
-            {/* --- TEXT LOGO --- */}
+          <div className="flex items-center justify-between">
+            
+            {/* --- CSS/TEXT LOGO START --- */}
             <Link
               href="/"
-              className="group relative z-50 flex flex-col justify-center"
+              className="group relative z-50 flex flex-col items-center justify-center gap-2 py-1"
             >
-              <div className="flex items-baseline gap-1">
-                <span className="text-white font-black text-3xl md:text-4xl tracking-tighter leading-none group-hover:text-gray-200 transition-colors">
-                  DANIA
-                </span>
-                <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-blue-600 rounded-full mb-1 group-hover:scale-125 group-hover:bg-blue-400 transition-all duration-300 shadow-[0_0_10px_rgba(37,99,235,0.8)]" />
+              {/* Kotak DMP */}
+              <div className="flex items-center gap-1.5 md:gap-2">
+                {/* Huruf D */}
+                <div className="flex items-center justify-center w-9 h-9 md:w-[42px] md:h-[42px] bg-gradient-to-br from-blue-600 to-blue-900 border border-blue-400/50 rounded-md shadow-[0_0_15px_rgba(37,99,235,0.3)] group-hover:shadow-[0_0_25px_rgba(37,99,235,0.6)] group-hover:-translate-y-0.5 transition-all duration-300">
+                  <span className="text-white font-serif font-bold text-xl md:text-2xl mt-0.5">D</span>
+                </div>
+                
+                {/* Huruf M */}
+                <div className="flex items-center justify-center w-9 h-9 md:w-[42px] md:h-[42px] bg-gradient-to-br from-slate-500 to-slate-800 border border-slate-400/50 rounded-md shadow-[0_0_15px_rgba(100,116,139,0.3)] group-hover:shadow-[0_0_25px_rgba(148,163,184,0.5)] group-hover:-translate-y-0.5 transition-all duration-300 delay-75">
+                  <span className="text-white font-serif font-bold text-xl md:text-2xl mt-0.5">M</span>
+                </div>
+
+                {/* Huruf P */}
+                <div className="flex items-center justify-center w-9 h-9 md:w-[42px] md:h-[42px] bg-gradient-to-br from-blue-600 to-blue-900 border border-blue-400/50 rounded-md shadow-[0_0_15px_rgba(37,99,235,0.3)] group-hover:shadow-[0_0_25px_rgba(37,99,235,0.6)] group-hover:-translate-y-0.5 transition-all duration-300 delay-150">
+                  <span className="text-white font-serif font-bold text-xl md:text-2xl mt-0.5">P</span>
+                </div>
               </div>
 
-              <div className="flex items-center gap-2 mt-1 opacity-80 group-hover:opacity-100 transition-opacity">
-                <span className="h-[1px] w-4 bg-blue-500 group-hover:w-8 group-hover:bg-blue-500 transition-all duration-500" />
-                <span className="text-gray-400 text-[10px] md:text-[11px] font-bold tracking-[0.35em] uppercase group-hover:text-blue-400 transition-colors">
-                  Multi Prima
-                </span>
-              </div>
+              {/* Garis Pemisah Bawah (Glow Line) */}
+              <div className="w-[110%] h-[2px] bg-gradient-to-r from-transparent via-blue-400/60 to-transparent group-hover:via-blue-300 transition-colors duration-500" />
+
+              {/* Teks Bawah */}
+              <span className="text-white text-[11px] md:text-[13px] font-bold uppercase tracking-[0.25em] md:tracking-[0.35em] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] group-hover:text-blue-100 transition-colors duration-300">
+                Dania Multi Prima
+              </span>
             </Link>
+            {/* --- CSS/TEXT LOGO END --- */}
 
             <ul className="hidden lg:flex items-center gap-1 bg-white/5 border border-white/5 rounded-full p-1.5 backdrop-blur-sm list-none m-0">
               {navItems.map((item) => {
@@ -75,10 +89,8 @@ export default function Navbar() {
                         block px-6 py-2.5 text-sm font-bold rounded-full transition-all duration-300
                         ${
                           isActive
-                            ? 
-                              "bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]"
-                            : 
-                              "text-gray-300 hover:text-white hover:bg-white/10"
+                            ? "bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]"
+                            : "text-gray-300 hover:text-white hover:bg-white/10"
                         }
                       `}
                     >
@@ -109,14 +121,13 @@ export default function Navbar() {
               </Link>
             </div>
 
-
-            <div className="lg:hidden z-50">
+            <div className="lg:hidden z-50 flex items-center">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
                 aria-label="Toggle Menu"
               >
-                {isOpen ? <X size={30} /> : <Menu size={30} />}
+                {isOpen ? <X size={32} /> : <Menu size={32} />}
               </button>
             </div>
           </div>
@@ -138,7 +149,7 @@ export default function Navbar() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -50, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="fixed top-0 left-0 w-full bg-[#020617] border-b border-white/10 z-40 pt-24 pb-8 px-6 shadow-2xl lg:hidden"
+              className="fixed top-0 left-0 w-full bg-[#020617] border-b border-white/10 z-40 pt-28 pb-8 px-6 shadow-2xl lg:hidden"
             >
               <div className="flex flex-col space-y-2">
                 {navItems.map((item, idx) => {
