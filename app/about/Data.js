@@ -1,240 +1,289 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Navbar from '@/ui/Navbar';
-import Footer from '@/ui/Footer';
-import { motion } from 'framer-motion';
-import { 
-  Target, Shield, Globe2, Rocket, 
-  ArrowUpRight, Cpu, CheckCircle2 
-} from 'lucide-react';
+import React from "react";
+import Navbar from "@/ui/Navbar";
+import Footer from "@/ui/Footer";
+import { motion } from "framer-motion";
+import {
+    Swords,
+    Shield,
+    Zap,
+    Target,
+    Scroll,
+    ArrowRight,
+    Cpu,
+    Trophy,
+    Heart,
+    Star,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function AboutPage() {
-  return (
-    <main className="bg-[#020617] min-h-screen text-white selection:bg-blue-500 selection:text-white">
-      <Navbar />
+    return (
+        <main className="bg-[#020617] min-h-screen text-white selection:bg-yellow-400 selection:text-black font-sans">
+            <Navbar />
 
+            {/* HEADER: NEO-BRUTALIST INFO PANEL */}
+            <section className="relative w-full pt-32 md:pt-40 pb-20 px-6 overflow-hidden bg-[#020617] border-b-[8px] border-black">
+                {/* Retro Dot Matrix Background */}
+                <div className="absolute inset-0 bg-[radial-gradient(#334155_2px,transparent_2px)] bg-[size:24px_24px] pointer-events-none opacity-40" />
 
-      <section className="relative pt-40 pb-20 px-6 border-b border-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="absolute top-0 right-0 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none" />
+                <div className="max-w-[1000px] mx-auto relative z-10 flex flex-col gap-16 items-center text-center">
+                    {/* Top: Huge Typography */}
+                    <div className="w-full flex flex-col items-center">
+                        <div className="inline-block bg-blue-600 text-white border-[4px] border-black shadow-[6px_6px_0_0_#000] px-4 py-2 mb-8">
+                            <h1 className="font-mono text-xs md:text-sm font-black tracking-widest uppercase">
+                                Software House & Konsultan IT Medan Sejak 2017
+                            </h1>
+                        </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-8"
-          >
-            
-            <h1 className="text-blue-500 font-bold tracking-[0.2em] text-sm uppercase block mb-4">
-              Software House & Konsultan IT Medan Sejak 2017
-            </h1>
+                        <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] font-black text-white leading-[1.1] tracking-tighter font-logo uppercase drop-shadow-[4px_4px_0_#000] md:drop-shadow-[6px_6px_0_#000] break-words">
+                            Engineering <br />
+                            <span className="text-blue-400 drop-shadow-[6px_6px_0_#000]">
+                                Digital Future.
+                            </span>
+                        </h2>
+                    </div>
 
+                    {/* Bottom: Retro Document Panel */}
+                    <div className="w-full max-w-[800px] text-left">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="bg-[#e2e8f0] border-[6px] border-black p-8 md:p-10 shadow-[16px_16px_0_0_#000] relative">
+                            {/* Paperclips / Screws at corners */}
+                            <div className="absolute top-2 left-2 w-3 h-3 bg-gray-400 border-[2px] border-black rounded-full shadow-[inset_1px_1px_0_0_#fff]" />
+                            <div className="absolute top-2 right-2 w-3 h-3 bg-gray-400 border-[2px] border-black rounded-full shadow-[inset_1px_1px_0_0_#fff]" />
+                            <div className="absolute bottom-2 left-2 w-3 h-3 bg-gray-400 border-[2px] border-black rounded-full shadow-[inset_1px_1px_0_0_#fff]" />
+                            <div className="absolute bottom-2 right-2 w-3 h-3 bg-gray-400 border-[2px] border-black rounded-full shadow-[inset_1px_1px_0_0_#fff]" />
 
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight">
-              Engineering <br />
-              <span className="text-blue-400 drop-shadow-[0_0_25px_rgba(96,165,250,0.5)]">
-                Digital Future.
-              </span>
-            </h2>
-          </motion.div>
+                            <p className="font-sans text-base md:text-lg text-gray-800 font-bold leading-relaxed mt-2 text-justify">
+                                <span className="bg-black text-white px-2 py-1 mx-1 font-black shadow-[2px_2px_0_0_#3b82f6]">
+                                    PT. Dania Multi Prima
+                                </span>
+                                adalah perusahaan{" "}
+                                <strong className="text-black underline decoration-[3px] decoration-blue-500">
+                                    Software House
+                                </strong>{" "}
+                                dan{" "}
+                                <strong className="text-black underline decoration-[3px] decoration-blue-500">
+                                    Konsultan IT
+                                </strong>{" "}
+                                profesional yang berbasis di Medan & Deli
+                                Serdang.
+                                <br />
+                                <br />
+                                Kami mengintegrasikan rekayasa perangkat lunak,{" "}
+                                <strong className="text-black bg-yellow-300 px-1 border-[2px] border-black">
+                                    Keamanan Siber
+                                </strong>
+                                , dan{" "}
+                                <strong className="text-black bg-cyan-300 px-1 border-[2px] border-black">
+                                    Solusi AI
+                                </strong>{" "}
+                                untuk membangun infrastruktur digital bagi
+                                instansi Pemerintah dan Swasta di seluruh
+                                Indonesia.
+                            </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12"
-          >
-            
-            <p className="text-xl text-gray-400 leading-relaxed">
-              <strong className="text-white">PT. Dania Multi Prima</strong> adalah perusahaan <strong className="text-white">Software House</strong> dan <strong className="text-white">Konsultan IT</strong> profesional yang berbasis di <strong className="text-white">Medan & Deli Serdang</strong>. 
-              <br/><br/>
-              Kami mengintegrasikan rekayasa perangkat lunak, <strong className="text-white">Keamanan Siber</strong>, dan <strong className="text-white">Solusi AI</strong> untuk membangun infrastruktur digital bagi instansi Pemerintah dan Swasta di seluruh Indonesia.
+                            <div className="mt-8 pt-6 border-t-[4px] border-black border-dashed flex items-center justify-between">
+                                <div className="flex gap-2">
+                                    <div className="w-2 h-8 bg-black" />
+                                    <div className="w-1 h-8 bg-black" />
+                                    <div className="w-3 h-8 bg-black" />
+                                    <div className="w-1 h-8 bg-black" />
+                                    <div className="w-4 h-8 bg-black" />
+                                    <div className="w-1 h-8 bg-black" />
+                                    <div className="w-2 h-8 bg-black" />
+                                </div>
+                                <span className="font-mono text-xs font-black text-black tracking-widest uppercase">
+                                    ESTABLISHED IN NORTH SUMATRA
+                                </span>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CONTENT: QUEST LOG (VISION & MISSION) */}
+            <section className="py-20 px-6 relative z-20 bg-[#0f172a]">
+                <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                    {/* Main Quest: Vision */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-[#e2e8f0] border-[6px] border-black p-6 md:p-8 shadow-[12px_12px_0_0_#000] relative">
+                        {/* Pin / Nail */}
+                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-gray-400 border-[2px] border-black rounded-full shadow-[2px_2px_0_0_#000]" />
+
+                        <div className="flex items-center gap-3 border-b-[4px] border-black pb-4 mb-6">
+                            <Star
+                                size={28}
+                                className="text-yellow-500 fill-yellow-500 drop-shadow-[2px_2px_0_#000]"
+                            />
+                            <h3 className="font-logo text-2xl font-black text-black uppercase tracking-widest">
+                                MAIN QUEST (VISION)
+                            </h3>
+                        </div>
+
+                        <p className="font-sans font-black text-lg md:text-xl text-gray-800 leading-relaxed text-center">
+                            Menjadi{" "}
+                            <span className="text-blue-700 bg-blue-100 px-2 py-1 border-[2px] border-black shadow-[2px_2px_0_0_#000]">
+                                Mitra Teknologi No.1
+                            </span>{" "}
+                            yang mendorong transformasi digital pemerintahan dan
+                            bisnis melalui inovasi Software & AI.
+                        </p>
+                    </motion.div>
+
+                    {/* Objectives: Mission */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-black border-[6px] border-gray-400 p-6 md:p-8 shadow-[12px_12px_0_0_#000] relative">
+                        {/* Neon accent line */}
+                        <div className="absolute top-0 left-0 w-full h-[4px] bg-red-500 shadow-[0_0_10px_#ef4444]" />
+
+                        <div className="flex items-center gap-3 border-b-[4px] border-gray-600 pb-4 mb-6">
+                            <Scroll
+                                size={28}
+                                className="text-red-500 drop-shadow-[2px_2px_0_#000]"
+                            />
+                            <h3 className="font-logo text-2xl font-black text-white uppercase tracking-widest">
+                                OBJECTIVES (MISSION)
+                            </h3>
+                        </div>
+
+                        <div className="space-y-4">
+                            <MissionTask text="Menyediakan Jasa Pembuatan Aplikasi (Web & Android) Berkualitas Tinggi." />
+                            <MissionTask text="Mengembangkan Solusi Smart City & SIMRS Terintegrasi." />
+                            <MissionTask text="Implementasi Keamanan Siber & Kecerdasan Buatan (AI)." />
+                            <MissionTask text="Memberikan Layanan IT Support & Maintenance Jangka Panjang." />
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* SKILL TREE: VALUES */}
+            <section className="py-24 px-6 bg-[#020617] border-y-[8px] border-black relative overflow-hidden">
+                {/* Hexagon / Grid background */}
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#334155_2px,transparent_2px)] bg-[size:30px_30px] pointer-events-none" />
+
+                <div className="max-w-[1200px] mx-auto relative z-10 text-center">
+                    <h2 className="font-logo text-4xl md:text-5xl font-black text-white uppercase tracking-widest mb-16 drop-shadow-[4px_4px_0_#000]">
+                        <span className="text-cyan-400">#</span> PASSIVE SKILLS
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+                        <SkillCard
+                            title="Full Customization"
+                            desc="Software yang kami bangun 100% disesuaikan dengan alur kerja (business logic) perusahaan Anda, bukan sekadar template."
+                            icon={Cpu}
+                            color="cyan"
+                        />
+                        <SkillCard
+                            title="Cyber Security"
+                            desc="Aplikasi dirancang dengan arsitektur tahan retas dan standar keamanan data privasi tingkat tinggi."
+                            icon={Shield}
+                            color="red"
+                        />
+                        <SkillCard
+                            title="Ecosystem Sync"
+                            desc="Solusi End-to-End: Website, Mobile, API Gateway, dan Server terhubung secara mulus dalam satu ekosistem."
+                            icon={Zap}
+                            color="yellow"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* BOTTOM CTA: JOIN PARTY */}
+            <section className="py-32 px-6 bg-[#1e293b] text-center relative">
+                <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.1),rgba(0,0,0,0.1)_10px,transparent_10px,transparent_20px)] pointer-events-none" />
+
+                <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
+                    <Trophy
+                        size={80}
+                        className="text-yellow-400 drop-shadow-[4px_4px_0_#000] mb-8"
+                    />
+                    <h2 className="font-logo text-3xl md:text-5xl font-black text-white uppercase tracking-widest mb-6 drop-shadow-[4px_4px_0_#000]">
+                        READY TO START THE JOURNEY?
+                    </h2>
+                    <p className="font-sans text-gray-300 font-bold text-lg mb-10">
+                        Konsultasikan kebutuhan sistem Anda dengan tim ahli kami
+                        dan bangun masa depan digital bersama.
+                    </p>
+
+                    <Link href="/contact">
+                        <button className="group relative bg-yellow-400 text-black px-10 py-5 font-logo text-xl font-black uppercase tracking-widest border-[6px] border-black shadow-[8px_8px_0_0_#000] hover:translate-y-1 hover:translate-x-1 hover:shadow-[4px_4px_0_0_#000] hover:bg-white transition-all overflow-hidden flex items-center gap-4">
+                            <span className="relative z-10 group-hover:animate-pulse">
+                                PRESS START (JOIN PARTY)
+                            </span>
+                            <ArrowRight size={24} className="stroke-[4px]" />
+                            {/* Glitch block on hover */}
+                            <div className="absolute inset-0 bg-black translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-200 z-0 opacity-10" />
+                        </button>
+                    </Link>
+                </div>
+            </section>
+
+            <Footer />
+        </main>
+    );
+}
+
+function MissionTask({ text }) {
+    return (
+        <div className="flex gap-4 items-start group border-[2px] border-transparent hover:border-gray-600 hover:bg-gray-900 p-2 transition-all">
+            <div className="mt-1 flex-shrink-0 w-5 h-5 bg-black border-[2px] border-red-500 flex items-center justify-center shadow-[2px_2px_0_0_#ef4444] group-hover:bg-red-500 transition-colors">
+                {/* Checkmark square logic: normally empty, check when hover */}
+                <div className="w-2 h-2 bg-transparent group-hover:bg-black" />
+            </div>
+            <p className="font-sans text-sm font-bold text-gray-300 leading-relaxed group-hover:text-white">
+                {text}
             </p>
-            <div className="flex items-center gap-4 text-sm font-bold text-white/50">
-              <div className="h-px flex-1 bg-white/10" />
-              <span>ESTABLISHED IN NORTH SUMATRA</span>
+        </div>
+    );
+}
+
+function SkillCard({ title, desc, icon: Icon, color }) {
+    const colorMap = {
+        cyan: "bg-cyan-500 shadow-[8px_8px_0_0_#0891b2] border-cyan-300",
+        red: "bg-red-500 shadow-[8px_8px_0_0_#dc2626] border-red-300",
+        yellow: "bg-yellow-400 shadow-[8px_8px_0_0_#ca8a04] border-yellow-200",
+    };
+
+    const textHover = {
+        cyan: "group-hover:text-cyan-400",
+        red: "group-hover:text-red-400",
+        yellow: "group-hover:text-yellow-400",
+    };
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-[#0a0f1c] border-[6px] border-black p-8 flex flex-col items-center text-center shadow-[12px_12px_0_0_#000] hover:-translate-y-2 transition-transform duration-300 group">
+            {/* Skill Icon Frame */}
+            <div
+                className={`w-20 h-20 border-[4px] border-black flex items-center justify-center mb-8 ${colorMap[color]} group-hover:scale-110 transition-transform`}>
+                <Icon size={40} className="text-black stroke-[2.5px]" />
             </div>
-          </motion.div>
-        </div>
-      </section>
 
+            <h3
+                className={`font-logo text-2xl font-black text-white uppercase tracking-widest mb-4 ${textHover[color]} transition-colors`}>
+                {title}
+            </h3>
 
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[minmax(300px,auto)]">
-            
-            
-            <BentoCard className="md:col-span-2 bg-gradient-to-br from-[#0B1120] to-[#020617]">
-              <div className="flex flex-col justify-between h-full">
-                <div className="flex justify-between items-start mb-8">
-                  <Badge text="OUR VISION" icon={Rocket} />
-                  <ArrowUpRight className="text-white/20 w-8 h-8" />
-                </div>
-                <div>
-                  <h3 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-white">
-                    Menjadi <span className="text-blue-400">Mitra Teknologi No.1</span> yang mendorong transformasi digital pemerintahan dan bisnis melalui inovasi Software & AI.
-                  </h3>
-                </div>
-              </div>
-            </BentoCard>
+            <div className="w-8 h-[4px] bg-gray-700 mb-6 group-hover:w-16 transition-all duration-300" />
 
-
-            <BentoCard className="bg-blue-600 border-none relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-700" />
-              <div className="flex flex-col justify-center h-full items-center text-center relative z-10">
-                <span className="text-8xl font-black text-white tracking-tighter">
-                  08<span className="text-4xl align-top">+</span>
-                </span>
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-200 mt-2">
-                  Tahun Pengalaman
-                </p>
-              </div>
-            </BentoCard>
-
-
-            <BentoCard className="bg-[#0B1120] flex flex-col justify-between">
-              <div className="flex flex-col h-full">
-                <Badge text="OUR MISSION" icon={Target} />
-                <div className="mt-6 space-y-6 flex-grow">
-                  <MissionItem
-                    text="Menyediakan Jasa Pembuatan Aplikasi (Web & Android) Berkualitas."
-                  />
-                  <MissionItem
-                    text="Mengembangkan Solusi Smart City & SIMRS Terintegrasi."
-                  />
-                  <MissionItem
-                    text="Implementasi Keamanan Siber & Kecerdasan Buatan (AI)."
-                  />
-                  <MissionItem
-                    text="Memberikan Layanan IT Support & Maintenance Terbaik."
-                  />
-                </div>
-              </div>
-            </BentoCard>
-
-
-            <BentoCard className="md:col-span-2 bg-[#0B1120] relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center" />
-              <div className="relative z-10 flex flex-col h-full justify-between">
-                <div>
-                  <Badge text="WHO WE ARE" icon={Globe2} />
-                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-400 text-lg leading-relaxed">
-                    <p>
-                      Sebagai <strong className="text-white">Vendor IT Terpercaya di Medan</strong>, kami telah menangani 50+ proyek strategis mulai dari <strong className="text-white">Sistem Pemerintahan Berbasis Elektronik (SPBE)</strong>, Digitalisasi Rumah Sakit, hingga sistem ERP Perusahaan.
-                    </p>
-                    <p>
-                      Kami melayani seluruh wilayah Indonesia dengan standar kualitas global. Fokus kami adalah <strong className="text-white">Pembuatan Aplikasi Custom</strong> yang aman, cepat, dan sesuai kebutuhan bisnis Anda.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-12 flex gap-12 border-t border-white/10 pt-8">
-                  <div>
-                    <div className="text-3xl font-black text-white">50+</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">
-                      Proyek Selesai
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-black text-white">18+</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">
-                      Layanan IT
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </BentoCard>
-
-
-            <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
-              <ValueCard
-                title="Full Customization"
-                desc="Setiap bisnis itu unik. Kami membangun software yang 100% disesuaikan dengan alur kerja perusahaan Anda."
-                icon={Cpu}
-              />
-              <ValueCard
-                title="Cyber Security Ready"
-                desc="Keamanan data adalah prioritas. Aplikasi kami dibangun dengan standar keamanan siber tinggi untuk mencegah peretasan."
-                icon={Shield}
-              />
-              <ValueCard
-                title="Integrated Ecosystem"
-                desc="Solusi End-to-End: Mulai dari Website, Aplikasi Mobile, Integrasi API, hingga Infrastruktur Server Cloud."
-                icon={Globe2}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section className="py-24 border-t border-white/5 bg-[#050505]">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-8">
-            Cari Jasa Pembuatan Aplikasi Terbaik?
-          </h2>
-          <p className="text-xl text-gray-400 mb-10">
-            Konsultasikan kebutuhan IT Anda dengan tim ahli Dania Multi Prima. Kami siap membantu transformasi digital Anda.
-          </p>
-          <a
-            href="/contacts"
-            className="inline-flex items-center gap-3 bg-white text-black px-10 py-5 rounded-full font-bold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-          >
-            Hubungi Tim Kami <ArrowUpRight size={20} />
-          </a>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
-}
-
-
-function BentoCard({ children, className }) {
-   return (
-      <motion.div 
-         initial={{ opacity: 0, y: 30 }}
-         whileInView={{ opacity: 1, y: 0 }}
-         viewport={{ once: true }}
-         transition={{ duration: 0.5 }}
-         className={`p-10 md:p-12 rounded-[2.5rem] border border-white/10 hover:border-white/20 transition-colors duration-500 ${className}`}
-      >
-         {children}
-      </motion.div>
-   )
-}
-
-function Badge({ text, icon: Icon }) {
-   return (
-      <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-blue-400">
-         <Icon size={16} />
-         <span className="text-xs font-bold uppercase tracking-[0.2em]">{text}</span>
-      </div>
-   )
-}
-
-function MissionItem({ text }) {
-   return (
-      <div className="flex gap-4 group">
-         <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
-            <CheckCircle2 size={14} />
-         </div>
-         <p className="text-gray-400 leading-relaxed group-hover:text-white transition-colors">
-            {text}
-         </p>
-      </div>
-   )
-}
-
-function ValueCard({ title, desc, icon: Icon }) {
-   return (
-      <div className="bg-[#0B1120] p-10 rounded-[2rem] border border-white/10 hover:border-blue-500/50 transition-all duration-300 group">
-         <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 text-gray-400 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-lg">
-            <Icon size={28} />
-         </div>
-         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">{title}</h3>
-         <p className="text-gray-400 leading-relaxed">{desc}</p>
-      </div>
-   )
+            <p className="font-sans text-sm font-bold text-gray-400 leading-relaxed group-hover:text-gray-200 transition-colors">
+                {desc}
+            </p>
+        </motion.div>
+    );
 }

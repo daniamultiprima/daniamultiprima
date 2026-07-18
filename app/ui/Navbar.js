@@ -35,16 +35,16 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         aria-label="Main Navigation"
-        className={`fixed top-0 w-full z-50 transition-all duration-500 border-b border-transparent ${
+        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 border-b-[4px] ${
           scrolled
-            ? "bg-[#020617]/90 backdrop-blur-xl border-white/10 py-3 shadow-2xl"
-            : "bg-transparent py-5 md:py-6"
+            ? "bg-[#020617] border-b-[#1e293b] shadow-[0_4px_0_0_rgba(0,0,0,0.5)] py-3"
+            : "bg-transparent border-b-transparent shadow-none py-5 md:py-6"
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between">
             
-            {/* --- CSS/TEXT LOGO START --- */}
+            {/* --- CSS/TEXT LOGO START (Persis seperti Navbar 2 asli) --- */}
             <Link
               href="/"
               className="group relative z-50 flex flex-col items-center justify-center gap-2 py-1"
@@ -77,137 +77,92 @@ export default function Navbar() {
             </Link>
             {/* --- CSS/TEXT LOGO END --- */}
 
-            <ul className="hidden lg:flex items-center gap-1 bg-white/5 border border-white/5 rounded-full p-1.5 backdrop-blur-sm list-none m-0">
+
+            {/* DESKTOP MENU (Pixel Art Style) */}
+            <div className="hidden lg:flex items-center gap-8">
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
-
                 return (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className={`
-                        block px-6 py-2.5 text-sm font-bold rounded-full transition-all duration-300
-                        ${
-                          isActive
-                            ? "bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]"
-                            : "text-gray-300 hover:text-white hover:bg-white/10"
-                        }
-                      `}
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`font-logo text-[10px] md:text-[11px] uppercase tracking-widest transition-transform hover:-translate-y-1 ${
+                      isActive 
+                        ? "text-brand-light drop-shadow-[2px_2px_0px_#000]" 
+                        : "text-gray-300 hover:text-white drop-shadow-[2px_2px_0px_#000]"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
                 );
               })}
-            </ul>
+            </div>
 
+            {/* CTA BUTTON DESKTOP (Pixel Art Style) */}
             <div className="hidden lg:block">
               <Link
                 href="/contacts"
-                className={`
-                    group relative inline-flex items-center gap-2 px-6 py-3 font-extrabold text-sm uppercase tracking-wider rounded-lg transition-all duration-300
-                    ${
-                      pathname === "/contacts"
-                        ? "bg-white text-blue-900 shadow-[0_0_20px_rgba(255,255,255,0.4)]"
-                        : "bg-blue-600 hover:bg-blue-800 text-white"
-                    }
-                `}
+                className="inline-flex items-center justify-center px-6 py-3 font-logo text-[10px] uppercase text-white bg-brand border-[4px] border-b-[#1e3a8a] border-r-[#1e3a8a] border-t-[#93c5fd] border-l-[#93c5fd] hover:bg-brand-light active:border-t-[#1e3a8a] active:border-l-[#1e3a8a] active:border-b-[#93c5fd] active:border-r-[#93c5fd] transition-all"
               >
-                <span>CONTACTS</span>
-                <ArrowUpRight
-                  size={18}
-                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
+                <span className="mt-1 flex items-center gap-2 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.5)]">
+                  CONTACTS <ArrowUpRight size={14} className="stroke-[3px]" />
+                </span>
               </Link>
             </div>
 
+            {/* MOBILE MENU BUTTON (Pixel Art Style) */}
             <div className="lg:hidden z-50 flex items-center">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+                className="text-white p-2 bg-gray-800 border-[3px] border-b-black border-r-black border-t-gray-500 border-l-gray-500 active:border-t-black active:border-l-black active:border-b-gray-500 active:border-r-gray-500 transition-colors"
                 aria-label="Toggle Menu"
               >
-                {isOpen ? <X size={32} /> : <Menu size={32} />}
+                {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
               </button>
             </div>
           </div>
         </div>
       </motion.nav>
 
+      {/* MOBILE MENU (Pixel Art Style) */}
       <AnimatePresence>
         {isOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
-            />
-            <motion.div
-              initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -50, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="fixed top-0 left-0 w-full bg-[#020617] border-b border-white/10 z-40 pt-28 pb-8 px-6 shadow-2xl lg:hidden"
-            >
-              <div className="flex flex-col space-y-2">
-                {navItems.map((item, idx) => {
-                  const isActive = pathname === item.href;
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "100vh", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="fixed inset-0 w-full bg-[#020617] border-t-4 border-brand z-40 lg:hidden overflow-y-auto pt-32"
+          >
+            {/* Pixel Pattern Background */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '30px 30px' }}></div>
 
-                  return (
-                    <motion.div
-                      key={item.name}
-                      initial={{ x: -20, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: 0.1 + idx * 0.05 }}
-                    >
-                      <Link
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className={`
-                            flex items-center justify-between p-4 rounded-xl transition-all group
-                            ${
-                              isActive
-                                ? "bg-blue-600/20 border border-blue-500/50 text-white"
-                                : "text-gray-300 hover:text-white hover:bg-white/5 border border-transparent"
-                            }
-                        `}
-                      >
-                        <span className="font-bold text-lg tracking-wide">
-                          {item.name}
-                        </span>
-                        <ChevronRight
-                          size={18}
-                          className={`${
-                            isActive
-                              ? "text-blue-400"
-                              : "text-gray-600 group-hover:text-blue-500"
-                          } transition-colors`}
-                        />
-                      </Link>
-                    </motion.div>
-                  );
-                })}
-
-                <div className="h-[1px] bg-white/10 my-4" />
-
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                >
+            <div className="relative z-10 px-6 py-10 font-logo text-[11px] tracking-widest space-y-6 pb-32">
+              {navItems.map((item) => {
+                const isActive = pathname === item.href;
+                return (
                   <Link
-                    href="/contacts"
+                    key={item.name}
+                    href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="w-full flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] active:scale-95 uppercase tracking-widest text-sm"
+                    className={`flex items-center justify-between p-4 border-[3px] uppercase tracking-widest bg-gray-900 ${
+                      isActive ? "text-brand-light border-brand-light" : "text-gray-300 border-gray-700 hover:border-gray-500 hover:text-white"
+                    }`}
                   >
-                    Start Project <ArrowUpRight size={18} />
+                    <span className="drop-shadow-[2px_2px_0px_#000]">&gt; {item.name}</span>
+                    <ChevronRight size={16} className={isActive ? "text-brand-light" : "text-gray-500"} />
                   </Link>
-                </motion.div>
-              </div>
-            </motion.div>
-          </>
+                );
+              })}
+
+              <Link
+                href="/contacts"
+                onClick={() => setIsOpen(false)}
+                className="block text-center mt-10 bg-brand text-white py-5 border-[4px] border-b-[#1e3a8a] border-r-[#1e3a8a] border-t-[#93c5fd] border-l-[#93c5fd] active:border-t-[#1e3a8a] active:border-l-[#1e3a8a] active:border-b-[#93c5fd] active:border-r-[#93c5fd] transition-all uppercase tracking-widest text-[11px]"
+              >
+                <span className="drop-shadow-[2px_2px_0px_rgba(0,0,0,0.5)]">Start Project</span>
+              </Link>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

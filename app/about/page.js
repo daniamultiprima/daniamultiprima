@@ -2,19 +2,17 @@ import Data from "./Data"
 import Script from "next/script"
 
 export const metadata = {
-    
-    title: 'Tentang Kami - Software House & Konsultan IT Terbaik Medan | DMP',
+    title: 'Profil Software House & IT Konsultan | DMP',
     
     
     description: 'Profil PT. Dania Multi Prima (DMP). Perusahaan Teknologi & Software House di Medan yang berpengalaman 8+ tahun sebagai Vendor IT Pemerintahan (SPBE), Pembuatan Aplikasi Android, Website, dan SIMRS di Indonesia.',
     
     
     keywords: [
-        
         'Profil PT Dania Multi Prima', 
         'Sejarah Dania Multi Prima', 
         'Visi Misi Dania Multi Prima',
-        
+        'Daftar Software House Medan',
         
         'Software House Medan', 
         'Konsultan IT Medan', 
@@ -22,11 +20,11 @@ export const metadata = {
         'Vendor IT Pemerintahan Sumut',
         'Jasa Pembuatan Website Profesional',
         
-        
         'Programmer Deli Serdang', 
         'IT Consultant North Sumatra',
         'Perusahaan IT Terpercaya Indonesia',
-        
+        'Tim Programmer Medan',
+        'Pengembang Aplikasi Berpengalaman Sumut',
         
         'Pengembang AI Indonesia',
         'Sistem Smart City',

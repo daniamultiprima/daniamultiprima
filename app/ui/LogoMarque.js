@@ -35,32 +35,57 @@ const row2 = partners.slice(Math.ceil(partners.length / 2));
 
 export default function LogoMarquee() {
   return (
-    <section className="relative w-full py-20 md:py-28 bg-[#050505] overflow-hidden flex flex-col items-center justify-center">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-[#050505] to-[#050505] pointer-events-none" />
+    <section className="relative w-full py-20 md:py-28 bg-[#020617] border-b-[8px] border-black overflow-hidden flex flex-col items-center justify-center">
+      
+      {/* Background Pixel Dots */}
+      <div 
+        className="absolute inset-0 opacity-10 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)',
+          backgroundSize: '30px 30px'
+        }}
+      />
 
-      <div className="relative z-10 text-center mb-12 md:mb-20 px-6 max-w-4xl mx-auto">
-        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-900/10 border border-blue-500/20 text-blue-400 text-[10px] md:text-sm font-bold tracking-[0.2em] uppercase backdrop-blur-md shadow-[0_0_15px_rgba(59,130,246,0.2)] mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-          Partner Terpercaya
-        </span>
-
-        <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight mb-4 md:mb-6">
-          Dipercaya oleh Instansi <br className="hidden md:block" />
-          <span className="text-blue-400 drop-shadow-[0_0_25px_rgba(96,165,250,0.5)]">
-            Pemerintah & Swasta.
+      <div className="relative z-10 text-center mb-16 md:mb-24 px-6 max-w-5xl mx-auto flex flex-col items-center">
+        
+        {/* Pixel Badge */}
+        <div className="inline-flex items-center gap-3 px-4 py-2 border-[4px] border-black bg-blue-500 shadow-[6px_6px_0_0_#000] mb-8 transform rotate-1">
+          <span className="w-3 h-3 bg-white border-[2px] border-black animate-pulse" />
+          <span className="font-logo text-[10px] md:text-xs tracking-[0.2em] text-white uppercase drop-shadow-[2px_2px_0px_#000] font-bold">
+            PARTNER TERPERCAYA
           </span>
-        </h2>
+        </div>
 
-        <p className="text-sm md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Menjadi mitra teknologi andalan bagi <strong className="text-white font-semibold">Kementerian, Dinas Pemerintahan</strong> dan <strong className="text-white font-semibold">Perusahaan Swasta</strong> di seluruh Indonesia.
-        </p>
+        {/* Neo-Brutalist Heading */}
+        <div className="flex flex-col items-center text-center mb-12">
+          <h2 className="font-logo text-2xl md:text-3xl lg:text-[2.5rem] text-white tracking-widest leading-[1.5] uppercase drop-shadow-[4px_4px_0_#000] z-10 relative mb-6 md:mb-8">
+            Dipercaya Oleh Instansi
+          </h2>
+          <div className="inline-block bg-yellow-400 border-[6px] border-black px-6 md:px-10 py-3 shadow-[8px_8px_0_0_#fff] transform -rotate-1 z-20 relative">
+            <span className="font-logo text-xl md:text-3xl lg:text-[2.5rem] text-black tracking-widest uppercase drop-shadow-[2px_2px_0_#fff]">
+              Pemerintah & Swasta.
+            </span>
+          </div>
+        </div>
+
+        {/* Solid Paragraph Box */}
+        <div className="bg-gray-800 border-[4px] border-black p-4 md:p-6 shadow-[6px_6px_0_0_#000] max-w-3xl transform rotate-1">
+          <p className="font-sans text-sm md:text-lg text-gray-300 leading-relaxed font-bold">
+            Menjadi mitra teknologi andalan bagi <strong className="text-white font-black bg-blue-600 px-1 border-[2px] border-black mx-1">Kementerian, Dinas Pemerintahan</strong> dan <strong className="text-white font-black bg-blue-600 px-1 border-[2px] border-black mx-1">Perusahaan Swasta</strong> di seluruh Indonesia.
+          </p>
+        </div>
+
       </div>
 
-      <div className="relative w-full flex flex-col gap-6 md:gap-8 z-10">
-        <div className="absolute inset-y-0 left-0 w-10 md:w-64 bg-gradient-to-r from-[#050505] to-transparent z-20 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-10 md:w-64 bg-gradient-to-l from-[#050505] to-transparent z-20 pointer-events-none" />
-        <MarqueeRow items={row1} direction="left" speed={180} />
-        <MarqueeRow items={row2} direction="right" speed={180} />
+      {/* TICKER TAPE MARQUEE SECTION */}
+      <div className="relative w-full flex flex-col gap-10 md:gap-14 z-10 mt-4 bg-[#020617] py-16 shadow-[0_10px_0_0_rgba(0,0,0,0.5)] overflow-hidden">
+        
+        {/* Decorative Grid Top/Bottom */}
+        <div className="absolute top-0 left-0 w-full h-2 bg-blue-900/30 border-b-[2px] border-blue-500/20" />
+        <div className="absolute bottom-0 left-0 w-full h-2 bg-blue-900/30 border-t-[2px] border-blue-500/20" />
+
+        <MarqueeRow items={row1} direction="left" speed={200} />
+        <MarqueeRow items={row2} direction="right" speed={200} />
       </div>
     </section>
   );
@@ -68,32 +93,67 @@ export default function LogoMarquee() {
 
 function MarqueeRow({ items, direction, speed }) {
   return (
-    <div className="flex overflow-hidden select-none">
+    <div className="flex select-none w-full bg-[#020617] py-8 shadow-inner relative z-20 overflow-visible">
+      {/* Directory Grid Background */}
+      <div 
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: 'linear-gradient(#1e293b 1px, transparent 1px), linear-gradient(90deg, #1e293b 1px, transparent 1px)',
+          backgroundSize: '20px 20px'
+        }}
+      />
       <motion.div
-        className="flex gap-4 md:gap-10 items-center flex-nowrap"
+        className="flex gap-8 md:gap-12 items-center flex-nowrap pl-8 md:pl-12"
         animate={{ x: direction === "left" ? ["0%", "-50%"] : ["-50%", "0%"] }}
         transition={{ repeat: Infinity, ease: "linear", duration: speed }}
       >
         {[...items, ...items, ...items, ...items].map((partner, idx) => (
-          <CleanCard key={`${direction}-${idx}`} logoSrc={partner.logo} name={partner.name} isDark={partner.isDark} />
+          <BlockyCard key={`${direction}-${idx}`} logoSrc={partner.logo} name={partner.name} isDark={partner.isDark} />
         ))}
       </motion.div>
     </div>
   );
 }
 
-function CleanCard({ logoSrc, name, isDark }) {
+function BlockyCard({ logoSrc, name, isDark }) {
   return (
-    <div className="group relative w-[140px] h-[70px] md:w-[220px] md:h-[130px] flex-shrink-0">
-      <div className="relative w-full h-full bg-white/[0.03] border border-white/[0.05] rounded-xl flex items-center justify-center transition-all duration-500 hover:bg-white/[0.08] hover:border-white/20 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm overflow-hidden">
-        <div className="relative w-24 h-12 md:w-44 md:h-24 transition-transform duration-500 group-hover:scale-110">
-          <Image src={logoSrc} alt={`Logo ${name} - Partner Dania Multi Prima`} fill className={`object-contain transition-all duration-300 px-2 md:px-0 ${isDark ? "brightness-0 invert opacity-80 group-hover:opacity-100" : ""}`} sizes="(max-width: 768px) 140px, 220px" quality={90} />
+    <div className="group relative w-[160px] h-[90px] md:w-[220px] md:h-[120px] flex-shrink-0 mt-6 cursor-crosshair">
+      
+      {/* Folder Tab */}
+      <div className="absolute -top-[16px] md:-top-[20px] left-[-2px] w-[50%] h-[20px] md:h-[24px] bg-[#cbd5e1] border-[3px] border-b-0 border-black rounded-t-md transition-all duration-300 group-hover:bg-[#fbbf24] z-10 flex items-center justify-center">
+         {/* Dotted lines on tab */}
+         <div className="flex gap-1 md:gap-1.5 opacity-50">
+           <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-black rounded-full" />
+           <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-black rounded-full" />
+           <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-black rounded-full" />
+         </div>
+      </div>
+
+      {/* Folder Body */}
+      <div className="relative w-full h-full bg-[#e2e8f0] border-[3px] border-black rounded-b-md rounded-tr-md flex items-center justify-center p-2.5 transition-all duration-300 group-hover:-translate-y-2 group-hover:bg-[#fbbf24] shadow-[6px_6px_0_0_#1e293b] group-hover:shadow-[8px_8px_0_0_#000] z-20">
+        
+        {/* Inner paper/screen */}
+        <div className="w-full h-full bg-white border-[2px] border-black flex items-center justify-center relative p-2 shadow-inner">
+           <div className="relative w-full h-full transition-transform duration-300 group-hover:scale-110 z-10">
+             <Image 
+               src={logoSrc} 
+               alt={`Logo ${name}`} 
+               fill 
+               className={`object-contain transition-all duration-300 ${isDark ? "opacity-70 group-hover:opacity-100" : "grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100"}`} 
+               sizes="(max-width: 768px) 160px, 220px" 
+             />
+           </div>
         </div>
-        <div className="absolute inset-0 -translate-x-[150%] skew-x-12 group-hover:animate-shine bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
       </div>
-      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-30 whitespace-nowrap hidden md:block">
-        <span className="text-xs font-medium text-gray-400 tracking-wide bg-black/50 px-2 py-1 rounded border border-white/10 backdrop-blur-md">{name}</span>
+
+      {/* Hover Tooltip (Pixel Style) */}
+      <div className="absolute -top-16 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-[100] whitespace-nowrap hidden md:block">
+        <div className="bg-black border-[2px] border-[#fbbf24] px-3 py-1.5 shadow-[2px_2px_0_0_#fff]">
+          <span className="font-mono text-[10px] font-bold text-[#fbbf24] tracking-widest uppercase">{name}</span>
+        </div>
+        <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[5px] border-l-transparent border-t-[5px] border-t-[#fbbf24] border-r-[5px] border-r-transparent" />
       </div>
+      
     </div>
   );
 }

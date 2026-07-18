@@ -21,6 +21,12 @@ module.exports = {
           700: "#1e293b",
         },
       },
+      fontFamily: {
+        // Menggunakan variabel dari next/font
+        logo: ["var(--font-press-start)", "cursive"],
+        title: ["var(--font-press-start)", "cursive"],
+        sans: ["var(--font-dm-sans)", "sans-serif"], 
+      },
     },
   },
   plugins: [

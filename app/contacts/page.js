@@ -2,28 +2,28 @@ import Data from "./Data"
 import Script from "next/script"
 
 export const metadata = {
-    
-    title: 'Kontak Software House Medan & Konsultan IT | PT. Dania Multi Prima',
+    title: 'Kontak Software House & Konsultan IT Medan',
     
     
     description: 'Hubungi PT. Dania Multi Prima (0813-8050-510). Konsultasi Gratis Jasa Pembuatan Aplikasi, Website, & Sistem Pemerintahan (SPBE) di Medan, Deli Serdang & Seluruh Indonesia.',
     
     
     keywords: [
-        
         'Nomor WA Software House Medan',
+        'Nomor WA Programmer',
+        'Call Center Vendor IT',
         'Alamat Konsultan IT Medan',
         'Kontak Vendor IT Pemerintahan',
         'Jasa Pembuatan Aplikasi Deli Serdang',
         'Kantor Dania Multi Prima',
-        
+        'Alamat PT DMP Deli Serdang',
         
         'IT Consultant Sunggal',
         'Software House Binjai',
         'Web Developer Sumatera Utara',
         
-        
         'Konsultasi IT Gratis',
+        'Harga Bikin Aplikasi Android',
         'Jasa Pembuatan SIMRS'
     ],
     
@@ -35,7 +35,7 @@ export const metadata = {
         title: 'Hubungi Tim Ahli IT - PT. Dania Multi Prima',
         description: 'Butuh Solusi Digital? Chat WhatsApp Kami Sekarang (Fast Response).',
         url: 'https://dmp.bio/contacts',
-        images: ['/opengraph-image.png'],
+        images: ['https://dmp.bio/opengraph-image.png'],
         type: 'website',
     }
 }

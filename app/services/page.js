@@ -3,18 +3,21 @@ import Script from "next/script"
 
 export const metadata = {
     // TITLE: Keyword Utama + Lokasi + Brand
-    title: 'Layanan IT & Jasa Pembuatan Aplikasi Medan | PT. Dania Multi Prima',
+    title: 'Layanan IT & Jasa Aplikasi Medan | PT DMP',
     
     // DESCRIPTION: Copywriting "Menjual" dengan keyword lengkap
     description: 'Jelajahi 18+ Layanan IT Terbaik di Medan & Indonesia: Jasa Pembuatan Aplikasi Android/iOS, Website, Sistem SIMRS, Smart City (IoT), Keamanan Siber, hingga Pengadaan Perangkat IT Pemerintahan.',
     
     // KEYWORDS: Kombinasi Jasa + Lokasi
     keywords: [
-        // Development
+        // Development & Design
         'Jasa Pembuatan Aplikasi Medan',
         'Software House Medan',
         'Jasa Pembuatan Website Deli Serdang',
         'Web Developer Profesional Sumut',
+        'Jasa SEO Website Perusahaan',
+        'Pembuatan Software ERP Custom',
+        'Sistem CRM Penjualan',
         
         // Government & Enterprise
         'Vendor IT Pemerintahan',
@@ -25,8 +28,11 @@ export const metadata = {
         // Infrastructure & Security
         'Jasa Instalasi Jaringan Medan',
         'Konsultan Cyber Security Indonesia',
-        'Jasa Penetration Testing (Pentest)',
+        'Jasa Penetration Testing Indonesia',
+        'Audit Keamanan Siber Web',
         'Pengadaan Server & Komputer Medan',
+        'Penyedia Server Dedicated Indonesia',
+        'Jasa Instalasi CCTV Face Recognition',
         
         // Advanced Tech
         'Solusi IoT Pertanian & Kota',

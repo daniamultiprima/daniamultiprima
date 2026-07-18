@@ -2,28 +2,28 @@ import Data from "./Data"
 import Script from "next/script"
 
 export const metadata = {
-    
-    title: 'Portfolio & Studi Kasus - Proyek Aplikasi Pemerintah & Swasta | PT. Dania Multi Prima',
+    title: 'Portfolio Proyek Aplikasi & IT | PT DMP',
     
     
     description: 'Lihat rekam jejak PT. Dania Multi Prima dalam mengerjakan 35+ proyek strategis: Sistem Informasi RS (SIMRS), Smart City Pemerintahan (SPBE), Dashboard Big Data, dan Aplikasi Kampus di Indonesia.',
     
     
     keywords: [
-        
         'Portfolio Konsultan IT', 
         'Studi Kasus Software House',
         'Contoh Aplikasi Pemerintahan',
-        
+        'Demo SIMRS Rumah Sakit',
         
         'Proyek Smart City Indonesia', 
         'Vendor SIMRS Terpercaya', 
         'Sistem E-Office DPRD',
         'Dashboard Eksekutif Pemerintahan',
-        
+        'Studi Kasus Aplikasi Smart City',
+        'Contoh E-Government Indonesia',
         
         'Portfolio Dania Multi Prima',
-        'Software House Medan Portfolio'
+        'Software House Medan Portfolio',
+        'Portfolio Web Developer Medan'
     ],
     
     alternates: {

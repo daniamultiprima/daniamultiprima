@@ -1,6 +1,6 @@
 import NextTopLoader from 'nextjs-toploader';
 import { ThemeModeScript } from 'flowbite-react';
-import { Golos_Text, Poppins } from 'next/font/google';
+import { Golos_Text, Poppins, Press_Start_2P, DM_Sans } from 'next/font/google';
 import Script from 'next/script'; // Penting untuk JSON-LD
 import WhatsAppFloat from './ui/WhatsApp'; // Pastikan path ini sesuai
 import "./globals.css";
@@ -20,6 +20,21 @@ const logo = Poppins({
   variable: '--font-logo'
 });
 
+
+const pressStart2P = Press_Start_2P({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-press-start",
+});
+
+// Setup font DM Sans untuk teks biasa, menu, & tombol
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-dm-sans",
+});
+
+
 // --- 2. SEO METADATA SUPER LENGKAP ---
 export const metadata = {
   metadataBase: new URL('https://dmp.bio'), // Pastikan domain ini benar
@@ -34,49 +49,40 @@ export const metadata = {
   
   // Keywords sangat penting untuk pencarian
   keywords: [
+    // --- LSI & VARIANT UMUM (Broad Topics) ---
     "IT Consultant Medan", 
     "IT Consultant Deli Serdang", 
-    "IT Consultant Indonesia", 
-    "Jasa Pembuatan Aplikasi Pemerintahan", 
+    "Konsultan IT Bersertifikat Indonesia", 
+    "Jasa Pembuatan Aplikasi Pemerintahan (SPBE)", 
     "AI Developer Medan", 
-    "AI Programmer Medan", 
-    "AI Developer Deli Serdang", 
-    "AI Programmer Deli Serdang", 
-    "AI Developer Indonesia", 
-    "Software House Terpercaya", 
-    "Sistem Informasi Manajemen Rumah Sakit (SIMRS)", 
-    "Smart City Solutions",
+    "Jasa Machine Learning & AI Indonesia", 
+    "Software House Terpercaya di Sumatera Utara", 
+    
+    // --- HEALTHCARE & GOV SPECIFIC ---
+    "Sistem Informasi Manajemen Rumah Sakit (SIMRS) Terbaik", 
+    "Smart City Solutions Indonesia",
+    "Aplikasi Rekam Medis Elektronik (RME)",
+    "Vendor E-Katalog Pemerintah Sumut",
+    
+    // --- CORPORATE IDENTITY ---
     "PT Dania Multi Prima",
-    "Jasa Pembuatan Website Medan",
-    "Jasa Pembuatan Website Deli Serdang",
-    "Jasa Pembuatan Aplikasi Medan",
-    "Jasa Pembuatan Aplikasi Deli Serdang",
-    "Konsultan IT Medan",
-    "Konsultan IT Deli Serdang",
-    "Kecerdasan Buatan Medan",
-    "Kecerdasan Buatan Deli Serdang",
     "PT DMP",
-    "DMP",
-    "Bridging BPJS Medan",
-    "Bridging BPJS",
-    "Bridging BPJS Deli Serdang",
-    "Bridging BPJS Sumut",
-    "Bridging BPJS Sumatera Utara", 
-    "Bridging SATUSEHAT Medan",
-    "Bridging SATUSEHAT",
-    "Bridging SATUSEHAT Deli Serdang",
-    "Bridging SATUSEHAT Sumut",
-    "Bridging SATUSEHAT Sumatera Utara", 
-    "IT Goverment Medan",
-    "IT Goverment",
-    "IT Goverment Deli Serdang",
-    "IT Goverment Sumut",
-    "IT Goverment Sumatera Utara", 
-    "SIMRS Medan",
-    "SIMRS",
-    "SIMRS Deli Serdang",
-    "SIMRS Sumut",
-    "SIMRS Sumatera Utara", 
+    "DMP IT Consultant",
+    
+    // --- HIGH-INTENT SERVICES ---
+    "Jasa Pembuatan Website Perusahaan Medan",
+    "Jasa Pembuatan Aplikasi Mobile Android iOS",
+    "Jasa Bikin Web Toko Online",
+    
+    // --- BRIDGING & INTEGRATION ---
+    "Jasa Bridging BPJS V-Claim & PCare",
+    "Integrasi SATUSEHAT Kemenkes",
+    "Pembuatan API Payment Gateway",
+    
+    // --- ERP & CUSTOM SOFTWARE ---
+    "Pembuatan Software ERP Custom",
+    "Aplikasi Kasir POS Terintegrasi",
+    "Aplikasi E-Office Tata Naskah Dinas"
   ],
 
   authors: [{ name: "PT. Dania Multi Prima" }],
@@ -111,7 +117,7 @@ export const metadata = {
     siteName: "Dania Multi Prima",
     images: [
       {
-        url: '/opengraph-image.jpg', // Pastikan gambar ini ada di folder public
+        url: 'https://dmp.bio/opengraph-image.jpg', // URL absolut diperlukan NextJS
         width: 1200,
         height: 630,
         alt: "PT. Dania Multi Prima Portfolio",
@@ -124,10 +130,14 @@ export const metadata = {
     card: 'summary_large_image',
     title: "PT. Dania Multi Prima - Tech Innovations",
     description: "IT Consultant & AI Developer. Membangun masa depan digital Indonesia.",
-    images: ['/opengraph-image.jpg'],
+    images: ['https://dmp.bio/opengraph-image.jpg'],
   },
-
-   
+  
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -163,8 +173,23 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <ThemeModeScript />
+        
+        {/* Google Analytics Placeholder */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-XXXXXXXXXX');
+          `}
+        </Script>
       </head>
-      <body className={`${golos.variable} ${logo.variable} bg-[#020617]`}>
+      <body className={`${golos.variable} ${logo.variable} ${pressStart2P.variable} ${dmSans.variable} bg-[#020617] text-paragraph font-sans antialiased`}>
         
         {/* Loader Bar di atas */}
         <NextTopLoader 
@@ -175,7 +200,7 @@ export default function RootLayout({ children }) {
         />
 
         {/* JSON-LD Script */}
-        <Script
+        <script
           id="json-ld-org"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

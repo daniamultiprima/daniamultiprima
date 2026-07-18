@@ -8,6 +8,7 @@ body {
   /* Ganti kode hex #020617 di bawah ini kalau mau sesuaikan persis sama warna gelap logomu */
   background-color: #020617; 
   color: #ffffff;
+  font-family: var(--font-body);
 }
 
 
@@ -16,7 +17,7 @@ body,
 html,
 :root {
   outline: none !important; 
-  font-family: var(--font-golos);
+  font-family: var(--font-body);
 }
 
 

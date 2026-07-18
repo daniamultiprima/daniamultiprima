@@ -2,34 +2,39 @@ import Data from "./Data"
 import Script from "next/script"
 
 export const metadata = {
-    
-    title: 'Solusi Smart City, SIMRS, & Sistem Kampus Terbaik Medan | PT. Dania Multi Prima',
+    title: 'Solusi Smart City & SIMRS Medan | PT DMP',
     
     
     description: 'Solusi IT Terintegrasi untuk Transformasi Digital: E-Government (SPBE), Manajemen Rumah Sakit (SIMRS Satu Sehat), Sistem Akademik Kampus, dan ERP Bisnis di Indonesia.',
     
     
     keywords: [
-        
+        // Smart City & Gov
         'Solusi Smart City Indonesia',
         'Aplikasi Pemerintahan SPBE',
         'Vendor E-Government Medan',
         'Sistem Command Center Daerah',
+        'Aplikasi E-Office Tata Naskah Dinas',
+        'E-Katalog Pemerintah Daerah',
         
-        
+        // Healthcare (SIMRS)
         'Sistem Informasi Manajemen Rumah Sakit',
         'Vendor SIMRS BPJS',
         'Integrasi Satu Sehat Kemenkes',
         'Rekam Medis Elektronik (RME)',
+        'Bridging BPJS VClaim & PCare',
+        'Aplikasi Antrean Rumah Sakit',
         
-        
+        // Education (EdTech)
         'Sistem Informasi Akademik Kampus (SIAKAD)',
         'Software Kampus Merdeka',
+        'Sistem Remunerasi Dosen',
         
-        
+        // Enterprise & Business
         'Software ERP Indonesia',
         'Solusi IT Korporat',
-        'Aplikasi Kasir POS Terintegrasi'
+        'Aplikasi Kasir POS Terintegrasi',
+        'Pembuatan Software Custom Bisnis'
     ],
     
     alternates: {

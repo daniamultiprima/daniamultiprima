@@ -1,31 +1,39 @@
 import Navbar from "./ui/Navbar";
 import Hero from "./ui/Hero";
-import LogoMarquee from "./ui/LogoMarque";
-import ServicesBento from "./ui/Services";
-import WhyChooseUs from "./ui/Why";
-import ProjectShowcase from "./ui/Projects";
-import TechStack from "./ui/TeachStack";
-import Footer from "./ui/Footer";  
-import PSE_EKatalog from "./ui/PSE_EKatalog";  
-import Script from "next/script"; 
+import dynamic from 'next/dynamic';
+import Script from "next/script";
+
+
+
+const LogoMarquee = dynamic(() => import("./ui/LogoMarque"), { ssr: false });
+const ServicesBento = dynamic(() => import("./ui/Services"), { ssr: true });
+const WhyChooseUs = dynamic(() => import("./ui/Why"), { ssr: true });
+const ProjectShowcase = dynamic(() => import("./ui/Projects"), { ssr: true });
+const TechStack = dynamic(() => import("./ui/TeachStack"), { ssr: true });
+const PSE_EKatalog = dynamic(() => import("./ui/PSE_EKatalog"), { ssr: true });
+const Footer = dynamic(() => import("./ui/Footer"), { ssr: true }); 
 
 export const metadata = {
   
-  title: 'Jasa Pembuatan Aplikasi & Software House Medan | PT. Dania Multi Prima',
+  title: 'Software House Medan & IT Konsultan | PT DMP',
   
-  
-  description: 'Software House & Konsultan IT Terbaik di Medan & Indonesia. Melayani Jasa Pembuatan Aplikasi Android/iOS, Website, SIMRS, Smart City, IoT & SPBE Pemerintahan. Hubungi kami untuk solusi digital.',
+  description: 'Konsultan IT & Software House Terbaik di Medan. Layanan Pembuatan Aplikasi Android/iOS, Website, SIMRS, Smart City, & SPBE. Hubungi PT DMP hari ini.',
   
   applicationName: 'PT. Dania Multi Prima Website',
   authors: [{ name: 'PT. Dania Multi Prima', url: 'https://dmp.bio' }],
   generator: 'Next.js',
   keywords: [
-    // --- KATA KUNCI UTAMA ---
+    // --- KATA KUNCI UTAMA (High Volume) ---
     'Jasa Pembuatan Website',
     'Jasa Pembuatan Aplikasi Android',
+    'Jasa Pembuatan Aplikasi iOS',
     'Software House Indonesia',
+    'Software House Terbaik Indonesia',
+    'Perusahaan IT BUMN',
+    'Jasa Bikin Web Profil Perusahaan',
+    'Jasa Pembuatan Aplikasi Kasir',
     
-    // --- LOKAL MEDAN & SUMUT (Dominasi Lokal) ---
+    // --- LOKAL MEDAN & SUMUT (Dominasi Lokal High Intent) ---
     'Software House Medan',
     'Jasa Pembuatan Aplikasi Medan',
     'Jasa Pembuatan Website Medan',
@@ -35,20 +43,32 @@ export const metadata = {
     'Vendor IT Deli Serdang',
     'Jasa IT Support Medan',
     'Pembuatan Aplikasi Android Deli Serdang',
+    'Perusahaan IT Terpercaya di Medan',
+    'Jasa Web Design Medan',
     
-    
+    // --- ENTERPRISE, GOV & HEALTH (Niche Khusus) ---
     'Sistem Informasi Manajemen Rumah Sakit (SIMRS)',
+    'Vendor SIMRS Terpercaya',
     'Aplikasi Smart City Indonesia',
     'Vendor Aplikasi SPBE Pemerintahan',
+    'Sistem E-Katalog Pemerintah',
+    'Vendor E-Katalog Lokal',
+    'Software Klinik dan Apotek Terintegrasi',
+    
+    // --- TECH STACK & SERVICES (Advanced Tech) ---
     'Jasa Integrasi API',
+    'Jasa Integrasi API Payment Gateway',
     'Pengembang AI Indonesia',
     'Internet of Things (IoT) Solutions',
-    'Sistem E-Katalog Pemerintah',
+    'Jasa Pembuatan Chatbot AI',
+    'Implementasi Machine Learning Perusahaan',
+    'Konsultan IT Bersertifikat',
     
-    
-    'Harga Jasa Pembuatan Aplikasi',
+    // --- LONG TAIL & BUYING INTENT ---
+    'Harga Jasa Pembuatan Aplikasi Android Perusahaan',
+    'Biaya Pembuatan Website Toko Online',
     'Jasa IT Konsultan Profesional',
-    'Perusahaan IT Terpercaya di Medan'
+    'Bikin Aplikasi Custom Murah Berkualitas'
   ],
 
   
@@ -205,7 +225,7 @@ const jsonLd = [
 export default async function Home(){
   return (
     <>
-      <Script
+      <script
         id="home-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
