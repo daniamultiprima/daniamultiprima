@@ -125,6 +125,7 @@ export default function Footer() {
                                 <a
                                     key={i}
                                     href="#"
+                                    aria-label={"Social Link " + i}
                                     className="w-12 h-12 bg-gray-800 border-[4px] border-black flex items-center justify-center text-white shadow-[4px_4px_0_0_#000] hover:bg-blue-600 hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
                                     <Icon
                                         size={20}
@@ -137,9 +138,9 @@ export default function Footer() {
 
                     {/* MENU COLUMN */}
                     <div className="lg:col-span-3 lg:col-start-6">
-                        <h4 className="font-logo text-yellow-400 font-bold text-xs md:text-sm tracking-widest uppercase border-b-[4px] border-gray-800 pb-4 mb-6">
+                        <div className="font-logo text-yellow-400 font-bold text-xs md:text-sm tracking-widest uppercase border-b-[4px] border-gray-800 pb-4 mb-6">
                             Menu_Directory
-                        </h4>
+                        </div>
                         <ul className="space-y-4">
                             {companyLinks.map((item) => (
                                 <li key={item.name}>

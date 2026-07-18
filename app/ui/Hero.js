@@ -145,7 +145,7 @@ export default function Hero() {
                             </Link>
 
                             <Link href="/services" className="w-full sm:w-auto">
-                                <button className="group relative w-full sm:w-auto px-8 py-5 bg-brand text-white font-logo font-bold uppercase tracking-widest text-[11px] md:text-[13px] border-[4px] border-black shadow-[8px_8px_0_0_#000] hover:shadow-[4px_4px_0_0_#000] hover:translate-x-1 hover:translate-y-1 hover:bg-white transition-all active:shadow-none active:translate-x-2 active:translate-y-2 flex items-center justify-center gap-4 hover:text-black">
+                                <button className="group relative w-full sm:w-auto px-8 py-5 bg-brand-dark text-white font-logo font-bold uppercase tracking-widest text-[11px] md:text-[13px] border-[4px] border-black shadow-[8px_8px_0_0_#000] hover:shadow-[4px_4px_0_0_#000] hover:translate-x-1 hover:translate-y-1 hover:bg-white transition-all active:shadow-none active:translate-x-2 active:translate-y-2 flex items-center justify-center gap-4 hover:text-black">
                                     <Layers
                                         size={20}
                                         className="text-black stroke-[3px]"
@@ -182,9 +182,9 @@ export default function Hero() {
                                         <Cpu className="text-white w-7 h-7 stroke-[2px]" />
                                     </div>
                                     <div>
-                                        <h3 className="font-logo text-brand-light text-[9px] uppercase mb-1">
+                                        <div className="font-logo text-brand-light text-[9px] uppercase mb-1">
                                             Module 01
-                                        </h3>
+                                        </div>
                                         <p className="font-logo text-white text-[11px] md:text-[12px] uppercase leading-relaxed tracking-wider drop-shadow-[1px_1px_0_#000]">
                                             AI & IoT
                                             <br />
@@ -199,9 +199,9 @@ export default function Hero() {
                                         <ShieldCheck className="text-white w-7 h-7 stroke-[2px]" />
                                     </div>
                                     <div>
-                                        <h3 className="font-logo text-brand-light text-[9px] uppercase mb-1">
+                                        <div className="font-logo text-brand-light text-[9px] uppercase mb-1">
                                             Module 02
-                                        </h3>
+                                        </div>
                                         <p className="font-logo text-white text-[11px] md:text-[12px] uppercase leading-relaxed tracking-wider drop-shadow-[1px_1px_0_#000]">
                                             Cyber
                                             <br />
@@ -216,9 +216,9 @@ export default function Hero() {
                                         <Globe className="text-white w-7 h-7 stroke-[2px]" />
                                     </div>
                                     <div>
-                                        <h3 className="font-logo text-brand-light text-[9px] uppercase mb-1">
+                                        <div className="font-logo text-brand-light text-[9px] uppercase mb-1">
                                             Module 03
-                                        </h3>
+                                        </div>
                                         <p className="font-logo text-white text-[11px] md:text-[12px] uppercase leading-relaxed tracking-wider drop-shadow-[1px_1px_0_#000]">
                                             Layanan
                                             <br />
@@ -238,9 +238,9 @@ export default function Hero() {
                                         </span>
                                     </div>
                                     <div className="z-10 border-l-[4px] border-black pl-4">
-                                        <h3 className="font-logo text-black text-[9px] font-bold uppercase mb-1">
+                                        <div className="font-logo text-black text-[9px] font-bold uppercase mb-1">
                                             Achievement
-                                        </h3>
+                                        </div>
                                         <p className="font-logo text-white text-[11px] md:text-[12px] uppercase leading-relaxed tracking-wider drop-shadow-[1px_1px_0_#000]">
                                             Proyek
                                             <br />

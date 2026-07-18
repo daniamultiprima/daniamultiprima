@@ -177,9 +177,9 @@ export default function RootLayout({ children }) {
         {/* Google Analytics Placeholder */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
@@ -207,7 +207,9 @@ export default function RootLayout({ children }) {
         />
 
         {/* Main Content */}
-        {children}
+        <main>
+          {children}
+        </main>
 
         {/* Floating WhatsApp Button (Fixed di semua halaman) */}
         <WhatsAppFloat />

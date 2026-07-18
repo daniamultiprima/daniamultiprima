@@ -49,7 +49,7 @@ export default function LogoMarquee() {
       <div className="relative z-10 text-center mb-16 md:mb-24 px-6 max-w-5xl mx-auto flex flex-col items-center">
         
         {/* Pixel Badge */}
-        <div className="inline-flex items-center gap-3 px-4 py-2 border-[4px] border-black bg-blue-500 shadow-[6px_6px_0_0_#000] mb-8 transform rotate-1">
+        <div className="inline-flex items-center gap-3 px-4 py-2 border-[4px] border-black bg-blue-700 shadow-[6px_6px_0_0_#000] mb-8 transform rotate-1">
           <span className="w-3 h-3 bg-white border-[2px] border-black animate-pulse" />
           <span className="font-logo text-[10px] md:text-xs tracking-[0.2em] text-white uppercase drop-shadow-[2px_2px_0px_#000] font-bold">
             PARTNER TERPERCAYA
