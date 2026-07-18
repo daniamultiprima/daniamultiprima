@@ -30,11 +30,8 @@ export default function Hero() {
                 {/* NEO-BRUTALIST ASYMMETRICAL GRID */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 w-full items-start">
                     {/* LEFT PANEL: QUEST DIALOG & TYPOGRAPHY */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="lg:col-span-8 flex flex-col items-start w-full relative">
+                    <div
+                        className="lg:col-span-8 flex flex-col items-start w-full relative animate-[fade-in-up_0.8s_ease-out]">
                         {/* SPEECH BUBBLE BADGE */}
                         <div className="relative mb-12 mt-8 md:mt-0">
                             <div className="px-5 py-3 border-[4px] border-black bg-yellow-400 shadow-[8px_8px_0_0_#000] inline-block z-10 relative">
@@ -154,7 +151,7 @@ export default function Hero() {
                                 </button>
                             </Link>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* RIGHT PANEL: VERTICAL INVENTORY HUD (STATS) */}
                     <motion.div
