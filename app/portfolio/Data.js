@@ -328,14 +328,12 @@ const categories = [
 ];
 
 export default function PortfolioPage() {
-    const [filter, setFilter] = useState("All Work");
-    const [glitchTitle, setGlitchTitle] = useState("CLASSIFIED DOSSIER");
+    const [filter, setFilter] = useState("Seluruh Portfolio");
+    const [glitchTitle, setGlitchTitle] = useState("SELURUH KLIEN KAMI");
 
     useEffect(() => {
         const texts = [
-            "CLASSIFIED DOSSIER",
-            "ARCHIVE // 35+ RECORDS",
-            "ENGINEERING LEGACY",
+            "SELURUH KLIEN KAMI",
         ];
         let i = 0;
         const interval = setInterval(() => {

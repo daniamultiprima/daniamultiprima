@@ -38,9 +38,9 @@ export default function AboutPage() {
                         </div>
 
                         <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] font-black text-white leading-[1.1] tracking-tighter font-logo uppercase drop-shadow-[4px_4px_0_#000] md:drop-shadow-[6px_6px_0_#000] break-words">
-                            Engineering <br />
+                            Sedikit <br />
                             <span className="text-blue-400 drop-shadow-[6px_6px_0_#000]">
-                                Digital Future.
+                                Tentang Kami.
                             </span>
                         </h2>
                     </div>

@@ -232,10 +232,10 @@ export default function ServicesPage() {
                         transition={{ delay: 0.1 }}
                         className="relative">
                         <h1 className="font-logo text-2xl sm:text-3xl md:text-5xl lg:text-[4rem] text-white tracking-widest leading-[1.3] uppercase drop-shadow-[4px_4px_0_#000] break-words">
-                            Comprehensive IT
+                            Lihat Seluruh
                             <br />
                             <span className="inline-block bg-white text-black px-2 py-1 sm:px-4 sm:py-2 mt-4 border-[4px] sm:border-[6px] border-black shadow-[4px_4px_0_0_#eab308] sm:shadow-[8px_8px_0_0_#eab308] transform rotate-1">
-                                Solutions.
+                                Layanan Kami.
                             </span>
                         </h1>
                     </motion.div>

@@ -79,14 +79,16 @@ const industries = [
 ];
 
 export default function SolutionsPage() {
-    const [glitchText, setGlitchText] = useState("CRITICAL SECTORS");
+    const [glitchText, setGlitchText] = useState("SEKTOR PEMERINTAH");
 
     useEffect(() => {
         const interval = setInterval(() => {
             const texts = [
-                "CRITICAL SECTORS",
-                "SMART SYSTEMS",
-                "ENTERPRISE CORE",
+                "SEKTOR PEMERINTAH",
+                "KECERDASAN BUATAN",
+                "SISTEM ENTERPRISE",
+                "RUMAH SAKIT",
+                "PENDIDIKAN",
             ];
             const randomText = texts[Math.floor(Math.random() * texts.length)];
             setGlitchText(randomText);
@@ -139,7 +141,7 @@ export default function SolutionsPage() {
                         <div className="absolute bottom-0 left-0 w-full h-4 bg-[repeating-linear-gradient(-45deg,#000,#000_10px,#eab308_10px,#eab308_20px)]" />
 
                         <h2 className="font-logo text-sm md:text-2xl text-black font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-2 mt-4">
-                            Optimized Architectures for
+                            Layanan Terbaik Kami Untuk
                         </h2>
 
                         <h1 className="font-logo text-3xl sm:text-4xl md:text-6xl lg:text-[5.5rem] font-black text-black tracking-tighter leading-[1.1] md:leading-none uppercase drop-shadow-[2px_2px_0_#eab308] md:drop-shadow-[4px_4px_0_#eab308] break-words">
