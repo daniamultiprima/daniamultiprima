@@ -328,7 +328,7 @@ const categories = [
 ];
 
 export default function PortfolioPage() {
-    const [filter, setFilter] = useState("Seluruh Portfolio");
+    const [filter, setFilter] = useState("All Work");
     const [glitchTitle, setGlitchTitle] = useState("SELURUH KLIEN KAMI");
 
     useEffect(() => {
