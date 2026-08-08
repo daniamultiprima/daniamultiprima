@@ -326,7 +326,17 @@ export const metadata = {
         "Software House Bali", "Software House Lombok", "Software House Papua",
         "Jasa IT Aceh", "Jasa IT Riau", "Jasa IT Kepri", "Jasa IT Jambi", "Jasa IT Lampung",
         "Jasa IT Banten", "Jasa IT Jawa Tengah", "Jasa IT Jawa Timur", 
-        "Jasa IT Kalimantan", "Jasa IT Sulawesi", "Jasa IT Maluku", "Jasa IT NTB", "Jasa IT NTT"
+        "Jasa IT Kalimantan", "Jasa IT Sulawesi", "Jasa IT Maluku", "Jasa IT NTB", "Jasa IT NTT",
+        
+        // --- KATA KUNCI "BUAT WEB" & COMPANY PROFILE SPESIFIK ---
+        "Buat web di Medan", "Buat web company profile di Medan", "Buat web company profile Medan",
+        "Jasa buat web di Medan", "Tempat buat web di Medan", "Biaya buat web di Medan",
+        "Buat aplikasi di Medan", "Jasa buat aplikasi di Medan", "Buat software di Medan",
+        "Bikin web company profile di Medan", "Bikin web company profile Indonesia",
+        "Pembuatan website company profile Medan", "Jasa pembuatan website company profile",
+        "Buat website murah di Medan", "Buat website profesional di Medan",
+        "Jasa buat website Medan", "Jasa buat web Medan", "Pembuat web di Medan",
+        "Pembuat aplikasi di Medan", "Pembuat software di Medan"
     ],
 
     authors: [{ name: "PT. Dania Multi Prima" }],
