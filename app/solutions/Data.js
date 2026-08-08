@@ -162,13 +162,7 @@ export default function SolutionsPage() {
                             />
                         </div>
                         <p className="font-sans text-gray-300 text-sm md:text-lg font-bold leading-relaxed text-center md:text-left flex-1">
-                            Kami merancang{" "}
-                            <strong className="text-yellow-400 bg-gray-800 px-2 py-1">
-                                Arsitektur IT Spesifik
-                            </strong>{" "}
-                            untuk instansi Anda. Dari Smart City Pemerintahan,
-                            SIMRS Rumah Sakit, hingga Sistem Kampus Digital.
-                            Solusi kokoh, aman, dan siap pakai.
+                            Cari vendor handal untuk <strong className="text-yellow-400">integrasi SPBE</strong> atau <strong className="text-yellow-400">jasa pembuatan SIMRS</strong>? Kami spesialis bikin arsitektur IT untuk Pemerintah, Rumah Sakit, hingga Perusahaan B2B. Semua dirancang khusus, aman, dan berstandar nasional.
                         </p>
                     </motion.div>
                 </div>

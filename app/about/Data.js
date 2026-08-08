@@ -62,19 +62,18 @@ export default function AboutPage() {
                                 <span className="bg-black text-white px-2 py-1 mx-1 font-black shadow-[2px_2px_0_0_#3b82f6]">
                                     PT. Dania Multi Prima
                                 </span>
-                                adalah perusahaan{" "}
+                                adalah partner andalan Anda sebagai{" "}
                                 <strong className="text-black underline decoration-[3px] decoration-blue-500">
-                                    Software House
-                                </strong>{" "}
-                                dan{" "}
+                                    perusahaan IT dan software house di Medan
+                                </strong>{". "}
+                                Dari urusan{" "}
                                 <strong className="text-black underline decoration-[3px] decoration-blue-500">
-                                    Konsultan IT
-                                </strong>{" "}
-                                profesional yang berbasis di Medan & Deli
-                                Serdang.
+                                    buat web di Medan
+                                </strong>{", "}
+                                perancangan aplikasi mobile, hingga jasa IT lainnya, kami siap membantu UMKM dan instansi pemerintah berkembang di era digital.
                                 <br />
                                 <br />
-                                Kami mengintegrasikan rekayasa perangkat lunak,{" "}
+                                Kami nggak cuma asal coding, tapi juga mengintegrasikan{" "}
                                 <strong className="text-black bg-yellow-300 px-1 border-[2px] border-black">
                                     Keamanan Siber
                                 </strong>
@@ -82,8 +81,7 @@ export default function AboutPage() {
                                 <strong className="text-black bg-cyan-300 px-1 border-[2px] border-black">
                                     Solusi AI
                                 </strong>{" "}
-                                untuk membangun infrastruktur digital bagi
-                                instansi Pemerintah dan Swasta di seluruh
+                                agar sistem yang dibuat benar-benar kokoh dan siap bersaing di seluruh
                                 Indonesia.
                             </p>
 
@@ -131,10 +129,9 @@ export default function AboutPage() {
                         <p className="font-sans font-black text-lg md:text-xl text-gray-800 leading-relaxed text-center">
                             Menjadi{" "}
                             <span className="text-blue-700 bg-blue-100 px-2 py-1 border-[2px] border-black shadow-[2px_2px_0_0_#000]">
-                                Mitra Teknologi No.1
+                                Mitra IT Terpercaya
                             </span>{" "}
-                            yang mendorong transformasi digital pemerintahan dan
-                            bisnis melalui inovasi Software & AI.
+                            buat bantuin transformasi digital bisnis dan pemerintahan dari hulu ke hilir lewat teknologi Software & AI terdepan.
                         </p>
                     </motion.div>
 
@@ -158,10 +155,10 @@ export default function AboutPage() {
                         </div>
 
                         <div className="space-y-4">
-                            <MissionTask text="Menyediakan Jasa Pembuatan Aplikasi (Web & Android) Berkualitas Tinggi." />
-                            <MissionTask text="Mengembangkan Solusi Smart City & SIMRS Terintegrasi." />
-                            <MissionTask text="Implementasi Keamanan Siber & Kecerdasan Buatan (AI)." />
-                            <MissionTask text="Memberikan Layanan IT Support & Maintenance Jangka Panjang." />
+                            <MissionTask text="Menyediakan jasa pembuatan aplikasi (Web & Android) yang beneran ngasih solusi." />
+                            <MissionTask text="Pengembangan sistem SIMRS rumah sakit dan solusi e-gov Smart City." />
+                            <MissionTask text="Penerapan proteksi siber ketat dan otomatisasi pakai teknologi AI cerdas." />
+                            <MissionTask text="Ngasi dukungan layanan IT support yang selalu standby dan jangka panjang." />
                         </div>
                     </motion.div>
                 </div>
@@ -179,20 +176,20 @@ export default function AboutPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
                         <SkillCard
-                            title="Full Customization"
-                            desc="Software yang kami bangun 100% disesuaikan dengan alur kerja (business logic) perusahaan Anda, bukan sekadar template."
+                            title="Full Custom"
+                            desc="Custom software yang dibikin 100% nyambung sama cara kerja bisnis Anda. Gak pake template pasaran!"
                             icon={Cpu}
                             color="cyan"
                         />
                         <SkillCard
-                            title="Cyber Security"
-                            desc="Aplikasi dirancang dengan arsitektur tahan retas dan standar keamanan data privasi tingkat tinggi."
+                            title="Anti Retas"
+                            desc="Website atau aplikasi diproteksi dengan keamanan data kelas atas. Bikin Anda dan pelanggan tidur nyenyak."
                             icon={Shield}
                             color="red"
                         />
                         <SkillCard
-                            title="Ecosystem Sync"
-                            desc="Solusi End-to-End: Website, Mobile, API Gateway, dan Server terhubung secara mulus dalam satu ekosistem."
+                            title="Semua Nyambung"
+                            desc="Jasa IT lengkap (End-to-End). Mulai dari web, mobile app, API, sampai server, semuanya terhubung dengan mulus."
                             icon={Zap}
                             color="yellow"
                         />

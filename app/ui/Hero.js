@@ -108,18 +108,15 @@ export default function Hero() {
                                     <span className="font-logo text-brand font-bold mr-2 drop-shadow-[1px_1px_0_#000]">
                                         &gt;
                                     </span>
-                                    PT. Dania Multi Prima adalah{" "}
+                                    PT. Dania Multi Prima adalah partner teknologi dan{" "}
                                     <strong className="text-white font-bold bg-blue-900/50 px-1 border-b-[2px] border-brand">
-                                        Software House di Medan
-                                    </strong>{" "}
-                                    yang melayani jasa pembuatan Website,
-                                    Aplikasi Android/iOS, dan Sistem Informasi
-                                    Pemerintahan (SPBE). Kami membantu
-                                    transformasi digital bisnis dan instansi di{" "}
+                                        Software House terpercaya di Medan
+                                    </strong>{". "}
+                                    Jika Anda sedang mencari jasa{" "}
                                     <strong className="text-white font-bold bg-blue-900/50 px-1 border-b-[2px] border-brand">
-                                        Sumatera Utara
-                                    </strong>{" "}
-                                    dan seluruh Indonesia.
+                                        buat web di Medan
+                                    </strong>{", "}
+                                    ingin bikin website company profile profesional, atau butuh jasa pembuatan aplikasi custom, Anda berada di tempat yang tepat. Mulai dari startup, sistem ERP bisnis, hingga aplikasi pemerintahan (SPBE) di Sumatera Utara dan seluruh Indonesia, kami siap wujudkan ide Anda dengan teknologi terbaik.
                                     <span className="inline-block w-3 h-5 bg-white ml-2 animate-pulse align-middle" />
                                 </p>
                             </div>

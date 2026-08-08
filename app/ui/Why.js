@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
 
             <div className="max-w-2xl bg-black border-[4px] border-gray-800 p-6 shadow-[8px_8px_0_0_#2563eb]">
               <p className="font-sans text-sm md:text-base text-gray-300 font-bold leading-relaxed">
-                Kami bukan sekadar vendor, tapi mitra strategis. Dengan pengalaman lebih dari 8 tahun, kami membangun fondasi digital yang kokoh untuk pertumbuhan bisnis Anda.
+                Sebagai konsultan IT di Medan yang udah berpengalaman lebih dari 8 tahun, kami nggak cuma sekadar bikin web atau aplikasi. Kami jadi partner strategis buat ngebangun pondasi digital yang kuat biar bisnis Anda makin cuan dan berkembang pesat.
               </p>
             </div>
         </div>
@@ -46,28 +46,28 @@ export default function WhyChooseUs() {
           <MechanicalCard
             icon={<Clock size={40} className="text-black" />}
             title="Pengalaman 8+ Tahun"
-            desc="Telah dipercaya oleh berbagai sektor industri dan pemerintahan selama lebih dari sewindu. Pengalaman kami adalah jaminan keberhasilan proyek Anda."
+            desc="Udah dipercaya sama banyak perusahaan dan dinas pemerintahan selama lebih dari sewindu. Jam terbang kami adalah jaminan kalau proyek aplikasi atau website Anda pasti beres dan sukses."
             color="bg-orange-500"
           />
 
           <MechanicalCard
             icon={<Layers size={40} className="text-black" />}
             title="Ekosistem Menyeluruh"
-            desc="Solusi satu atap. Dari Software, Mobile App, AI, hingga pengadaan Server dan Hardware. Kami mengurus semuanya agar Anda fokus pada bisnis."
+            desc="Satu pintu buat semua kebutuhan IT. Mulai dari buat web di Medan, bikin aplikasi mobile, AI, sampai urusan beli server dan laptop kantor. Biar kami yang pusing urus IT, Anda tinggal fokus kembangin bisnis."
             color="bg-blue-500"
           />
 
           <MechanicalCard
             icon={<ShieldCheck size={40} className="text-black" />}
             title="Keamanan & Keandalan"
-            desc="Keamanan bukan opsi, tapi prioritas. Kami menerapkan standar keamanan siber berlapis untuk melindungi data aset dan reputasi perusahaan Anda."
+            desc="Website diretas? Data bocor? Tenang, keamanan itu prioritas utama kami. Sistem yang kami buat diproteksi dengan keamanan cyber berlapis biar data perusahaan dan pelanggan Anda aman sentosa."
             color="bg-green-500"
           />
 
           <MechanicalCard
             icon={<Cpu size={40} className="text-black" />}
             title="Teknologi Masa Depan"
-            desc="Kami menggunakan stack teknologi terkini (AI & IoT) yang skalabel, memastikan sistem Anda tetap relevan untuk 5-10 tahun ke depan."
+            desc="Kami selalu pakai teknologi terbaru yang lagi ngetren (seperti AI & IoT). Jadi aplikasi atau sistem yang kita buat bakal tetep awet, relevan, dan nggak ketinggalan zaman buat 5 sampai 10 tahun ke depan."
             color="bg-yellow-400"
           />
 

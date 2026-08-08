@@ -12,62 +12,62 @@ import {
 const services = [
   {
     title: "Software Development",
-    desc: "Jasa pembuatan software custom (Web & Desktop) yang fleksibel sesuai kebutuhan bisnis Anda di Medan.",
+    desc: "Bikin custom software, aplikasi kasir (POS), atau pembuatan sistem ERP di Medan jadi lebih mudah dan fleksibel menyesuaikan cara kerja bisnis Anda.",
     icon: Code2
   },
   {
     title: "Mobile App Development",
-    desc: "Jasa pembuatan aplikasi Android & iOS profesional. Solusi mobile app modern untuk bisnis dan startup.",
+    desc: "Jasa buat aplikasi di Medan untuk Android dan iOS. Cocok banget buat startup atau perusahaan yang ingin punya aplikasi sendiri seperti Gojek atau Tokopedia.",
     icon: Smartphone
   },
   {
     title: "Web Development",
-    desc: "Jasa pembuatan website company profile, e-commerce, dan portal berita yang SEO friendly dan cepat.",
+    desc: "Lagi cari tempat buat web di Medan? Kami melayani jasa pembuatan website company profile, e-commerce, hingga portal berita dengan desain premium yang dijamin muncul di halaman pertama Google.",
     icon: Globe
   },
   {
     title: "Artificial Intelligence",
-    desc: "Integrasi AI & Chatbot Cerdas untuk otomatisasi layanan pelanggan dan efisiensi operasional.",
+    desc: "Jasa bikin AI dan Chatbot cerdas buat balasin chat pelanggan otomatis 24 jam. Bikin operasional bisnis Anda makin efisien dan canggih.",
     icon: BrainCircuit
   },
   {
     title: "Sistem Informasi",
-    desc: "Pengembangan sistem manajemen rumah sakit (SIMRS) dan aplikasi pemerintahan (SPBE/E-Gov).",
+    desc: "Spesialis pembuatan SIMRS di Medan dan skala nasional, serta pembuatan aplikasi layanan publik (SPBE) untuk instansi pemerintah daerah.",
     icon: BarChart3
   },
   {
     title: "Internet of Things",
-    desc: "Solusi Smart City dan monitoring aset real-time dengan teknologi sensor IoT terkini.",
+    desc: "Solusi Smart City dan monitoring aset real-time lewat sensor IoT. Cocok buat pabrik, perkebunan, atau instansi yang mau serba otomatis.",
     icon: Wifi
   },
   {
     title: "IT Procurement",
-    desc: "Pengadaan perangkat keras (Server, Laptop, Videotron) resmi dan bergaransi untuk instansi.",
+    desc: "Bukan cuma jasa IT, kami juga nyediain perangkat keras (Server, Laptop, Videotron) resmi dan bergaransi khusus untuk instansi dan corporate.",
     icon: ShoppingBag
   },
   {
     title: "Cybersecurity Pentest",
-    desc: "Layanan audit keamanan sistem dan penetration testing untuk mencegah kebocoran data.",
+    desc: "Jangan tunggu diretas! Kami nyediain layanan audit keamanan sistem dan penetration testing buat ngecek celah keamanan di website atau aplikasi Anda.",
     icon: ShieldCheck
   },
   {
     title: "Network Infrastructure",
-    desc: "Instalasi jaringan LAN/WAN, Fiber Optic, dan manajemen server kantor yang stabil.",
+    desc: "Jasa instalasi jaringan LAN/WAN, tarikan kabel Fiber Optic, dan manajemen server kantor biar internet stabil dan data aman.",
     icon: Network
   },
   {
     title: "IT Training",
-    desc: "Pelatihan teknologi dan workshop digital untuk peningkatan SDM perusahaan/dinas.",
+    desc: "Pelatihan teknologi dan workshop digital yang asik dan gampang dimengerti buat ningkatin skill tim IT di perusahaan atau dinas Anda.",
     icon: MonitorPlay
   },
   {
     title: "System Integration",
-    desc: "Menghubungkan berbagai aplikasi terpisah (API Integration) agar data terpusat.",
+    desc: "Banyak aplikasi tapi datanya misah-misah? Kami bantu integrasikan sistem Anda (API Integration) kayak payment gateway atau bridging BPJS biar datanya terpusat.",
     icon: Settings
   },
   {
     title: "SEO Optimization",
-    desc: "Jasa SEO untuk meningkatkan ranking website Anda di halaman pertama Google.",
+    desc: "Jasa SEO profesional biar website Anda gampang dicari orang dan selalu nongkrong di halaman pertama Google saat dicari calon pelanggan.",
     icon: Search
   }
 ];
@@ -110,7 +110,7 @@ export default function ServicesBento() {
 
             <div className="bg-[#e5e7eb] border-[4px] border-black p-4 md:p-6 shadow-[8px_8px_0_0_#eab308] transform rotate-1">
                 <p className="font-sans text-sm md:text-xl font-bold text-black leading-relaxed">
-                    Sebagai IT Consultant terpercaya, kami menyediakan solusi teknologi <span className="bg-yellow-400 px-2 py-0.5 border-[2px] border-black ml-1 mr-1">end-to-end</span> untuk kebutuhan bisnis dan pemerintahan Anda.
+                    Sebagai konsultan IT dan software house andalan, kami nyediain semua jasa IT <span className="bg-yellow-400 px-2 py-0.5 border-[2px] border-black ml-1 mr-1">end-to-end</span> mulai dari bikin web, aplikasi, sampai server untuk bisnis dan pemerintahan Anda.
                 </p>
             </div>
         </div>
