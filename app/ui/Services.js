@@ -12,62 +12,62 @@ import {
 const services = [
   {
     title: "Software Development",
-    desc: "Bikin custom software, aplikasi kasir (POS), atau pembuatan sistem ERP di Medan jadi lebih mudah dan fleksibel menyesuaikan cara kerja bisnis Anda.",
+    desc: "Layanan perancangan custom software, aplikasi POS (kasir), hingga sistem ERP terpadu di Medan yang dirancang fleksibel untuk menyesuaikan alur kerja unik bisnis Anda.",
     icon: Code2
   },
   {
     title: "Mobile App Development",
-    desc: "Jasa buat aplikasi di Medan untuk Android dan iOS. Cocok banget buat startup atau perusahaan yang ingin punya aplikasi sendiri seperti Gojek atau Tokopedia.",
+    desc: "Jasa pembuatan aplikasi di Medan untuk Android dan iOS berskala profesional. Solusi mobilitas digital terbaik untuk ekosistem startup maupun perusahaan korporat.",
     icon: Smartphone
   },
   {
     title: "Web Development",
-    desc: "Lagi cari tempat buat web di Medan? Kami melayani jasa pembuatan website company profile, e-commerce, hingga portal berita dengan desain premium yang dijamin muncul di halaman pertama Google.",
+    desc: "Mencari mitra terpercaya untuk buat web di Medan? Kami menyediakan jasa pembuatan website company profile, e-commerce, hingga portal berita dengan desain premium yang teroptimasi di halaman utama Google.",
     icon: Globe
   },
   {
     title: "Artificial Intelligence",
-    desc: "Jasa bikin AI dan Chatbot cerdas buat balasin chat pelanggan otomatis 24 jam. Bikin operasional bisnis Anda makin efisien dan canggih.",
+    desc: "Implementasi teknologi AI dan Chatbot cerdas untuk merespons pelanggan secara otomatis 24/7. Mengakselerasi efisiensi dan kecanggihan operasional bisnis Anda.",
     icon: BrainCircuit
   },
   {
     title: "Sistem Informasi",
-    desc: "Spesialis pembuatan SIMRS di Medan dan skala nasional, serta pembuatan aplikasi layanan publik (SPBE) untuk instansi pemerintah daerah.",
+    desc: "Spesialis pembuatan SIMRS di Medan dan skala nasional, serta perancangan aplikasi layanan publik (SPBE) komprehensif untuk instansi pemerintahan.",
     icon: BarChart3
   },
   {
     title: "Internet of Things",
-    desc: "Solusi Smart City dan monitoring aset real-time lewat sensor IoT. Cocok buat pabrik, perkebunan, atau instansi yang mau serba otomatis.",
+    desc: "Solusi Smart City dan sistem monitoring aset secara real-time melalui teknologi sensor IoT. Sangat ideal untuk otomatisasi pabrik, perkebunan, maupun infrastruktur instansi.",
     icon: Wifi
   },
   {
     title: "IT Procurement",
-    desc: "Bukan cuma jasa IT, kami juga nyediain perangkat keras (Server, Laptop, Videotron) resmi dan bergaransi khusus untuk instansi dan corporate.",
+    desc: "Kami juga menyediakan pengadaan perangkat keras (Server, Laptop, Videotron) resmi dan bergaransi, khusus dirancang untuk memenuhi spesifikasi instansi dan korporat.",
     icon: ShoppingBag
   },
   {
     title: "Cybersecurity Pentest",
-    desc: "Jangan tunggu diretas! Kami nyediain layanan audit keamanan sistem dan penetration testing buat ngecek celah keamanan di website atau aplikasi Anda.",
+    desc: "Lindungi aset digital Anda. Kami menghadirkan layanan audit keamanan sistem dan penetration testing untuk mendeteksi serta menutup celah keamanan pada website atau aplikasi Anda.",
     icon: ShieldCheck
   },
   {
     title: "Network Infrastructure",
-    desc: "Jasa instalasi jaringan LAN/WAN, tarikan kabel Fiber Optic, dan manajemen server kantor biar internet stabil dan data aman.",
+    desc: "Jasa instalasi infrastruktur jaringan LAN/WAN, penarikan kabel Fiber Optic, serta manajemen server untuk memastikan konektivitas internet stabil dan perlindungan data yang kuat.",
     icon: Network
   },
   {
     title: "IT Training",
-    desc: "Pelatihan teknologi dan workshop digital yang asik dan gampang dimengerti buat ningkatin skill tim IT di perusahaan atau dinas Anda.",
+    desc: "Program pelatihan teknologi dan workshop digital yang komprehensif serta mudah dipahami untuk meningkatkan kompetensi sumber daya manusia (SDM) di perusahaan atau instansi Anda.",
     icon: MonitorPlay
   },
   {
     title: "System Integration",
-    desc: "Banyak aplikasi tapi datanya misah-misah? Kami bantu integrasikan sistem Anda (API Integration) kayak payment gateway atau bridging BPJS biar datanya terpusat.",
+    desc: "Menghadapi fragmentasi data? Kami membantu mengintegrasikan sistem Anda (API Integration) seperti payment gateway atau bridging BPJS agar data terkelola secara terpusat.",
     icon: Settings
   },
   {
     title: "SEO Optimization",
-    desc: "Jasa SEO profesional biar website Anda gampang dicari orang dan selalu nongkrong di halaman pertama Google saat dicari calon pelanggan.",
+    desc: "Layanan optimasi mesin pencari (SEO) profesional agar website Anda mudah ditemukan dan mendominasi halaman pertama Google saat dicari oleh calon klien.",
     icon: Search
   }
 ];

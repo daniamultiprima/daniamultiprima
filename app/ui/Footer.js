@@ -70,7 +70,7 @@ export default function Footer() {
                                     Transformasi?
                                 </h2>
                                 <p className="font-sans font-bold text-gray-800 text-sm md:text-lg max-w-xl">
-                                    Lagi cari perusahaan IT di Medan? Jangan ragu buat konsultasi gratis! Kami siap bantu buatin website, custom software, atau aplikasi mobile sesuai budget dan kebutuhan bisnis Anda.
+                                    Mencari Perusahaan IT di Medan yang dapat diandalkan? Silakan jadwalkan konsultasi gratis! Kami siap merancang website, custom software, maupun aplikasi mobile yang disesuaikan secara presisi dengan kebutuhan bisnis Anda.
                                 </p>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <p className="font-sans font-bold text-gray-400 text-sm md:text-base leading-relaxed mb-10 border-l-[4px] border-gray-700 pl-4">
-                            Jasa buat web di Medan dan software house terpercaya. Kami ahlinya bikin website company profile, aplikasi Android/iOS, sistem ERP bisnis, hingga solusi teknologi pintar (AI & IoT) untuk seluruh Indonesia.
+                            Layanan terdepan untuk buat web di Medan dan mitra Software House terpercaya. Kami berpengalaman merancang website company profile, aplikasi Android/iOS, sistem ERP bisnis, hingga implementasi teknologi pintar (AI & IoT) skala nasional.
                         </p>
                         <div className="flex gap-4">
                             {[Instagram, Linkedin, Facebook].map((Icon, i) => (

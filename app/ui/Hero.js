@@ -108,15 +108,15 @@ export default function Hero() {
                                     <span className="font-logo text-brand font-bold mr-2 drop-shadow-[1px_1px_0_#000]">
                                         &gt;
                                     </span>
-                                    PT. Dania Multi Prima adalah partner teknologi dan{" "}
+                                    PT. Dania Multi Prima adalah mitra strategis dan{" "}
                                     <strong className="text-white font-bold bg-blue-900/50 px-1 border-b-[2px] border-brand">
                                         Software House terpercaya di Medan
                                     </strong>{". "}
-                                    Jika Anda sedang mencari jasa{" "}
+                                    Kami menghadirkan solusi teknologi terdepan, mulai dari layanan{" "}
                                     <strong className="text-white font-bold bg-blue-900/50 px-1 border-b-[2px] border-brand">
                                         buat web di Medan
                                     </strong>{", "}
-                                    ingin bikin website company profile profesional, atau butuh jasa pembuatan aplikasi custom, Anda berada di tempat yang tepat. Mulai dari startup, sistem ERP bisnis, hingga aplikasi pemerintahan (SPBE) di Sumatera Utara dan seluruh Indonesia, kami siap wujudkan ide Anda dengan teknologi terbaik.
+                                    perancangan website company profile yang elegan, hingga jasa pembuatan aplikasi custom berskala enterprise. Mulai dari perusahaan rintisan (startup), integrasi sistem ERP bisnis, hingga ekosistem aplikasi pemerintahan (SPBE) di Sumatera Utara dan seluruh Indonesia, kami siap merealisasikan visi Anda.
                                     <span className="inline-block w-3 h-5 bg-white ml-2 animate-pulse align-middle" />
                                 </p>
                             </div>

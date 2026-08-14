@@ -77,12 +77,12 @@ export default function ContactPage() {
                         transition={{ delay: 0.2 }}
                         className="bg-black border-[4px] border-gray-600 p-6 max-w-2xl shadow-[8px_8px_0_0_#000]">
                         <p className="font-sans text-sm md:text-lg font-bold text-gray-300 leading-relaxed">
-                            Mau buat web di Medan, bikin aplikasi mobile, atau cari jasa IT terpercaya? Diskusikan ide Anda bareng tim ahli kami! Kami melayani{" "}
+                            Mencari mitra terpercaya untuk buat web di Medan atau konsultasi jasa pembuatan aplikasi berskala enterprise? Diskusikan visi teknologi Anda bersama tim ahli kami. Kami melayani instansi di{" "}
                             <strong className="text-white bg-green-900 px-1 border-[2px] border-black">
                                 Medan, Binjai, Deli Serdang
                             </strong>
-                            , sampai ke seluruh Indonesia secara Remote maupun
-                            On-Site. Konsultasi GRATIS.
+                            , hingga seluruh Indonesia secara Remote maupun
+                            On-Site. Jadwalkan konsultasi GRATIS.
                         </p>
                     </motion.div>
                 </div>

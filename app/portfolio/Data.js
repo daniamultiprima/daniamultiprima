@@ -400,7 +400,7 @@ export default function PortfolioPage() {
                         className="bg-black border-[4px] border-gray-600 p-6 shadow-[8px_8px_0_0_#0f172a] max-w-3xl text-center relative">
                         <div className="absolute top-2 left-2 w-2 h-2 bg-cyan-400 animate-ping" />
                         <p className="font-sans text-gray-300 text-sm md:text-lg font-bold leading-relaxed mt-2">
-                            Lihat langsung bukti nyata hasil kerja kami. Dari sekadar <strong className="text-cyan-400">bikin web company profile</strong> sampai <strong className="text-cyan-400">pembuatan aplikasi kompleks</strong> untuk Kementerian, Pemda, Rumah Sakit, dan Perusahaan di seluruh Indonesia.
+                            Telusuri rekam jejak dan portofolio kebanggaan kami. Mulai dari perancangan <strong className="text-cyan-400">web company profile</strong> yang elegan, hingga <strong className="text-cyan-400">pembuatan aplikasi kompleks</strong> untuk Kementerian, Pemerintah Daerah, Rumah Sakit, dan Perusahaan berskala nasional.
                         </p>
                     </motion.div>
                 </div>

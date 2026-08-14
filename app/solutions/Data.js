@@ -162,7 +162,7 @@ export default function SolutionsPage() {
                             />
                         </div>
                         <p className="font-sans text-gray-300 text-sm md:text-lg font-bold leading-relaxed text-center md:text-left flex-1">
-                            Cari vendor handal untuk <strong className="text-yellow-400">integrasi SPBE</strong> atau <strong className="text-yellow-400">jasa pembuatan SIMRS</strong>? Kami spesialis bikin arsitektur IT untuk Pemerintah, Rumah Sakit, hingga Perusahaan B2B. Semua dirancang khusus, aman, dan berstandar nasional.
+                            Membutuhkan mitra berpengalaman untuk <strong className="text-yellow-400">integrasi SPBE</strong> atau <strong className="text-yellow-400">jasa pembuatan SIMRS</strong>? Kami mengkhususkan diri dalam merancang arsitektur IT berstandar tinggi untuk Pemerintahan, Rumah Sakit, dan Ekosistem B2B. Semua solusi dikembangkan secara kustom, aman, dan mematuhi regulasi nasional.
                         </p>
                     </motion.div>
                 </div>

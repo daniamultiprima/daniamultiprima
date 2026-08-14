@@ -73,7 +73,7 @@ export default function AboutPage() {
                                 perancangan aplikasi mobile, hingga jasa IT lainnya, kami siap membantu UMKM dan instansi pemerintah berkembang di era digital.
                                 <br />
                                 <br />
-                                Kami nggak cuma asal coding, tapi juga mengintegrasikan{" "}
+                                Kami mengintegrasikan fondasi rekayasa perangkat lunak dengan{" "}
                                 <strong className="text-black bg-yellow-300 px-1 border-[2px] border-black">
                                     Keamanan Siber
                                 </strong>
@@ -81,8 +81,8 @@ export default function AboutPage() {
                                 <strong className="text-black bg-cyan-300 px-1 border-[2px] border-black">
                                     Solusi AI
                                 </strong>{" "}
-                                agar sistem yang dibuat benar-benar kokoh dan siap bersaing di seluruh
-                                Indonesia.
+                                untuk membangun infrastruktur digital yang kokoh dan berdaya saing bagi
+                                instansi Pemerintah dan Swasta di seluruh Indonesia.
                             </p>
 
                             <div className="mt-8 pt-6 border-t-[4px] border-black border-dashed flex items-center justify-between">
@@ -131,7 +131,7 @@ export default function AboutPage() {
                             <span className="text-blue-700 bg-blue-100 px-2 py-1 border-[2px] border-black shadow-[2px_2px_0_0_#000]">
                                 Mitra IT Terpercaya
                             </span>{" "}
-                            buat bantuin transformasi digital bisnis dan pemerintahan dari hulu ke hilir lewat teknologi Software & AI terdepan.
+                            dalam mengakselerasi transformasi digital bisnis dan pemerintahan dari hulu ke hilir melalui inovasi Software & AI terdepan.
                         </p>
                     </motion.div>
 
@@ -155,10 +155,10 @@ export default function AboutPage() {
                         </div>
 
                         <div className="space-y-4">
-                            <MissionTask text="Menyediakan jasa pembuatan aplikasi (Web & Android) yang beneran ngasih solusi." />
-                            <MissionTask text="Pengembangan sistem SIMRS rumah sakit dan solusi e-gov Smart City." />
-                            <MissionTask text="Penerapan proteksi siber ketat dan otomatisasi pakai teknologi AI cerdas." />
-                            <MissionTask text="Ngasi dukungan layanan IT support yang selalu standby dan jangka panjang." />
+                            <MissionTask text="Menyediakan jasa pembuatan aplikasi (Web & Android) yang presisi dan berorientasi pada solusi nyata." />
+                            <MissionTask text="Pengembangan sistem SIMRS rumah sakit dan ekosistem E-Government (Smart City) yang terintegrasi." />
+                            <MissionTask text="Implementasi protokol keamanan siber tingkat lanjut dan otomatisasi berbasis teknologi AI." />
+                            <MissionTask text="Memberikan dukungan IT Support dan Maintenance yang andal serta berkesinambungan jangka panjang." />
                         </div>
                     </motion.div>
                 </div>
@@ -176,20 +176,20 @@ export default function AboutPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
                         <SkillCard
-                            title="Full Custom"
-                            desc="Custom software yang dibikin 100% nyambung sama cara kerja bisnis Anda. Gak pake template pasaran!"
+                            title="Full Customization"
+                            desc="Perangkat lunak yang kami rancang 100% disesuaikan dengan alur kerja (business logic) perusahaan Anda, memastikan efisiensi maksimal tanpa menggunakan template massal."
                             icon={Cpu}
                             color="cyan"
                         />
                         <SkillCard
-                            title="Anti Retas"
-                            desc="Website atau aplikasi diproteksi dengan keamanan data kelas atas. Bikin Anda dan pelanggan tidur nyenyak."
+                            title="Cyber Security"
+                            desc="Setiap aplikasi dibangun dengan arsitektur tangguh dan standar perlindungan data tingkat tinggi untuk menjamin kerahasiaan informasi klien Anda."
                             icon={Shield}
                             color="red"
                         />
                         <SkillCard
-                            title="Semua Nyambung"
-                            desc="Jasa IT lengkap (End-to-End). Mulai dari web, mobile app, API, sampai server, semuanya terhubung dengan mulus."
+                            title="Ecosystem Sync"
+                            desc="Menyediakan layanan IT End-to-End. Dari platform web, mobile app, integrasi API, hingga manajemen server yang beroperasi mulus dalam satu ekosistem terpadu."
                             icon={Zap}
                             color="yellow"
                         />

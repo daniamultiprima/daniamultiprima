@@ -33,7 +33,7 @@ const allServices = [
         id: 1,
         category: "Development",
         title: "Software Development",
-        desc: "Jasa bikin custom software, sistem ERP, dan POS kasir yang luwes banget ngikutin cara kerja unik bisnis Anda.",
+        desc: "Layanan pengembangan custom software, sistem ERP, dan POS kasir yang dirancang fleksibel untuk menyesuaikan alur kerja operasional bisnis Anda.",
         icon: Code2,
         color: "bg-blue-500",
     },
@@ -41,7 +41,7 @@ const allServices = [
         id: 2,
         category: "Development",
         title: "Mobile App Development",
-        desc: "Jasa pembuatan aplikasi mobile (Android/iOS) keren. Solusi tepat buat startup atau perusahaan yang mau go-digital.",
+        desc: "Jasa pembuatan aplikasi mobile (Android/iOS) berskala profesional. Solusi mobilitas digital terbaik untuk ekosistem startup dan perusahaan korporasi.",
         icon: Smartphone,
         color: "bg-indigo-500",
     },
@@ -49,7 +49,7 @@ const allServices = [
         id: 3,
         category: "Development",
         title: "Web Development",
-        desc: "Layanan jasa buat web company profile, toko online, sampai portal berita. Dijamin desain premium dan nangkring di Google.",
+        desc: "Layanan perancangan web company profile, e-commerce, hingga portal berita. Mengutamakan desain premium dan optimasi SEO untuk tampil di halaman utama Google.",
         icon: Globe,
         color: "bg-sky-500",
     },
@@ -249,7 +249,7 @@ export default function ServicesPage() {
                         <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-yellow-400 border-[2px] border-black shadow-[2px_2px_0_0_#000] transform -rotate-3" />
 
                         <p className="font-sans text-sm md:text-base font-bold text-gray-200">
-                            Apapun skala bisnis Anda, kami siap nyediain solusi IT terlengkap. Sebagai tempat <strong className="text-white">buat web di Medan</strong> dan konsultan teknologi andalan, kami punya 18+ spesialisasi buat naikin level bisnis Anda.
+                            Apapun skala bisnis Anda, kami menyediakan solusi IT komprehensif. Sebagai mitra <strong className="text-white">buat web di Medan</strong> dan konsultan teknologi andalan, kami hadir dengan 18+ spesialisasi untuk mengakselerasi pertumbuhan bisnis Anda.
                         </p>
                     </motion.div>
                 </div>
