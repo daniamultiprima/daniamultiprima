@@ -34,7 +34,15 @@ export const metadata = {
         'Software ERP Indonesia',
         'Solusi IT Korporat',
         'Aplikasi Kasir POS Terintegrasi',
-        'Pembuatan Software Custom Bisnis'
+        'Pembuatan Software Custom Bisnis',
+
+        // --- NEW KEYWORDS (AI, CYBERSECURITY, B2G, COMMUNICATION) ---
+        "Jasa AI Agent Indonesia", "Agentic AI Indonesia", "Jasa Integrasi RAG", "Retrieval-Augmented Generation", 
+        "Jasa Integrasi LLM", "Integrasi ChatGPT", "Konsultan AI Indonesia", "Jasa Pembuatan Chatbot WhatsApp AI",
+        "Konsultan Cyber Security", "Jasa Konsultan UU PDP", "Data Protection Officer", "Audit Keamanan Sistem",
+        "Jasa Integrasi WhatsApp Business API", "Omnichannel CRM", "Otomasi Proses Bisnis AI",
+        "E-Katalog Lokal", "E-Katalog Nasional", "Vendor IT Pemko Medan", "Konsultan SPBE Sumatera Utara", 
+        "SBU Spesialis IT", "ISO 27001 Tender IT", "Konsultan Transformasi Digital Bisnis"
     ],
     
     alternates: {

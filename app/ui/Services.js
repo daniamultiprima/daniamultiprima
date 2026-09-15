@@ -27,12 +27,12 @@ const services = [
   },
   {
     title: "Artificial Intelligence",
-    desc: "Implementasi teknologi AI dan Chatbot cerdas untuk merespons pelanggan secara otomatis 24/7. Mengakselerasi efisiensi dan kecanggihan operasional bisnis Anda.",
+    desc: "Implementasi AI Agent, RAG (Retrieval-Augmented Generation), dan integrasi LLM (ChatGPT/Gemini) untuk otomasi proses bisnis dan chatbot cerdas 24/7 yang revolusioner.",
     icon: BrainCircuit
   },
   {
     title: "Sistem Informasi",
-    desc: "Spesialis pembuatan SIMRS di Medan dan skala nasional, serta perancangan aplikasi layanan publik (SPBE) komprehensif untuk instansi pemerintahan.",
+    desc: "Spesialis pembuatan SIMRS berskala nasional, serta pengembangan aplikasi publik (SPBE) dan E-Katalog (Lokal/Nasional) untuk kebutuhan instansi pemerintahan.",
     icon: BarChart3
   },
   {
@@ -47,7 +47,7 @@ const services = [
   },
   {
     title: "Cybersecurity Pentest",
-    desc: "Lindungi aset digital Anda. Kami menghadirkan layanan audit keamanan sistem dan penetration testing untuk mendeteksi serta menutup celah keamanan pada website atau aplikasi Anda.",
+    desc: "Lindungi aset digital Anda melalui audit keamanan sistem, penetration testing, serta pemenuhan standar kepatuhan regulasi UU PDP (Pelindungan Data Pribadi).",
     icon: ShieldCheck
   },
   {
@@ -62,7 +62,7 @@ const services = [
   },
   {
     title: "System Integration",
-    desc: "Menghadapi fragmentasi data? Kami membantu mengintegrasikan sistem Anda (API Integration) seperti payment gateway atau bridging BPJS agar data terkelola secara terpusat.",
+    desc: "Kami membantu mengintegrasikan ekosistem digital Anda mulai dari API Payment Gateway, Bridging BPJS, hingga integrasi WhatsApp Business API untuk Omnichannel CRM.",
     icon: Settings
   },
   {

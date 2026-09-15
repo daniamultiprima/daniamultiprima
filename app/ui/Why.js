@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
 
             <div className="max-w-2xl bg-black border-[4px] border-gray-800 p-6 shadow-[8px_8px_0_0_#2563eb]">
               <p className="font-sans text-sm md:text-base text-gray-300 font-bold leading-relaxed">
-                Sebagai konsultan IT di Medan dengan pengalaman lebih dari 8 tahun, kami tidak sekadar mengembangkan website atau aplikasi. Kami hadir sebagai mitra strategis untuk membangun fondasi digital yang kuat guna mengakselerasi pertumbuhan dan profitabilitas bisnis Anda.
+                Sebagai <strong className="text-white">konsultan IT terpercaya di Medan dan skala Nasional</strong> dengan pengalaman lebih dari 8 tahun, kami hadir sebagai mitra strategis (Konsultan Transformasi Digital) untuk membangun fondasi teknologi yang kuat guna mengakselerasi pertumbuhan bisnis maupun pelayanan publik Anda.
               </p>
             </div>
         </div>
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
           <MechanicalCard
             icon={<Layers size={40} className="text-black" />}
             title="Ekosistem Menyeluruh"
-            desc="Satu solusi terintegrasi untuk seluruh kebutuhan IT Anda. Mulai dari layanan buat web di Medan, pengembangan aplikasi mobile, AI, hingga pengadaan infrastruktur server. Biarkan kami yang mengelola IT Anda, sementara Anda fokus mengembangkan bisnis."
+            desc="Satu solusi (One Stop IT Solution) untuk seluruh kebutuhan Anda. Mulai dari jasa buat web di Medan, pembuatan aplikasi custom, implementasi AI Agent, integrasi E-Katalog Nasional/Lokal, hingga pengadaan infrastruktur."
             color="bg-blue-500"
           />
 
@@ -67,7 +67,7 @@ export default function WhyChooseUs() {
           <MechanicalCard
             icon={<Cpu size={40} className="text-black" />}
             title="Teknologi Masa Depan"
-            desc="Kami selalu mengadopsi teknologi mutakhir yang relevan (seperti AI & IoT). Dengan demikian, aplikasi atau sistem yang kami bangun akan tetap kompetitif dan andal untuk menghadapi tantangan 5 hingga 10 tahun ke depan."
+            desc="Selalu mengadopsi teknologi mutakhir (AI Agent, integrasi RAG, LLM & IoT). Aplikasi komersial maupun sistem pemerintahan (SPBE & Smart City) yang kami bangun dirancang andal untuk tantangan masa depan."
             color="bg-yellow-400"
           />
 

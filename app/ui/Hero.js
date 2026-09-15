@@ -116,7 +116,7 @@ export default function Hero() {
                                     <strong className="text-white font-bold bg-blue-900/50 px-1 border-b-[2px] border-brand">
                                         buat web di Medan
                                     </strong>{", "}
-                                    perancangan website company profile yang elegan, hingga jasa pembuatan aplikasi custom berskala enterprise. Mulai dari perusahaan rintisan (startup), integrasi sistem ERP bisnis, hingga ekosistem aplikasi pemerintahan (SPBE) di Sumatera Utara dan seluruh Indonesia, kami siap merealisasikan visi Anda.
+                                    perancangan website company profile, hingga jasa pembuatan aplikasi custom berskala enterprise. Mulai dari perusahaan rintisan, integrasi sistem ERP bisnis, hingga ekosistem aplikasi pemerintahan (SPBE & E-Katalog Lokal) di Sumatera Utara dan nasional. Kami juga berinovasi dengan solusi terdepan <strong className="text-white font-bold bg-blue-900/50 px-1 border-b-[2px] border-brand">Artificial Intelligence (AI Agent & RAG)</strong> serta memastikan keamanan data Anda sepenuhnya mematuhi regulasi <strong className="text-white font-bold bg-blue-900/50 px-1 border-b-[2px] border-brand">UU PDP</strong>.
                                     <span className="inline-block w-3 h-5 bg-white ml-2 animate-pulse align-middle" />
                                 </p>
                             </div>
