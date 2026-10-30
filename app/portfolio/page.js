@@ -1,120 +1,49 @@
-import Data from "./Data"
-import Script from "next/script"
+import JsonLd from "@/ui/JsonLd";
+import PortfolioExplorer from "./PortfolioExplorer";
+import { CTA, PageHero, Section, SectionHead, Stats } from "@/ui/blocks";
+import { PROJECTS } from "@/lib/content";
+import { SITE, pageMeta } from "@/lib/site";
 
-export const metadata = {
-    title: 'Portfolio Proyek Aplikasi & IT | PT DMP',
-    
-    
-    description: 'Lihat rekam jejak PT. Dania Multi Prima dalam mengerjakan 35+ proyek strategis: Sistem Informasi RS (SIMRS), Smart City Pemerintahan (SPBE), Dashboard Big Data, dan Aplikasi Kampus di Indonesia.',
-    
-    
-    keywords: [
-        'Portfolio Konsultan IT', 
-        'Studi Kasus Software House',
-        'Contoh Aplikasi Pemerintahan',
-        'Demo SIMRS Rumah Sakit',
-        
-        'Proyek Smart City Indonesia', 
-        'Vendor SIMRS Terpercaya', 
-        'Sistem E-Office DPRD',
-        'Dashboard Eksekutif Pemerintahan',
-        'Studi Kasus Aplikasi Smart City',
-        'Contoh E-Government Indonesia',
-        
-        'Portfolio Dania Multi Prima',
-        'Software House Medan Portfolio',
-        'Portfolio Web Developer Medan',
+export const metadata = pageMeta({
+  title: "Portofolio Proyek Website, Aplikasi, SIMRS & AI",
+  description:
+    "Hasil kerja PT Dania Multi Prima: chatbot AI Kementerian Komdigi, SIMRS RSUD, dashboard keuangan daerah, aplikasi smart city, sistem kampus, dan toko online.",
+  path: "/portfolio",
+});
 
-        // --- NEW KEYWORDS (AI, CYBERSECURITY, B2G, COMMUNICATION) ---
-        "Jasa AI Agent Indonesia", "Agentic AI Indonesia", "Jasa Integrasi RAG", "Retrieval-Augmented Generation", 
-        "Jasa Integrasi LLM", "Integrasi ChatGPT", "Konsultan AI Indonesia", "Jasa Pembuatan Chatbot WhatsApp AI",
-        "Konsultan Cyber Security", "Jasa Konsultan UU PDP", "Data Protection Officer", "Audit Keamanan Sistem",
-        "Jasa Integrasi WhatsApp Business API", "Omnichannel CRM", "Otomasi Proses Bisnis AI",
-        "E-Katalog Lokal", "E-Katalog Nasional", "Vendor IT Pemko Medan", "Konsultan SPBE Sumatera Utara", 
-        "SBU Spesialis IT", "ISO 27001 Tender IT", "Konsultan Transformasi Digital Bisnis"
-    ],
-    
-    alternates: {
-        canonical: 'https://dmp.bio/portfolio',
-    },
-    
-    
-    openGraph: {
-        title: 'Portfolio Proyek IT - PT. Dania Multi Prima',
-        description: '35+ Proyek Terselesaikan: Government, Health, & Enterprise.',
-        url: 'https://dmp.bio/portfolio',
-        siteName: 'PT. Dania Multi Prima',
-        images: [{
-            url: '/opengraph-image.png',
-            width: 1200,
-            height: 630,
-            alt: 'Showcase Proyek PT. Dania Multi Prima'
-        }],
-        type: 'website',
-    },
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Portofolio PT Dania Multi Prima",
+  url: `${SITE.url}/portfolio`,
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: PROJECTS.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: { "@type": "CreativeWork", name: p.title, description: p.desc, creator: { "@id": `${SITE.url}/#organization` }, sourceOrganization: p.client },
+    })),
+  },
+};
 
-    
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-        }
-    }
-}
-
-
-const jsonLd = [
-    
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Portfolio Proyek IT PT. Dania Multi Prima",
-        "description": "Koleksi studi kasus dan proyek pengembangan perangkat lunak untuk Pemerintah, Rumah Sakit, Edukasi, dan Bisnis.",
-        "url": "https://dmp.bio/portfolio",
-        "mainEntity": {
-            "@type": "ItemList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Jare-AI Public Service - Kementerian Komunikasi & Digital" },
-                { "@type": "ListItem", "position": 2, "name": "Sistem Laporan Keuangan Daerah - Pemkab Serdang Bedagai" },
-                { "@type": "ListItem", "position": 3, "name": "SIMRS Terintegrasi - RSUD Drs. H. Amri Tambunan" },
-                { "@type": "ListItem", "position": 4, "name": "Sistem Akademik & Remunerasi - Universitas Sumatera Utara" },
-                { "@type": "ListItem", "position": 5, "name": "Smart City Apps & E-Absensi - Pemko Binjai" },
-                { "@type": "ListItem", "position": 6, "name": "Project Management Dashboard - Telkom Indonesia" },
-                { "@type": "ListItem", "position": 7, "name": "Sistem Penerimaan Murid Baru (SPMB) - Pemko Tanjung Balai" },
-                { "@type": "ListItem", "position": 8, "name": "Portal Informasi & E-Office - DPRD Deli Serdang" }
-            ]
-        }
-    },
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://dmp.bio"
-        },{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Portfolio",
-            "item": "https://dmp.bio/portfolio"
-        }]
-    }
-];
- 
-export default async function Portfolio() {  
-    return (
-        <>
-            <Script
-                id="portfolio-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            <Data/>
-        </>
-    );
+export default function PortfolioPage() {
+  return (
+    <>
+      <JsonLd data={ld} />
+      <PageHero
+        crumbs={[{ name: "Portofolio", href: "/portfolio" }]}
+        title="Hasil kerja kami"
+        lead="Sistem untuk kementerian, pemerintah daerah, rumah sakit, kampus, dan perusahaan. Saring berdasarkan sektor untuk melihat contoh yang paling dekat dengan kebutuhan Anda."
+      >
+        <div className="mt-12">
+          <Stats />
+        </div>
+      </PageHero>
+      <Section>
+        <SectionHead kicker="Daftar proyek" title="Pilih sektor, lihat contohnya" className="mb-10" />
+        <PortfolioExplorer />
+      </Section>
+      <CTA title="Proyek Anda berikutnya?" />
+    </>
+  );
 }

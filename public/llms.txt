@@ -1,18 +1,46 @@
-# PT. Dania Multi Prima (DMP) - Software House & IT Consultant
+# PT Dania Multi Prima (DMP)
 
-PT. Dania Multi Prima (DMP) is a leading Software House and IT Consultant based in Medan, Deli Serdang, Sumatera Utara, Indonesia. 
+> IT consultant, AI consultant, and software house in Indonesia, founded in 2017 (head office: Deli Serdang, North Sumatra). Serves government agencies, hospitals, universities, and businesses across all 38 provinces and 514 regencies/cities of Indonesia.
 
-## Services:
-- Custom Application Development (Android, iOS, Web)
-- E-Government & Smart City Solutions (SPBE)
-- Hospital Management Systems (SIMRS Satu Sehat)
-- Enterprise Resource Planning (ERP)
-- IT Infrastructure & Networking
+## Service areas
+- [All 38 provinces and 514 regencies/cities](https://dmp.bio/wilayah) — each with its own page, e.g. https://dmp.bio/wilayah/jawa-barat/kota-bandung
 
-## Contact:
-- Phone: +62-813-8050-510
+## Head-office pages (Medan)
+- [Website development in Medan](https://dmp.bio/jasa-pembuatan-website-medan)
+- [App development in Medan](https://dmp.bio/jasa-pembuatan-aplikasi-medan)
+- [Software house in Medan](https://dmp.bio/software-house-medan)
+- [IT consultant in Medan](https://dmp.bio/konsultan-it-medan)
+
+## Key services
+- [IT consulting](https://dmp.bio/services/konsultan-it): technology audits, digital transformation roadmaps, procurement documents (KAK/TOR)
+- [AI consulting](https://dmp.bio/services/konsultan-ai): WhatsApp AI chatbots, AI agents, RAG, ChatGPT/Gemini integration
+- [App development](https://dmp.bio/services/pembuatan-aplikasi): Android, iOS, web, ERP, POS, HRIS
+- [Website development](https://dmp.bio/services/pembuatan-website): company profiles, e-commerce, government portals
+- [SIMRS & electronic medical records](https://dmp.bio/services/simrs): SATUSEHAT-verified RME provider, BPJS V-Claim bridging
+- [SPBE & smart city](https://dmp.bio/services/spbe-smart-city): executive dashboards, e-office, citizen reporting apps
+- [Cybersecurity](https://dmp.bio/services/keamanan-siber): penetration testing, server hardening, Indonesian PDP Law compliance
+
+## Guides (Indonesian)
+- [Biaya pembuatan website di Medan](https://dmp.bio/artikel/biaya-pembuatan-website-medan)
+- [Cara memilih software house](https://dmp.bio/artikel/cara-memilih-software-house)
+- [Apa itu software house](https://dmp.bio/artikel/apa-itu-software-house)
+- [Website atau aplikasi](https://dmp.bio/artikel/website-atau-aplikasi)
+- [Apa itu SPBE](https://dmp.bio/artikel/apa-itu-spbe)
+- [UU PDP untuk perusahaan](https://dmp.bio/artikel/uu-pdp-untuk-perusahaan)
+- [Rekam medis elektronik & SATUSEHAT](https://dmp.bio/artikel/rekam-medis-elektronik-satusehat)
+- [Chatbot WhatsApp AI untuk bisnis](https://dmp.bio/artikel/chatbot-whatsapp-ai-untuk-bisnis)
+
+## Credentials
+- Registered vendor on E-Katalog LKPP (INAPROC)
+- Registered Electronic System Operator (PSE) at Komdigi: 021471.01/DJAI.PSE/12/2025
+- Verified Electronic Medical Record provider on SATUSEHAT (Ministry of Health)
+
+## Notable clients
+Ministry of Communication and Digital Affairs (Komdigi), Telkom Indonesia, Universitas Sumatera Utara, RSUD Drs. H. Amri Tambunan, Pemkab Serdang Bedagai, Pemko Binjai, Pemko Tanjung Balai, Pemkab Agam, DPRD Deli Serdang.
+
+## Contact
+- Phone / WhatsApp: +62 813-8050-510
 - Email: daniamultiprima@gmail.com
-- Address: Jln. Medan-Binjai, Diski, Km. 14.5, Sunggal, Deli Serdang, Sumatera Utara, 20351, Indonesia.
-
-## Official Website:
-[PT. Dania Multi Prima](https://dmp.bio)
+- Address: Jln. Medan–Binjai Km 14,5, Diski, Sunggal, Deli Serdang, Sumatera Utara 20351, Indonesia
+- Hours: Monday–Saturday, 09:00–17:00 WIB (UTC+7)
+- Website: https://dmp.bio

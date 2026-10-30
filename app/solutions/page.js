@@ -1,129 +1,75 @@
-import Data from "./Data"
-import Script from "next/script"
+import Link from "next/link";
+import JsonLd from "@/ui/JsonLd";
+import PixelIcon from "@/ui/PixelIcon";
+import { Reveal } from "@/ui/Motion";
+import { CheckList, CTA, PageHero, Section, Visual } from "@/ui/blocks";
+import { SECTORS } from "@/lib/content";
+import { SITE, pageMeta } from "@/lib/site";
 
-export const metadata = {
-    title: 'Solusi Smart City & SIMRS Medan | PT DMP',
-    
-    
-    description: 'Solusi IT Terintegrasi untuk Transformasi Digital: E-Government (SPBE), Manajemen Rumah Sakit (SIMRS Satu Sehat), Sistem Akademik Kampus, dan ERP Bisnis di Indonesia.',
-    
-    
-    keywords: [
-        // Smart City & Gov
-        'Solusi Smart City Indonesia',
-        'Aplikasi Pemerintahan SPBE',
-        'Vendor E-Government Medan',
-        'Sistem Command Center Daerah',
-        'Aplikasi E-Office Tata Naskah Dinas',
-        'E-Katalog Pemerintah Daerah',
-        
-        // Healthcare (SIMRS)
-        'Sistem Informasi Manajemen Rumah Sakit',
-        'Vendor SIMRS BPJS',
-        'Integrasi Satu Sehat Kemenkes',
-        'Rekam Medis Elektronik (RME)',
-        'Bridging BPJS VClaim & PCare',
-        'Aplikasi Antrean Rumah Sakit',
-        
-        // Education (EdTech)
-        'Sistem Informasi Akademik Kampus (SIAKAD)',
-        'Software Kampus Merdeka',
-        'Sistem Remunerasi Dosen',
-        
-        // Enterprise & Business
-        'Software ERP Indonesia',
-        'Solusi IT Korporat',
-        'Aplikasi Kasir POS Terintegrasi',
-        'Pembuatan Software Custom Bisnis',
+export const metadata = pageMeta({
+  title: "Solusi IT untuk Pemerintah, Rumah Sakit & Kampus",
+  description:
+    "Solusi IT per sektor: SPBE untuk pemda, SIMRS & RME untuk rumah sakit, SIAKAD untuk kampus, serta ERP & AI untuk bisnis di seluruh Indonesia.",
+  path: "/solutions",
+});
 
-        // --- NEW KEYWORDS (AI, CYBERSECURITY, B2G, COMMUNICATION) ---
-        "Jasa AI Agent Indonesia", "Agentic AI Indonesia", "Jasa Integrasi RAG", "Retrieval-Augmented Generation", 
-        "Jasa Integrasi LLM", "Integrasi ChatGPT", "Konsultan AI Indonesia", "Jasa Pembuatan Chatbot WhatsApp AI",
-        "Konsultan Cyber Security", "Jasa Konsultan UU PDP", "Data Protection Officer", "Audit Keamanan Sistem",
-        "Jasa Integrasi WhatsApp Business API", "Omnichannel CRM", "Otomasi Proses Bisnis AI",
-        "E-Katalog Lokal", "E-Katalog Nasional", "Vendor IT Pemko Medan", "Konsultan SPBE Sumatera Utara", 
-        "SBU Spesialis IT", "ISO 27001 Tender IT", "Konsultan Transformasi Digital Bisnis"
-    ],
-    
-    alternates: {
-        canonical: 'https://dmp.bio/solutions',
-    },
-    
-    openGraph: {
-        title: 'Solusi Digital Pemerintahan & Korporat - PT. Dania Multi Prima',
-        description: 'Spesialis Implementasi Sistem: SPBE, SIMRS, SIAKAD & ERP.',
-        url: 'https://dmp.bio/solutions',
-        images: ['/opengraph-image.jpg'],
-        type: 'website',
-    },
+const VISUAL = { gov: "dashboard", health: "queue", edu: "phone", biz: "browser" };
 
-    
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-image-preview': 'large',
-        }
-    }
-}
-
-
-const jsonLd = {
+export default function SolutionsPage() {
+  const ld = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Katalog Solusi Digital PT. Dania Multi Prima",
-    "description": "Daftar solusi perangkat lunak terintegrasi untuk berbagai sektor industri.",
-    "itemListElement": [
-        {
-            "@type": "Service",
-            "position": 1,
-            "name": "Solusi E-Government (Smart City)",
-            "serviceType": "Public Sector IT",
-            "description": "Dashboard Eksekutif, E-Office, Tata Naskah Dinas, dan Aplikasi Pelayanan Publik sesuai standar SPBE.",
-            "provider": { "@type": "Organization", "name": "PT. Dania Multi Prima" },
-            "areaServed": "Indonesia"
-        },
-        {
-            "@type": "Service",
-            "position": 2,
-            "name": "Solusi Kesehatan (HealthTech)",
-            "serviceType": "Healthcare IT",
-            "description": "SIMRS Terintegrasi, Bridging BPJS V-Claim, E-Resep, dan IoT Nurse Call (Satu Sehat Ready).",
-            "provider": { "@type": "Organization", "name": "PT. Dania Multi Prima" },
-            "areaServed": "Indonesia"
-        },
-        {
-            "@type": "Service",
-            "position": 3,
-            "name": "Solusi Pendidikan (EdTech)",
-            "serviceType": "Educational Software",
-            "description": "Sistem Informasi Akademik (SIAKAD), Portal Mahasiswa, Perpustakaan Digital, dan Sistem Remunerasi Dosen.",
-            "provider": { "@type": "Organization", "name": "PT. Dania Multi Prima" },
-            "areaServed": "Indonesia"
-        },
-        {
-            "@type": "Service",
-            "position": 4,
-            "name": "Solusi Enterprise (Bisnis)",
-            "serviceType": "Business Automation",
-            "description": "Custom ERP, CRM, Point of Sales (POS), dan E-Commerce Omnichannel.",
-            "provider": { "@type": "Organization", "name": "PT. Dania Multi Prima" },
-            "areaServed": "Indonesia"
-        }
-    ]
-}
- 
-export default async function Solutions() {  
-    return (
-        <>
-            <Script
-                id="solutions-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            <Data/>
-        </>
-    );
+    name: "Solusi IT per sektor",
+    itemListElement: SECTORS.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: { "@type": "Service", name: `${s.title}: ${s.tagline}`, description: s.desc, provider: { "@id": `${SITE.url}/#organization` }, areaServed: "Indonesia" },
+    })),
+  };
+  return (
+    <>
+      <JsonLd data={ld} />
+      <PageHero
+        crumbs={[{ name: "Solusi", href: "/solutions" }]}
+        title="Solusi yang paham cara kerja sektor Anda"
+        lead="Pemerintah, rumah sakit, kampus, dan bisnis punya aturan dan kebiasaan kerja yang berbeda. Sistem yang kami bangun menyesuaikan itu."
+      >
+        <div className="mt-8 max-w-2xl space-y-4 text-[16px] leading-relaxed text-ink-600">
+          <p>
+            Pemerintah daerah perlu aplikasi yang mendukung arsitektur SPBE dan bisa diadakan lewat E-Katalog. Rumah sakit wajib menjalankan rekam medis
+            elektronik yang tersambung ke SATUSEHAT dan BPJS. Kampus mengejar pelaporan akademik yang rapi, sementara bisnis butuh stok, keuangan, dan
+            penjualan dalam satu sistem.
+          </p>
+          <p>Di bawah ini ringkasan solusi per sektor, lengkap dengan fitur yang paling sering dibutuhkan dan contoh tampilannya.</p>
+        </div>
+      </PageHero>
+      {SECTORS.map((s, i) => {
+        const flip = i % 2 === 1;
+        return (
+          <Section key={s.id} id={s.id} tone={flip ? "white" : "paper"} dots={!flip}>
+            <div className="grid items-center gap-14 lg:grid-cols-2">
+              <Reveal className={flip ? "lg:order-2" : ""}>
+                <span className="grid h-14 w-14 place-items-center bg-ink text-white">
+                  <PixelIcon name={s.icon} size={48} />
+                </span>
+                <p className="mt-6 font-pixel text-[11px] uppercase tracking-wider text-brand-700">{s.tagline}</p>
+                <h2 className="t-h2 mt-2">{s.title}</h2>
+                <p className="lead mt-4">{s.desc}</p>
+                <div className="mt-7">
+                  <CheckList items={s.features} cols={1} />
+                </div>
+                <Link href={`/services/${s.slug}`} className="btn btn-light mt-9">
+                  Lihat detail →
+                </Link>
+              </Reveal>
+              <Reveal delay={0.1} className={`px-box grid place-items-center bg-pixel-dots p-8 md:p-12 ${flip ? "lg:order-1" : ""}`} style={{ "--bg": "#DCE8FF" }}>
+                <Visual type={VISUAL[s.id]} className={VISUAL[s.id] === "browser" ? "w-full max-w-[420px]" : ""} />
+              </Reveal>
+            </div>
+          </Section>
+        );
+      })}
+      <CTA title="Kebutuhan Anda tidak ada di daftar?" lead="Tim analis sistem kami terbiasa merancang solusi khusus sesuai anggaran daerah maupun perusahaan." />
+    </>
+  );
 }
