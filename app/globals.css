@@ -32,9 +32,19 @@
   p {
     text-wrap: pretty;
   }
+  /* Kata panjang (mis. "kabupaten/kota") tidak boleh menembus kotaknya di layar sempit */
+  body {
+    overflow-wrap: break-word;
+  }
 }
 
 @layer components {
+  /* Kolom grid bawaan tidak melebar mengikuti isi (mockup lebar dsb.);
+     utilitas grid-cols-* tetap menimpa karena berada di layer utilities */
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .container-site {
     @apply mx-auto w-full max-w-site px-5 md:px-8;
   }
@@ -44,7 +54,7 @@
     @apply font-pixel text-[33px] leading-[1.12] tracking-[-0.02em] sm:text-[44px] lg:text-[55px];
   }
   .t-h2 {
-    @apply font-pixel text-[33px] leading-[1.15] tracking-[-0.02em] lg:text-[44px];
+    @apply font-pixel text-[28px] leading-[1.15] tracking-[-0.02em] sm:text-[33px] lg:text-[44px];
   }
   .t-h3 {
     @apply font-pixel text-[22px] leading-[1.25] tracking-[-0.01em];
@@ -198,6 +208,29 @@
   /* Dither papan catur: transisi antar warna latar */
   .dither {
     background: conic-gradient(var(--d1, #0f1a33) 25%, transparent 0 50%, var(--d1, #0f1a33) 0 75%, transparent 0) 0 0 / 6px 6px;
+  }
+}
+
+/* Di HP, deretan kartu jadi geser ke samping supaya halaman tidak terlalu panjang */
+@media (max-width: 767.98px) {
+  .swipe-m {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
+    margin-inline: -20px;
+    padding: 6px 20px 16px;
+    scrollbar-width: none;
+  }
+  .swipe-m::-webkit-scrollbar {
+    display: none;
+  }
+  .swipe-m > * {
+    flex: 0 0 84%;
+    min-width: 0;
+    scroll-snap-align: start;
   }
 }
 

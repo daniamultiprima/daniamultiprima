@@ -26,6 +26,8 @@ const csp = [
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  // 1.100+ halaman & gambar OG dibuat paralel; batas 60 dtk bawaan memicu percobaan ulang yang tidak perlu
+  staticPageGenerationTimeout: 180,
   images: {
     formats: ["image/avif", "image/webp"],
   },

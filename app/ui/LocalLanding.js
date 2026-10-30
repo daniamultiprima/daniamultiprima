@@ -77,11 +77,11 @@ export default function LocalLanding({ page }) {
 
       <Section tone="white">
         <SectionHead kicker="Yang bisa kami buatkan" title={`Jenis ${page.short.toLowerCase()} yang kami kerjakan`} />
-        <RevealGroup className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-10 grid gap-4 md:mt-12 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {page.types.map((t, i) => (
-            <RevealItem key={t.t} className="px-box h-full p-6">
+            <RevealItem key={t.t} className="px-box h-full p-5 md:p-6">
               <span className="font-pixel text-[22px] text-brand-600">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="t-h3 mt-3">{t.t}</h3>
+              <h3 className="t-h3 mt-2 max-md:!text-[18px] md:mt-3">{t.t}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-ink-500">{t.d}</p>
             </RevealItem>
           ))}

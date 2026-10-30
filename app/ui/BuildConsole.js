@@ -12,7 +12,7 @@ const TABS = [
     id: "web",
     icon: "web",
     label: "Website",
-    view: <BrowserMock className="w-[380px]" />,
+    view: <BrowserMock className="w-full max-w-[380px]" />,
     log: ["$ dmp new website --company-profile", "desain responsif untuk HP & laptop", "metadata, sitemap & schema SEO", "online di domain Anda"],
   },
   {
@@ -20,6 +20,7 @@ const TABS = [
     icon: "mobile",
     label: "Aplikasi",
     view: <PhoneMock />,
+    fit: "scale-[0.66] sm:scale-[0.8]",
     log: ["$ dmp build app --android --ios", "absensi GPS + pengenalan wajah", "tetap jalan saat offline", "siap rilis ke Play Store"],
   },
   {
@@ -33,7 +34,7 @@ const TABS = [
     id: "dash",
     icon: "chart",
     label: "Dashboard",
-    view: <DashboardMock className="w-[340px]" />,
+    view: <DashboardMock className="w-full max-w-[340px]" />,
     log: ["$ dmp deploy dashboard --pemda", "data antar dinas tersinkron", "grafik real-time untuk pimpinan", "bisa dibuka dari HP"],
   },
 ];
@@ -103,7 +104,7 @@ export default function BuildConsole() {
         <span className="flex items-center gap-2 font-pixel text-[11px] uppercase tracking-wider text-white">
           <i className="h-2 w-2 animate-blink bg-brand-400" /> dmp/build — pilih produk
         </span>
-        <button type="button" onClick={() => setAuto((a) => !a)} className="font-pixel text-[11px] uppercase text-brand-300 hover:text-white" aria-label={auto ? "Hentikan putar otomatis" : "Putar otomatis"}>
+        <button type="button" onClick={() => setAuto((a) => !a)} className="-my-2 -mr-2 p-2 font-pixel text-[11px] uppercase text-brand-300 hover:text-white" aria-label={auto ? "Hentikan putar otomatis" : "Putar otomatis"}>
           {auto ? "❚❚ auto" : "▶ auto"}
         </button>
       </div>
@@ -126,9 +127,10 @@ export default function BuildConsole() {
         ))}
       </div>
 
-      <div className="relative h-[300px] overflow-hidden bg-brand-100 bg-pixel-dots sm:h-[330px]">
-        <div key={tab.id} className="anim-screen absolute inset-0 flex items-center justify-center p-5">
-          <div className="origin-center scale-[0.82] sm:scale-90">{tab.view}</div>
+      <div className="relative h-[310px] overflow-hidden bg-brand-100 bg-pixel-dots sm:h-[330px]">
+        {/* Area tampilan dimulai di bawah label agar label tidak menimpa mockup */}
+        <div key={tab.id} className="anim-screen absolute inset-x-0 bottom-0 top-9 flex items-center justify-center px-4 pb-2 sm:top-0 sm:p-5">
+          <div className={`flex w-full origin-center justify-center ${tab.fit || "scale-[0.82] sm:scale-90"}`}>{tab.view}</div>
         </div>
         <canvas ref={canvas} width={COLS} height={ROWS} aria-hidden className="pixelated pointer-events-none absolute inset-0 h-full w-full opacity-0" />
         <span className="absolute left-3 top-3 bg-ink px-2 py-1 font-pixel text-[11px] uppercase text-white">contoh tampilan</span>

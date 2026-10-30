@@ -18,10 +18,10 @@ function Col({ title, links }) {
   return (
     <nav aria-label={title}>
       <h2 className="font-pixel text-[11px] uppercase tracking-wider text-brand-300">{title}</h2>
-      <ul className="mt-4 space-y-2.5 text-[14px]">
+      <ul className="mt-3 space-y-1 text-[14px] leading-snug sm:mt-4">
         {links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href} className="text-ink-300 hover:text-white">
+            <Link href={l.href} className="inline-block py-1 text-ink-300 hover:text-white">
               {l.name}
             </Link>
           </li>
@@ -35,7 +35,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-ink text-ink-300">
-      <div className="container-site grid gap-12 border-t-[3px] border-ink-700 py-16 lg:grid-cols-12">
+      <div className="container-site grid gap-12 border-t-[3px] border-ink-700 py-14 md:py-16 lg:grid-cols-12">
         <div className="lg:col-span-3">
           <Logo tone="light" size="lg" />
           <p className="mt-6 text-[14px] leading-relaxed">
@@ -56,7 +56,7 @@ export default function Footer() {
             </p>
           </address>
         </div>
-        <div className="grid gap-10 sm:grid-cols-2 lg:col-span-9 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:col-span-9 lg:grid-cols-4">
           <Col title="Layanan" links={SERVICE_PAGES.map((s) => ({ name: s.name, href: `/services/${s.slug}` }))} />
           <Col title="Kota populer" links={[...POPULAR.slice(0, 10).map((k) => ({ name: k.nama, href: k.href })), { name: "Semua 514 kab/kota", href: "/wilayah" }]} />
           <Col

@@ -98,7 +98,7 @@ export default async function ProvincePage({ params }) {
               ].map(([k, v], i) => (
                 <div key={k} className={`p-4 ${i % 2 === 0 ? "border-r-2" : ""} ${i < 4 ? "border-b-2" : ""} border-line`}>
                   <dt className="text-[13px] text-ink-500">{k}</dt>
-                  <dd className="mt-1 font-pixel text-[22px] leading-tight text-ink">{v}</dd>
+                  <dd className="mt-1 font-pixel text-[18px] leading-tight text-ink sm:text-[22px]">{v}</dd>
                 </div>
               ))}
             </dl>
@@ -108,12 +108,12 @@ export default async function ProvincePage({ params }) {
 
       <Section tone="white">
         <SectionHead kicker="Cakupan" title={`${p.kabs.length} kabupaten & kota di ${p.nama}`} lead="Pilih daerah Anda untuk melihat layanan, data wilayah, dan daerah terdekat." />
-        <RevealGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-10 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {[...p.kabs]
             .sort((a, b) => (a.tipe === b.tipe ? a.nama.localeCompare(b.nama) : a.tipe === "Kota" ? -1 : 1))
             .map((k) => (
               <RevealItem key={k.kode}>
-                <Link href={k.href} className="px-box px-lift group flex items-center justify-between gap-3 p-4">
+                <Link href={k.href} className="px-box px-lift group flex items-center justify-between gap-3 px-4 py-3 sm:p-4">
                   <span>
                     <span className="block font-bold text-ink group-hover:text-brand-700">{k.label}</span>
                     <span className="block text-[13px] text-ink-500">{fmtNum(k.penduduk)} jiwa</span>
@@ -127,7 +127,7 @@ export default async function ProvincePage({ params }) {
 
       <Section dots>
         <SectionHead kicker="Layanan" title={`Yang bisa kami bantu di ${p.nama}`} />
-        <RevealGroup className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICE_PAGES.map((s) => (
             <RevealItem key={s.slug} className="h-full">
               <Link href={`/services/${s.slug}`} className="px-box px-lift group flex h-full gap-4 p-5">

@@ -110,14 +110,16 @@ export default async function ServiceDetail({ params }) {
 
       <Section tone="white">
         <SectionHead kicker="Cakupan" title={`Yang Anda dapatkan`} />
-        <RevealGroup className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-10 grid gap-4 md:mt-12 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {page.features.map((f) => (
-            <RevealItem key={f.t} className="px-box h-full p-6">
-              <span className="grid h-12 w-12 place-items-center bg-ink text-white">
+            <RevealItem key={f.t} className="px-box flex h-full gap-4 p-5 md:block md:p-6">
+              <span className="grid h-11 w-11 shrink-0 place-items-center bg-ink text-white md:h-12 md:w-12">
                 <PixelIcon name={f.icon} size={24} />
               </span>
-              <h3 className="t-h3 mt-5">{f.t}</h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink-500">{f.d}</p>
+              <div>
+                <h3 className="t-h3 max-md:!text-[18px] md:mt-5">{f.t}</h3>
+                <p className="mt-1 text-[15px] leading-relaxed text-ink-500 md:mt-2">{f.d}</p>
+              </div>
             </RevealItem>
           ))}
         </RevealGroup>

@@ -47,7 +47,7 @@ export default function SolutionsPage() {
         const flip = i % 2 === 1;
         return (
           <Section key={s.id} id={s.id} tone={flip ? "white" : "paper"} dots={!flip}>
-            <div className="grid items-center gap-14 lg:grid-cols-2">
+            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
               <Reveal className={flip ? "lg:order-2" : ""}>
                 <span className="grid h-14 w-14 place-items-center bg-ink text-white">
                   <PixelIcon name={s.icon} size={48} />
@@ -62,8 +62,8 @@ export default function SolutionsPage() {
                   Lihat detail →
                 </Link>
               </Reveal>
-              <Reveal delay={0.1} className={`px-box grid place-items-center bg-pixel-dots p-8 md:p-12 ${flip ? "lg:order-1" : ""}`} style={{ "--bg": "#DCE8FF" }}>
-                <Visual type={VISUAL[s.id]} className={VISUAL[s.id] === "browser" ? "w-full max-w-[420px]" : ""} />
+              <Reveal delay={0.1} className={`px-box grid place-items-center bg-pixel-dots p-5 sm:p-8 md:p-12 ${flip ? "lg:order-1" : ""}`} style={{ "--bg": "#DCE8FF" }}>
+                <Visual type={VISUAL[s.id]} className="flex w-full max-w-[420px] justify-center" />
               </Reveal>
             </div>
           </Section>

@@ -59,7 +59,7 @@ export default function Home() {
             </Link>
           }
         />
-        <div className="mt-14">
+        <div className="mt-10 md:mt-14">
           <ServiceShowcase />
         </div>
       </Section>
@@ -75,9 +75,9 @@ export default function Home() {
           }
         />
         <Reveal className="px-box px-drop mt-14 grid lg:grid-cols-2" style={{ "--bg": "#DCE8FF", "--sh": "#1E3A8A" }}>
-          <div className="flex flex-col justify-center p-8 md:p-12">
+          <div className="flex flex-col justify-center p-6 sm:p-8 md:p-12">
             <p className="font-pixel text-[11px] uppercase tracking-wider text-brand-800">Studi kasus · {jare.client}</p>
-            <h3 className="t-h2 mt-4 !text-[33px]">Chatbot WhatsApp AI yang menjawab warga 24 jam</h3>
+            <h3 className="t-h2 mt-4 max-sm:!text-[26px] sm:!text-[33px]">Chatbot WhatsApp AI yang menjawab warga 24 jam</h3>
             <p className="mt-4 text-[16px] leading-relaxed text-ink-600">
               Warga bertanya lewat WhatsApp seperti biasa. Jare-AI mencari jawabannya di data resmi kementerian, lalu membalas dengan bahasa yang mudah
               dipahami. Pertanyaan yang tidak bisa dijawab diteruskan ke petugas.
@@ -85,11 +85,11 @@ export default function Home() {
             <div className="mt-6">
               <CheckList cols={1} items={["Gemini + RAG: jawaban dari dokumen resmi", "Terhubung WhatsApp Business API resmi", "Melayani di luar jam kerja"]} />
             </div>
-            <Link href="/services/konsultan-ai" className="mt-8 inline-flex w-fit items-center gap-1.5 text-[15px] font-bold text-brand-800 hover:underline">
+            <Link href="/services/konsultan-ai" className="mt-7 inline-flex w-fit items-center gap-1.5 py-1.5 text-[15px] font-bold text-brand-800 hover:underline">
               Pelajari layanan konsultan AI <ArrowRight size={16} strokeWidth={2.5} />
             </Link>
           </div>
-          <div className="flex items-center justify-center border-t-[3px] border-ink bg-brand-200 bg-pixel-dots p-8 md:p-12 lg:border-l-[3px] lg:border-t-0">
+          <div className="flex items-center justify-center border-t-[3px] border-ink bg-brand-200 bg-pixel-dots p-5 sm:p-8 md:p-12 lg:border-l-[3px] lg:border-t-0">
             <ChatMock />
           </div>
         </Reveal>
@@ -115,10 +115,10 @@ export default function Home() {
 
       <Section id="sektor">
         <SectionHead kicker="Untuk siapa" title="Kami paham aturan main tiap sektor" lead="Sistem pemerintah, rumah sakit, dan kampus punya regulasinya sendiri. Kami sudah terbiasa dengan semuanya." />
-        <RevealGroup className="mt-14 grid gap-8 lg:grid-cols-2">
+        <RevealGroup className="swipe-m mt-10 grid gap-8 md:mt-14 lg:grid-cols-2">
           {SECTORS.map((s) => (
             <RevealItem key={s.id} className="h-full">
-              <Link href={`/services/${s.slug}`} className="px-box px-drop px-lift group grid h-full gap-6 p-7 sm:grid-cols-2 md:p-8">
+              <Link href={`/services/${s.slug}`} className="px-box px-drop px-lift group grid h-full gap-6 p-6 sm:grid-cols-2 md:p-8">
                 <div className="flex flex-col">
                   <span className="grid h-14 w-14 place-items-center bg-ink text-white transition-colors group-hover:bg-brand-600">
                     <PixelIcon name={s.icon} size={48} className="group-hover:animate-hop" />
@@ -152,7 +152,7 @@ export default function Home() {
       </Section>
 
       <Section id="wilayah" tone="white">
-        <SectionHead kicker="Wilayah layanan" title={`Melayani ${TOTAL_KAB} kabupaten/kota di 38 provinsi`} lead="Arahkan kursor ke peta untuk melihat provinsi, atau cari kota Anda di bawah. Setiap daerah punya halaman sendiri." />
+        <SectionHead kicker="Wilayah layanan" title={`Melayani ${TOTAL_KAB} kabupaten/kota di 38 provinsi`} lead="Pilih provinsi di peta atau cari kota Anda di bawah. Setiap daerah punya halaman sendiri." />
         <Reveal className="mt-12">
           <div className="px-box p-4 md:p-8" style={{ "--bg": "#F4F0E6" }}>
             <IndoMap map={NATIONAL_MAP} provinces={mapProvinces()} pins={mapPins(POPULAR.slice(0, 8))} />
@@ -180,7 +180,7 @@ export default function Home() {
             </Link>
           }
         />
-        <RevealGroup className="mt-14 grid gap-8 md:grid-cols-3">
+        <RevealGroup className="swipe-m mt-10 grid gap-8 md:mt-14 md:grid-cols-3">
           {POSTS.slice(0, 3).map((a) => (
             <RevealItem key={a.slug} className="h-full">
               <Link href={`/artikel/${a.slug}`} className="px-box px-drop px-lift group flex h-full flex-col p-6">

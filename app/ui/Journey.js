@@ -5,10 +5,10 @@ import { useEffect, useRef, useState } from "react";
 const INK = "#0F1A33";
 
 // Sprite robot 12x15, dua frame langkah
-function Robot({ frame }) {
+function Robot({ frame, w = 48 }) {
   const px = (x, y, w, h, f) => <rect key={`${x}${y}${w}${h}${f}`} x={x} y={y} width={w} height={h} fill={f} />;
   return (
-    <svg viewBox="0 0 12 15" width="48" height="60" shapeRendering="crispEdges" aria-hidden>
+    <svg viewBox="0 0 12 15" width={w} height={w * 1.25} shapeRendering="crispEdges" aria-hidden>
       {px(5, 0, 2, 1, "#2563EB")}
       {px(5.5, 1, 1, 1, INK)}
       {px(1, 2, 10, 6, INK)}
@@ -49,7 +49,7 @@ export default function Journey({ steps }) {
   const frame = Math.round(p * 40) % 2;
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="relative">
       <div className="relative hidden h-[84px] md:block" aria-hidden>
         <div className="absolute bottom-[18px]" style={{ left: `calc(${pct}% - ${pct * 0.48}px)` }}>
           <Robot frame={frame} />
@@ -59,16 +59,23 @@ export default function Journey({ steps }) {
           <div className="absolute inset-0 bg-[repeating-linear-gradient(90deg,transparent_0_calc(5%-3px),#0F1A33_calc(5%-3px)_5%)]" />
         </div>
       </div>
-      <ol className="rv-group mt-8 grid gap-6 md:mt-10 md:grid-cols-2 lg:grid-cols-4">
+      {/* HP: jalur vertikal di kiri, robot turun mengikuti scroll */}
+      <div aria-hidden className="absolute bottom-0 left-[14px] top-8 w-3 bg-sand md:hidden" style={{ boxShadow: "0 -3px 0 0 #0F1A33, 0 3px 0 0 #0F1A33, -3px 0 0 0 #0F1A33, 3px 0 0 0 #0F1A33" }}>
+        <div className="w-full bg-brand-600" style={{ height: `${Math.round(p * 20) * 5}%` }} />
+      </div>
+      <div aria-hidden className="absolute left-0 z-10 md:hidden" style={{ top: `calc(32px + (100% - 77px) * ${p})` }}>
+        <Robot frame={frame} w={36} />
+      </div>
+      <ol className="rv-group mt-8 grid gap-4 pl-12 md:mt-10 md:grid-cols-2 md:gap-6 md:pl-0 lg:grid-cols-4">
         {steps.map((s, i) => {
           const done = i < reached;
           return (
-            <li key={s.t} className="rv rv-up px-box p-6 transition-colors duration-200" style={{ "--bg": done ? "#DCE8FF" : "#fff" }}>
+            <li key={s.t} className="rv rv-up px-box p-5 transition-colors duration-200 md:p-6" style={{ "--bg": done ? "#DCE8FF" : "#fff" }}>
               <div className="flex items-center justify-between">
                 <span className={`grid h-10 w-10 place-items-center font-pixel text-[22px] transition-colors ${done ? "bg-brand-600 text-white" : "bg-sand text-ink"}`}>{done ? "✓" : i + 1}</span>
                 {s.time && <span className="font-pixel text-[11px] uppercase tracking-wider text-ink-500">{s.time}</span>}
               </div>
-              <h3 className="t-h3 mt-5">{s.t}</h3>
+              <h3 className="t-h3 mt-4 max-md:!text-[19px] md:mt-5">{s.t}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-ink-500">{s.d}</p>
             </li>
           );

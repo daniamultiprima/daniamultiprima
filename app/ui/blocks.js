@@ -157,13 +157,14 @@ export function LogoWall({ title = "Dipercaya kementerian, pemerintah daerah, ru
 
 export function Stats({ dark = false }) {
   return (
-    <RevealGroup as="dl" className="grid grid-cols-2 gap-6 md:grid-cols-4">
+    <RevealGroup as="dl" className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
       {STATS.map((s) => (
-        <RevealItem key={s.label} className="px-box p-5" style={{ "--bg": dark ? "#18264A" : "#fff", "--bd": dark ? "#3A4766" : "#0F1A33" }}>
-          <dd className={`font-pixel text-[44px] leading-none ${dark ? "text-white" : "text-ink"}`}>
+        <RevealItem key={s.label} className="px-box flex flex-col-reverse justify-end p-4 sm:p-5" style={{ "--bg": dark ? "#18264A" : "#fff", "--bd": dark ? "#3A4766" : "#0F1A33" }}>
+          {/* dt lebih dulu (urutan semantik), angka tetap tampil di atas lewat flex-col-reverse */}
+          <dt className={`mt-2 text-[14px] font-medium leading-snug sm:mt-3 sm:text-[15px] ${dark ? "text-ink-300" : "text-ink-500"}`}>{s.label}</dt>
+          <dd className={`font-pixel text-[33px] leading-none sm:text-[44px] ${dark ? "text-white" : "text-ink"}`}>
             <CountUp value={s.value} />
           </dd>
-          <dt className={`mt-3 text-[15px] font-medium ${dark ? "text-ink-300" : "text-ink-500"}`}>{s.label}</dt>
         </RevealItem>
       ))}
     </RevealGroup>
@@ -172,10 +173,10 @@ export function Stats({ dark = false }) {
 
 export function Credentials() {
   return (
-    <RevealGroup className="grid gap-8 md:grid-cols-3">
+    <RevealGroup className="swipe-m grid gap-8 md:grid-cols-3">
       {CERTIFICATIONS.map((c) => (
         <RevealItem key={c.id} className="h-full">
-          <article className="px-box px-drop px-lift flex h-full flex-col p-7">
+          <article className="px-box px-drop px-lift flex h-full flex-col p-6 sm:p-7">
           <div className="flex items-start justify-between">
             <span className="grid h-14 w-14 place-items-center bg-brand-100 text-brand-700">
               <PixelIcon name={c.icon} size={48} />
@@ -187,7 +188,7 @@ export function Credentials() {
           <p className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-500">{c.desc}</p>
           <p className="mt-6 border-t-2 border-dashed border-line pt-4 font-pixel text-[11px] uppercase tracking-wide text-ink-600">{c.ref}</p>
           {c.href && (
-            <a href={c.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex w-fit items-center gap-1 text-[14px] font-bold text-brand-700 hover:underline">
+            <a href={c.href} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex w-fit items-center gap-1 py-1.5 text-[14px] font-bold text-brand-700 hover:underline">
               Cek di situs resmi <ArrowUpRight size={15} strokeWidth={2.5} />
             </a>
           )}
@@ -201,13 +202,13 @@ export function Credentials() {
 /* ---------- Layanan dengan visual ---------- */
 
 const VISUALS = {
-  browser: <BrowserMock className="w-[400px]" />,
+  browser: <BrowserMock className="w-full max-w-[400px]" />,
   phone: <PhoneMock className="mx-auto" />,
   chat: <ChatMock className="mx-auto" />,
   chatStatic: <ChatStatic className="mx-auto" />,
-  dashboard: <DashboardMock className="w-[360px]" />,
-  queue: <QueueMock className="w-[360px]" />,
-  security: <SecurityMock className="w-[340px]" />,
+  dashboard: <DashboardMock className="w-full max-w-[360px]" />,
+  queue: <QueueMock className="w-full max-w-[360px]" />,
+  security: <SecurityMock className="w-full max-w-[340px]" />,
 };
 
 export function Visual({ type, className = "" }) {
@@ -225,17 +226,17 @@ const SHOWCASE = [
 
 export function ServiceShowcase() {
   return (
-    <RevealGroup className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <RevealGroup className="swipe-m grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {SHOWCASE.map((s) => (
         <RevealItem key={s.title} className="h-full">
           <Link href={s.href} className="px-box px-drop px-lift group flex h-full flex-col">
-            <div className="relative flex h-60 items-start justify-center overflow-hidden bg-brand-100 bg-pixel-dots px-6 pt-8">
-              <div className="origin-top scale-[0.78] transition-transform duration-300 group-hover:scale-[0.82]">{VISUALS[s.visual]}</div>
+            <div className="relative flex h-52 items-start justify-center overflow-hidden bg-brand-100 bg-pixel-dots px-4 pt-6 sm:h-60 sm:px-6 sm:pt-8">
+              <div className="flex w-full origin-top scale-[0.9] justify-center transition-transform duration-300 group-hover:scale-[0.94] sm:scale-[0.78] sm:group-hover:scale-[0.82]">{VISUALS[s.visual]}</div>
               <div className="dither absolute inset-x-0 bottom-0 h-3" style={{ "--d1": "#fff" }} />
             </div>
-            <div className="flex flex-1 flex-col border-t-[3px] border-ink p-6">
+            <div className="flex flex-1 flex-col border-t-[3px] border-ink p-5 sm:p-6">
               <div className="flex items-center gap-3">
-                <PixelIcon name={s.icon} size={24} className="text-brand-600" />
+                <PixelIcon name={s.icon} size={24} className="shrink-0 text-brand-600" />
                 <h3 className="t-h3">{s.title}</h3>
               </div>
               <p className="mt-3 flex-1 text-[15px] leading-relaxed text-ink-500">{s.text}</p>
@@ -252,7 +253,7 @@ export function ServiceShowcase() {
 
 export function CaseGrid({ projects }) {
   return (
-    <RevealGroup className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <RevealGroup className="swipe-m grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((p) => (
         <RevealItem key={p.id} className="h-full">
           <CaseCard p={p} />
@@ -339,7 +340,7 @@ export function RelatedPosts({ posts, title = "Panduan terkait" }) {
   return (
     <Section tone="white">
       <SectionHead kicker="Baca juga" title={title} />
-      <RevealGroup className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <RevealGroup className="swipe-m mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {posts.slice(0, 3).map((a) => (
           <RevealItem key={a.slug} className="h-full">
             <Link href={`/artikel/${a.slug}`} className="px-box px-drop px-lift group flex h-full flex-col p-6">

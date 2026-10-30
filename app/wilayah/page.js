@@ -34,7 +34,7 @@ export default function WilayahPage() {
       </PageHero>
 
       <Section tone="white">
-        <SectionHead kicker="Peta" title="Pilih provinsi di peta" lead="Arahkan kursor untuk melihat nama provinsi, klik untuk membuka daftar kabupaten/kotanya." />
+        <SectionHead kicker="Peta" title="Pilih provinsi di peta" lead="Ketuk atau klik provinsi untuk membuka daftar kabupaten/kotanya. Di bawah peta ada daftar lengkapnya." />
         <Reveal className="mt-12">
           <div className="px-box p-4 md:p-8" style={{ "--bg": "#F4F0E6" }}>
             <IndoMap map={NATIONAL_MAP} provinces={mapProvinces()} pins={mapPins(POPULAR.slice(0, 10))} />

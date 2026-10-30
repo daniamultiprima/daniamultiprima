@@ -40,7 +40,7 @@ export default function ChatMock({ className = "", compact = false }) {
   }, [count, visible]);
 
   return (
-    <div ref={ref} className={`px-box px-drop w-[290px] ${className}`} aria-hidden>
+    <div ref={ref} className={`px-box px-drop w-full max-w-[290px] ${className}`} aria-hidden>
       <div className="flex items-center gap-2.5 bg-ink px-3 py-2.5">
         <span className="grid h-8 w-8 place-items-center bg-brand-600 font-pixel text-[11px] text-white">AI</span>
         <div className="leading-tight">

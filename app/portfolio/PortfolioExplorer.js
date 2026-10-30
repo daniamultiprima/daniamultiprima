@@ -26,10 +26,10 @@ export default function PortfolioExplorer() {
           {list.length} proyek ditampilkan
         </p>
       </div>
-      <ul key={cat} className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <ul key={cat} className="mt-8 grid gap-5 sm:mt-10 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
         {list.map((p, i) => (
           <li key={p.id} className="anim-card" style={{ "--i": Math.min(i, 9) }}>
-            <CaseCard p={p} />
+            <CaseCard p={p} dense />
           </li>
         ))}
       </ul>

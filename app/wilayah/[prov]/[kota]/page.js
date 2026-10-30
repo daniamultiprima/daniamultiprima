@@ -81,9 +81,9 @@ export default async function KabPage({ params }) {
         lead={`Untuk pemerintah daerah, sekolah, rumah sakit, dan pelaku usaha di ${k.nama}. Konsultasi gratis, dikerjakan bertahap, dan didampingi sampai sistemnya dipakai.`}
         visual={
           <div className="px-box px-drop">
-            <div className="flex items-center justify-between bg-ink px-3 py-2 font-pixel text-[11px] uppercase tracking-wider text-white">
-              <span>{k.label}</span>
-              <span className="text-brand-300">
+            <div className="flex items-center justify-between gap-3 bg-ink px-3 py-2 font-pixel text-[11px] uppercase tracking-wider text-white">
+              <span className="min-w-0 truncate">{k.label}</span>
+              <span className="hidden shrink-0 text-brand-300 sm:inline">
                 {k.lat.toFixed(2)}, {k.lng.toFixed(2)}
               </span>
             </div>
@@ -140,7 +140,7 @@ export default async function KabPage({ params }) {
               ].map(([label, v], i) => (
                 <div key={label} className={`p-4 ${i % 2 === 0 ? "border-r-2" : ""} ${i < 4 ? "border-b-2" : ""} border-line`}>
                   <dt className="text-[13px] text-ink-500">{label}</dt>
-                  <dd className="mt-1 break-words font-pixel text-[22px] leading-tight text-ink">{v}</dd>
+                  <dd className="mt-1 break-words font-pixel text-[18px] leading-tight text-ink sm:text-[22px]">{v}</dd>
                 </div>
               ))}
             </dl>
@@ -151,16 +151,18 @@ export default async function KabPage({ params }) {
 
       <Section tone="white">
         <SectionHead kicker="Rekomendasi" title={`Solusi yang paling sering dibutuhkan di daerah seperti ${k.nama}`} />
-        <RevealGroup className="mt-12 grid gap-8 md:grid-cols-3">
+        <RevealGroup className="mt-10 grid gap-5 md:mt-12 md:grid-cols-3 md:gap-8">
           {solutions.map((s) => (
             <RevealItem key={s.t} className="h-full">
-              <Link href={s.href} className="px-box px-drop px-lift group flex h-full flex-col p-6">
-                <span className="grid h-14 w-14 place-items-center bg-ink text-white group-hover:bg-brand-600">
-                  <PixelIcon name={s.icon} size={48} />
+              <Link href={s.href} className="px-box px-drop px-lift group flex h-full gap-4 p-5 md:flex-col md:gap-0 md:p-6">
+                <span className="grid h-12 w-12 shrink-0 place-items-center bg-ink text-white group-hover:bg-brand-600 md:h-14 md:w-14">
+                  <PixelIcon name={s.icon} size={48} className="max-md:scale-75" />
                 </span>
-                <h3 className="t-h3 mt-5">{s.t}</h3>
-                <p className="mt-2 flex-1 text-[15px] leading-relaxed text-ink-500">{s.d}</p>
-                <span className="mt-4 text-[14px] font-bold text-brand-700">Lihat layanan →</span>
+                <div className="flex flex-1 flex-col">
+                  <h3 className="t-h3 max-md:!text-[18px] md:mt-5">{s.t}</h3>
+                  <p className="mt-2 flex-1 text-[15px] leading-relaxed text-ink-500">{s.d}</p>
+                  <span className="mt-3 text-[14px] font-bold text-brand-700 md:mt-4">Lihat layanan →</span>
+                </div>
               </Link>
             </RevealItem>
           ))}
